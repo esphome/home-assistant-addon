@@ -1,0 +1,40 @@
+{
+  "name": "ESPHome",
+  "version": "1.10.1",
+  "slug": "esphome",
+  "description": "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices.",
+  "url": "https://esphome.io/",
+  "webui": "http://[HOST]:[PORT:6052]",
+  "startup": "application",
+  "arch": [
+    "amd64",
+    "armhf",
+    "i386"
+  ],
+  "hassio_api": true,
+  "auth_api": true,
+  "hassio_role": "default",
+  "homeassistant_api": false,
+  "host_network": true,
+  "boot": "auto",
+  "auto_uart": true,
+  "map": [
+    "ssl",
+    "config:rw"
+  ],
+  "options": {
+    "ssl": false,
+    "certfile": "fullchain.pem",
+    "keyfile": "privkey.pem",
+    "port": 6052
+  },
+  "schema": {
+    "ssl": "bool",
+    "certfile": "str",
+    "keyfile": "str",
+    "port": "int",
+    "leave_front_door_open": "bool?",
+    "esphome_version": "str?"
+  },
+  "image": "esphome/esphome-hassio-{arch}"
+}

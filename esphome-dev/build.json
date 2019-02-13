@@ -1,0 +1,10 @@
+{
+  "squash": false,
+  "build_from": {
+    "aarch64": "esphome/esphome-hassio-base-aarch64:1.0.0",
+    "amd64": "esphome/esphome-hassio-base-amd64:1.0.0",
+    "armhf": "esphome/esphome-hassio-base-armhf:1.0.0",
+    "i386": "esphome/esphome-hassio-base-i386:1.0.0"
+  },
+  "args": {}
+}
