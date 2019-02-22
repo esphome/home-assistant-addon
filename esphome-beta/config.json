@@ -1,6 +1,6 @@
 {
   "name": "ESPHome (beta)",
-  "version": "1.11.0b1",
+  "version": "1.11.0",
   "slug": "esphome-beta",
   "description": "Beta version of ESPHome Hass.io add-on.",
   "url": "https://beta.esphome.io/",
