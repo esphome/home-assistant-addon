@@ -101,6 +101,26 @@ or for version 1.10.0: `"esphome_version": "v1.10.0""`.
 Please note that this does not always work and is only meant for testing, usually the
 ESPHome add-on and dashboard version must match to guarantee a working system.
 
+### Option: `relative_url`
+
+Host the ESPHome dashboard under a relative URL, so that it can be integrated
+into existing web proxys like nginx under a relative URl. Defaults to `/`.
+
+### Option: `status_use_ping`
+
+By default the dashboard uses mDNS to check if nodes are online. This does
+not work across subnets unless your router supports mDNS forwarding or avahi.
+
+Setting this to `true` will make ESPHome use ICMP ping requests to get the node status. Use this if all nodes always have offline status even when they're connected.
+
+### Option: `streamer_mode`
+
+If set to `true`, this will enable stremer mode, which makes ESPHome hide all
+potentially private information. So for example WiFi (B)SSIDs (which could be
+used to find your location), usernames etc. Please note that you need to use
+the `!secret` tag in your YAML file to also prevent these from showing up
+while editing and validating.
+
 [discord-shield]: https://img.shields.io/discord/429907082951524364.svg
 [dht22]: https://esphome.io/components/sensor/dht.html
 [discord]: https://discord.me/KhAMKrd
