@@ -38,5 +38,6 @@
     "streamer_mode": "bool?",
     "relative_url": "str?",
     "status_use_ping": "bool?"
-  }
+  },
+  "image": "esphome/esphome-hassio-{arch}"
 }
