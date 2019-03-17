@@ -34,7 +34,10 @@
     "keyfile": "str",
     "port": "int",
     "leave_front_door_open": "bool?",
-    "esphome_version": "str?"
+    "esphome_version": "str?",
+    "streamer_mode": "bool?",
+    "relative_url": "str?",
+    "status_use_ping": "bool?"
   },
   "image": "esphome/esphome-hassio-{arch}"
 }
