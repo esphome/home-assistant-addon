@@ -1,6 +1,6 @@
 {
   "name": "ESPHome",
-  "version": "1.11.2",
+  "version": "1.12.0",
   "slug": "esphome",
   "description": "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices.",
   "url": "https://esphome.io/",
