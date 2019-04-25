@@ -40,7 +40,7 @@
   },
   "name": "ESPHome (dev)",
   "version": "dev",
-  "slug": "esphome-dev2",
+  "slug": "esphome-dev",
   "description": "Development Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
   "options": {
     "esphome_version": "dev"

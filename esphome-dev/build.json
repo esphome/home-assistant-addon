@@ -1,10 +1,10 @@
 {
   "squash": false,
   "build_from": {
-    "amd64": "esphome/esphome-hassio-base-amd64:1.5.0",
-    "i386": "esphome/esphome-hassio-base-i386:1.5.0",
-    "armv7": "esphome/esphome-hassio-base-armv7:1.5.0",
-    "aarch64": "esphome/esphome-hassio-base-aarch64:1.5.0"
+    "amd64": "esphome/esphome-hassio-base-amd64:1.5.1",
+    "i386": "esphome/esphome-hassio-base-i386:1.5.1",
+    "armv7": "esphome/esphome-hassio-base-armv7:1.5.1",
+    "aarch64": "esphome/esphome-hassio-base-aarch64:1.5.1"
   },
   "args": {}
 }
