@@ -55,7 +55,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: 1.12.2
+  version: 1.13.0b1  # BETA
   description: "Beta version of ESPHome Hass.io add-on."
   image: esphome/esphome-hassio-{arch}
   options: {}
@@ -64,7 +64,7 @@ esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: 1.12.2
+  version: 1.12.2  # STABLE
   description: "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices."
   image: esphome/esphome-hassio-{arch}
   options: {}
