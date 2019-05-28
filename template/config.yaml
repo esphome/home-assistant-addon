@@ -56,7 +56,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: '1.13.0b2'  # BETA
+  version: '1.13.0b3'  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome Hass.io add-on."
   url: https://beta.esphome.io/
