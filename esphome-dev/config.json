@@ -1,48 +1,48 @@
 {
-  "url": "https://esphome.io/",
-  "webui": "http://[HOST]:[PORT:6052]",
-  "startup": "application",
-  "boot": "auto",
   "arch": [
     "amd64",
     "i386",
     "armv7",
     "aarch64"
   ],
-  "hassio_api": true,
   "auth_api": true,
+  "auto_uart": true,
+  "boot": "auto",
+  "description": "Development Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
+  "hassio_api": true,
   "hassio_role": "default",
   "homeassistant_api": false,
   "host_network": true,
   "ingress": true,
   "ingress_port": 0,
+  "map": [
+    "ssl:ro",
+    "config:rw"
+  ],
+  "name": "ESPHome (dev)",
+  "options": {
+    "esphome_version": "dev"
+  },
   "panel_icon": "mdi:chip",
-  "auto_uart": true,
   "ports": {
     "6052/tcp": null
   },
   "ports_description": {
     "6052/tcp": "Web interface (Not required for Hass.io Ingress)"
   },
-  "map": [
-    "ssl",
-    "config:rw"
-  ],
   "schema": {
-    "ssl": "bool?",
     "certfile": "str?",
+    "esphome_version": "str?",
     "keyfile": "str?",
     "leave_front_door_open": "bool?",
-    "esphome_version": "str?",
-    "streamer_mode": "bool?",
     "relative_url": "str?",
-    "status_use_ping": "bool?"
+    "ssl": "bool?",
+    "status_use_ping": "bool?",
+    "streamer_mode": "bool?"
   },
-  "name": "ESPHome (dev)",
-  "version": "dev",
   "slug": "esphome-dev",
-  "description": "Development Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
-  "options": {
-    "esphome_version": "dev"
-  }
+  "startup": "application",
+  "url": "https://next.esphome.io/",
+  "version": "dev",
+  "webui": "http://[HOST]:[PORT:6052]"
 }

@@ -30,7 +30,7 @@ for channel in args.channels:
     dir_ = root / conf.pop('directory')
     path = dir_ / 'config.json'
     with open(path, 'w') as f:
-        json.dump(conf, f, indent=2)
+        json.dump(conf, f, indent=2, sort_keys=True)
 
     for file_, conf_ in copyf.items():
         copyfile(templ / file_, dir_ / file_)
@@ -43,6 +43,6 @@ for channel in args.channels:
             "args": {}
         }
         with open(path, 'w') as f:
-            json.dump(build_conf, f, indent=2)
+            json.dump(build_conf, f, indent=2, sort_keys=True)
 
     print(f"Wrote {path}")

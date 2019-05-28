@@ -28,7 +28,7 @@ base: &base
   ports_description:
     '6052/tcp': "Web interface (Not required for Hass.io Ingress)"
   map:
-    - ssl
+    - ssl:ro
     - config:rw
   schema:
     ssl: bool?
@@ -45,9 +45,10 @@ esphome-dev:
   <<: *base
   directory: esphome-dev
   name: ESPHome (dev)
-  version: dev
+  version: 'dev'  # DEV
   slug: esphome-dev
   description: "Development Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files"
+  url: https://next.esphome.io/
   options:
     esphome_version: dev
 
@@ -55,8 +56,10 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: 1.13.0b1  # BETA
+  version: '1.13.0b1'  # BETA
+  slug: esphome-beta
   description: "Beta version of ESPHome Hass.io add-on."
+  url: https://beta.esphome.io/
   image: esphome/esphome-hassio-{arch}
   options: {}
 
@@ -64,7 +67,8 @@ esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: 1.12.2  # STABLE
+  version: '1.12.2'  # STABLE
+  slug: esphome
   description: "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices."
   image: esphome/esphome-hassio-{arch}
   options: {}
