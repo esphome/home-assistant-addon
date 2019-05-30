@@ -1,43 +1,47 @@
 {
-  "name": "ESPHome",
-  "version": "1.12.2",
-  "slug": "esphome",
-  "description": "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices.",
-  "url": "https://esphome.io/",
-  "webui": "http://[HOST]:[PORT:6052]",
-  "startup": "application",
   "arch": [
     "amd64",
-    "armhf",
-    "i386"
+    "i386",
+    "armv7",
+    "aarch64"
   ],
-  "hassio_api": true,
   "auth_api": true,
+  "auto_uart": true,
+  "boot": "auto",
+  "description": "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices.",
+  "hassio_api": true,
   "hassio_role": "default",
   "homeassistant_api": false,
   "host_network": true,
-  "boot": "auto",
-  "auto_uart": true,
+  "image": "esphome/esphome-hassio-{arch}",
+  "ingress": true,
+  "ingress_port": 0,
   "map": [
-    "ssl",
+    "ssl:ro",
     "config:rw"
   ],
-  "options": {
-    "ssl": false,
-    "certfile": "fullchain.pem",
-    "keyfile": "privkey.pem",
-    "port": 6052
+  "name": "ESPHome",
+  "options": {},
+  "panel_icon": "mdi:chip",
+  "ports": {
+    "6052/tcp": null
+  },
+  "ports_description": {
+    "6052/tcp": "Web interface (Not required for Hass.io Ingress)"
   },
   "schema": {
-    "ssl": "bool",
-    "certfile": "str",
-    "keyfile": "str",
-    "port": "int",
-    "leave_front_door_open": "bool?",
+    "certfile": "str?",
     "esphome_version": "str?",
-    "streamer_mode": "bool?",
+    "keyfile": "str?",
+    "leave_front_door_open": "bool?",
     "relative_url": "str?",
-    "status_use_ping": "bool?"
+    "ssl": "bool?",
+    "status_use_ping": "bool?",
+    "streamer_mode": "bool?"
   },
-  "image": "esphome/esphome-hassio-{arch}"
+  "slug": "esphome",
+  "startup": "application",
+  "url": "https://esphome.io/",
+  "version": "1.13.0",
+  "webui": "http://[HOST]:[PORT:6052]"
 }
