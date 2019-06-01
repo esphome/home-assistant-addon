@@ -63,10 +63,6 @@ Example add-on configuration:
 }
 ```
 
-### Option: `port`
-
-The port to start the dashboard server on. Default is 6052.
-
 ### Option: `ssl`
 
 Enables/Disables encrypted SSL (HTTPS) connections to the web server of this add-on.
