@@ -44,8 +44,6 @@ first:
 5. Start the add-on, check the logs of the add-on to see if everything went well.
 6. Click "OPEN WEB UI" to open the ESPHome dashboard. You will be asked for your Home Assistant credentials - ESPHome uses Hass.io's authentication system to log you in.
 
-**NOTE**: Installation on RPis running in 64-bit mode is currently not possible. Please use the 32-bit variant of HassOS instead.
-
 You can view the ESPHome docs here: https://esphome.io/
 
 ## Configuration
