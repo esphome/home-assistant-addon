@@ -116,7 +116,7 @@ while editing and validating.
 
 [discord-shield]: https://img.shields.io/discord/429907082951524364.svg
 [dht22]: https://esphome.io/components/sensor/dht.html
-[discord]: https://discord.me/KhAMKrd
+[discord]: https://discord.gg/KhAMKrd
 [releases-shield]: https://img.shields.io/github/release/esphome/esphome.svg
 [releases]: https://esphome.io/changelog/index.html
 [repository]: https://github.com/esphome/esphome
