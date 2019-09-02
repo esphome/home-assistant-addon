@@ -108,7 +108,7 @@ Setting this to `true` will make ESPHome use ICMP ping requests to get the node 
 
 ### Option: `streamer_mode`
 
-If set to `true`, this will enable stremer mode, which makes ESPHome hide all
+If set to `true`, this will enable streamer mode, which makes ESPHome hide all
 potentially private information. So for example WiFi (B)SSIDs (which could be
 used to find your location), usernames etc. Please note that you need to use
 the `!secret` tag in your YAML file to also prevent these from showing up
