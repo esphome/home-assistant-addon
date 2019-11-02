@@ -42,6 +42,6 @@
   "slug": "esphome",
   "startup": "application",
   "url": "https://esphome.io/",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "webui": "http://[HOST]:[PORT:6052]"
 }
