@@ -56,7 +56,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: '1.14.1'  # BETA
+  version: '1.14.2'  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome Hass.io add-on."
   url: https://beta.esphome.io/
@@ -67,7 +67,7 @@ esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: '1.14.1'  # STABLE
+  version: '1.14.2'  # STABLE
   slug: esphome
   description: "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices."
   image: esphome/esphome-hassio-{arch}
