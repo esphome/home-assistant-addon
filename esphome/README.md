@@ -89,7 +89,7 @@ authentication by setting it to `true`.
 
 Manually override which ESPHome version to use in the addon.
 For example to install the latest development version, use `"esphome_version": "dev"`,
-or for version 1.10.0: `"esphome_version": "v1.10.0""`.
+or for version 1.10.0: `"esphome_version": "v1.10.0"`.
 
 Please note that this does not always work and is only meant for testing, usually the
 ESPHome add-on and dashboard version must match to guarantee a working system.
