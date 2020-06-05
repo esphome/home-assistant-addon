@@ -39,7 +39,7 @@ base: &base
     streamer_mode: bool?
     relative_url: str?
     status_use_ping: bool?
-  base_image: esphome/esphome-hassio-base-{arch}:2.0.1
+  base_image: esphome/esphome-hassio-base-{arch}:2.1.0
 
 esphome-dev:
   <<: *base
