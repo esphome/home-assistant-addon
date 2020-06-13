@@ -12,7 +12,7 @@ class Channel(Enum):
     beta = 'beta'
     dev = 'dev'
 
-parser = argparse.ArgumentParser(description='Generate ESPHome Hass.io config.json')
+parser = argparse.ArgumentParser(description='Generate ESPHome Home Assistant config.json')
 parser.add_argument('channels', nargs='+', type=Channel, choices=list(Channel))
 args = parser.parse_args()
 
