@@ -5,6 +5,10 @@ import re
 import subprocess
 from dataclasses import dataclass
 import sys
+import os
+
+sys.path.append(os.path.dirname(__file__))
+import generate
 
 
 @dataclass
@@ -65,29 +69,20 @@ def write_version(target: str, version: Version):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('new_version', type=str)
-    parser.add_argument('--beta', action='store_true', help="Update the beta addon")
-    parser.add_argument('--stable', action='store_true', help="Update the stable addon")
-    parser.add_argument('--commit', action='store_true')
     args = parser.parse_args()
 
-    if not any([args.beta, args.stable]):
-        print("At least one of beta or stable has to be bumped")
-        return 1
-
-    if args.commit and subprocess.call(["git", "diff", "--quiet"]) == 1:
-        print("Cannot use --commit because git is dirty.")
-        return 1
-
     version = Version.parse(args.new_version)
+    assert not version.dev
+
     print(f"Bumping to {version}")
-    if args.beta:
+    if version.beta:
         write_version('beta', version)
-    if args.stable:
+        generate.main(['beta'])
+    else:
         assert not version.beta
         write_version('stable', version)
-
-    if args.commit:
-        subprocess.check_call(["git", "commit", "-nam", f"Bump version to v{version}"])
+        write_version('beta', version)
+        generate.main(['stable', 'beta'])
     return 0
 
 

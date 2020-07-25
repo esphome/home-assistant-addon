@@ -1,7 +1,6 @@
 {
   "arch": [
     "amd64",
-    "i386",
     "armv7",
     "aarch64"
   ],
@@ -28,7 +27,7 @@
     "6052/tcp": null
   },
   "ports_description": {
-    "6052/tcp": "Web interface (Not required for Hass.io Ingress)"
+    "6052/tcp": "Web interface (Not required for Home Assistant Ingress)"
   },
   "schema": {
     "certfile": "str?",
@@ -41,6 +40,7 @@
     "streamer_mode": "bool?"
   },
   "slug": "esphome-dev",
+  "stage": "experimental",
   "startup": "application",
   "url": "https://next.esphome.io/",
   "version": "dev",
