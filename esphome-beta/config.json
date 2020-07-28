@@ -42,6 +42,6 @@
   "stage": "experimental",
   "startup": "application",
   "url": "https://beta.esphome.io/",
-  "version": "1.15.0b1",
+  "version": "1.15.0b2",
   "webui": "http://[HOST]:[PORT:6052]"
 }
