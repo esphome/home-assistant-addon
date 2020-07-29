@@ -52,7 +52,7 @@ jobs:
     - if: ${{ contains(github.event.inputs.version, 'b') }}
       name: Publish beta release to community-addons repository
       run: |
-        docker run -it --rm hassioaddons/repository-updater:latest \
+        docker run --rm hassioaddons/repository-updater:latest \
           --repository hassio-addons/repository-beta \
           --addon esphome \
           --token "${TOKEN}"
@@ -61,7 +61,7 @@ jobs:
     - if: ${{ !contains(github.event.inputs.version, 'b') }}
       name: Publish stable release to community-addons repository
       run: |
-        docker run -it --rm hassioaddons/repository-updater:latest \
+        docker run --rm hassioaddons/repository-updater:latest \
           --repository hassio-addons/repository \
           --addon esphome \
           --token "${TOKEN}"
