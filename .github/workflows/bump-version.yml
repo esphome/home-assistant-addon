@@ -18,8 +18,8 @@ jobs:
     - run: pip install -r script/requirements.txt
     - run: script/bump-version.py ${{ github.event.inputs.version }}
     - run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+        git config user.name esphomebot
+        git config user.email contact@esphome.io
         git add .
         git commit -m "Bump version to v${{ github.event.inputs.version }}"
         git push
