@@ -1,9 +1,9 @@
 {
   "args": {},
   "build_from": {
-    "aarch64": "esphome/esphome-hassio-base-aarch64:2.3.4",
-    "amd64": "esphome/esphome-hassio-base-amd64:2.3.4",
-    "armv7": "esphome/esphome-hassio-base-armv7:2.3.4"
+    "aarch64": "esphome/esphome-hassio-base-aarch64:2.4.1",
+    "amd64": "esphome/esphome-hassio-base-amd64:2.4.1",
+    "armv7": "esphome/esphome-hassio-base-armv7:2.4.1"
   },
   "squash": false
 }
