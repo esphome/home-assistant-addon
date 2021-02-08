@@ -4,18 +4,13 @@ jobs:
   build:
     name: Add-on configuration
     runs-on: ubuntu-latest
+    strategy:
+       matrix:
+         channel: [esphome, esphome-beta, esphome-dev]
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v2
-      - name: 🚀 Run Home Assistant Add-on Lint on ESPHome
+      - name: 🚀 Run Home Assistant Add-on Lint on ${{ matrix.channel }}
         uses: frenck/action-addon-linter@v2
         with:
-          path: "./esphome"
-      - name: 🚀 Run Home Assistant Add-on Lint on ESPHome-Beta
-        uses: frenck/action-addon-linter@v2
-        with:
-          path: "./esphome-beta"
-      - name: 🚀 Run Home Assistant Add-on Lint on ESPHome-Dev
-        uses: frenck/action-addon-linter@v2
-        with:
-          path: "./esphome-dev"
+          path: "./${{ matrix.channel }}"
