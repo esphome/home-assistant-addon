@@ -5,8 +5,7 @@
     "aarch64"
   ],
   "auth_api": true,
-  "auto_uart": true,
-  "boot": "auto",
+  "uart": true,
   "description": "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices.",
   "hassio_api": true,
   "hassio_role": "default",
@@ -40,7 +39,6 @@
   },
   "slug": "esphome",
   "stage": "stable",
-  "startup": "application",
   "url": "https://esphome.io/",
   "version": "1.16.0",
   "webui": "http://[HOST]:[PORT:6052]"

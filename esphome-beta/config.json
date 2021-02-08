@@ -5,8 +5,7 @@
     "aarch64"
   ],
   "auth_api": true,
-  "auto_uart": true,
-  "boot": "auto",
+  "uart": true,
   "description": "Beta version of ESPHome Hass.io add-on.",
   "hassio_api": true,
   "hassio_role": "default",
@@ -40,7 +39,6 @@
   },
   "slug": "esphome-beta",
   "stage": "experimental",
-  "startup": "application",
   "url": "https://beta.esphome.io/",
   "version": "1.16.0",
   "webui": "http://[HOST]:[PORT:6052]"

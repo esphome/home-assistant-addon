@@ -5,8 +5,7 @@
     "aarch64"
   ],
   "auth_api": true,
-  "auto_uart": true,
-  "boot": "auto",
+  "uart": true,
   "description": "Development Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
   "hassio_api": true,
   "hassio_role": "default",
@@ -41,7 +40,6 @@
   },
   "slug": "esphome-dev",
   "stage": "experimental",
-  "startup": "application",
   "url": "https://next.esphome.io/",
   "version": "dev",
   "webui": "http://[HOST]:[PORT:6052]"
