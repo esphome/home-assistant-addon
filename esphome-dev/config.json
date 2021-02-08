@@ -8,8 +8,6 @@
   "uart": true,
   "description": "Development Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
   "hassio_api": true,
-  "hassio_role": "default",
-  "homeassistant_api": false,
   "host_network": true,
   "ingress": true,
   "ingress_port": 0,
@@ -41,6 +39,5 @@
   "slug": "esphome-dev",
   "stage": "experimental",
   "url": "https://next.esphome.io/",
-  "version": "dev",
-  "webui": "http://[HOST]:[PORT:6052]"
+  "version": "dev"
 }
