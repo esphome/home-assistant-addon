@@ -41,9 +41,7 @@ def main(args):
         if channel == Channel.dev:
             path = dir_ / 'build.json'
             build_conf = {
-                'squash': False,
-                "build_from": {arch: base_image.format(arch=arch) for arch in conf['arch']},
-                "args": {}
+                "build_from": {arch: base_image.format(arch=arch) for arch in conf['arch']}
             }
             with open(path, 'w') as f:
                 json.dump(build_conf, f, indent=2, sort_keys=True)
