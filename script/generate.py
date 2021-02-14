@@ -38,6 +38,10 @@ def main(args):
         for file_, conf_ in copyf.items():
             copyfile(templ / file_, dir_ / file_)
 
+        path = dir_ / 'FILES ARE GENERATED DO NOT EDIT'
+        with open(path, 'w') as f:
+            f.write("Any edits should be made to the files in the 'template' directory")
+
         if channel == Channel.dev:
             path = dir_ / 'build.json'
             build_conf = {
