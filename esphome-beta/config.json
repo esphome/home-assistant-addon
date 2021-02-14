@@ -5,9 +5,12 @@
     "aarch64"
   ],
   "auth_api": true,
-  "uart": true,
+  "auto_uart": true,
+  "boot": "auto",
   "description": "Beta version of ESPHome Hass.io add-on.",
   "hassio_api": true,
+  "hassio_role": "default",
+  "homeassistant_api": false,
   "host_network": true,
   "image": "esphome/esphome-hassio-{arch}",
   "ingress": true,
@@ -17,6 +20,7 @@
     "config:rw"
   ],
   "name": "ESPHome (beta)",
+  "options": {},
   "panel_icon": "mdi:chip",
   "ports": {
     "6052/tcp": null
@@ -36,6 +40,8 @@
   },
   "slug": "esphome-beta",
   "stage": "experimental",
+  "startup": "application",
   "url": "https://beta.esphome.io/",
-  "version": "1.16.0"
+  "version": "1.16.1",
+  "webui": "http://[HOST]:[PORT:6052]"
 }
