@@ -21,7 +21,7 @@ base: &base
   ingress_port: 0
   panel_icon: 'mdi:chip'
   # Automatically add UART devices to addon
-  auto_uart: true
+  uart: true
   ports:
     '6052/tcp': null
   ports_description:
