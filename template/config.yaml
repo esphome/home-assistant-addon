@@ -1,9 +1,6 @@
 ---
 base: &base
   url: https://esphome.io/
-  webui: 'http://[HOST]:[PORT:6052]'
-  startup: application
-  boot: auto
   arch:
     - amd64
     - armv7
@@ -11,9 +8,6 @@ base: &base
   # Uses Hass.io API (auth)
   hassio_api: true
   auth_api: true
-  hassio_role: default
-  # Doesn't use HA API
-  homeassistant_api: false
   # Host network mode for mDNS
   host_network: true
   # Ingress settings
@@ -21,7 +15,7 @@ base: &base
   ingress_port: 0
   panel_icon: 'mdi:chip'
   # Automatically add UART devices to addon
-  auto_uart: true
+  uart: true
   ports:
     '6052/tcp': null
   ports_description:
@@ -62,7 +56,6 @@ esphome-beta:
   url: https://beta.esphome.io/
   image: esphome/esphome-hassio-{arch}
   stage: experimental
-  options: {}
 
 esphome-stable:
   <<: *base
@@ -72,8 +65,6 @@ esphome-stable:
   slug: esphome
   description: "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices."
   image: esphome/esphome-hassio-{arch}
-  stage: stable
-  options: {}
 
 copy_files:
   icon.png:

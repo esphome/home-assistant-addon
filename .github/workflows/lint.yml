@@ -10,6 +10,14 @@ jobs:
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v2
+      - name: 🛠 Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: 🛠 Install dependencies
+        run: pip install -r script/requirements.txt
+      - name: 🛠 Generate files from template
+        run: python script/generate.py dev beta stable
       - name: 🚀 Run Home Assistant Add-on Lint on ${{ matrix.channel }}
         uses: frenck/action-addon-linter@v2
         with:
