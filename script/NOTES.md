@@ -7,7 +7,7 @@ the Hassio config for each type of install: latest, beta and dev.
 - `beta` points to the most recent full release or beta release (whichever is newer). This is so that beta image users automatically get upgraded to the stable install once it gets released.
 - `dev` is an image that Hassio builds itself and contains the latest ESPHome version straigt from dev branch.
 
-The config.json files are all automatically written with the script in this directory and the `template/config.yaml` file.
+The config.json files are all automatically written with the script in this directory and the `template/addon_config.yaml` file.
 
 To update one of the images: use
 

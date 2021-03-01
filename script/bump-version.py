@@ -60,7 +60,7 @@ def write_version(target: str, version: Version):
     #  version: '1.14.5'  # BETA
     #  version: '1.14.5'  # STABLE
     sub(
-        'template/config.yaml',
+        'template/addon_config.yaml',
         r"  version: '[^']+'  # {}".format(target.upper()),
         f"  version: '{version}'  # {target.upper()}"
     )

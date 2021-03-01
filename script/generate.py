@@ -22,7 +22,7 @@ def main(args):
     root = Path(__file__).parent.parent
     templ = root / 'template'
 
-    with open(templ / "config.yaml", 'r') as f:
+    with open(templ / "addon_config.yaml", 'r') as f:
         config = yaml.safe_load(f)
 
     copyf = config['copy_files']
