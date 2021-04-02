@@ -34,10 +34,9 @@ Then just click UPLOAD and the sensor will magically appear in Home Assistant:
 
 ## Installation
 
-To install this Home Assistant add-on you need to add the ESPHome add-on repository
-first:
+To install this Home Assistant add-on you need to follow those steps:
 
-1. Add the ESPHome add-ons repository to your Home Assistant instance. You can do this by navigating to the "Add-on store" tab in the Supervisor panel and then entering https://github.com/esphome/hassio in the "Add repository" field after selecting "Repositories" from the top-right menu.
+1. Go to the "Add-on store" tab in the "Supervisor" panel.
 2. Now scroll down and select the "ESPHome" add-on.
 3. Press install to download the add-on and unpack it on your machine. This can take some time.
 4. Optional: If you're using SSL/TLS certificates and want to encrypt your communication to this add-on, please enter `true` into the `ssl` field and set the `fullchain` and `certfile` options accordingly.
