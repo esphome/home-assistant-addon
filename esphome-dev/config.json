@@ -5,7 +5,6 @@
     "aarch64"
   ],
   "auth_api": true,
-  "uart": true,
   "description": "Development Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
   "hassio_api": true,
   "host_network": true,
@@ -38,6 +37,7 @@
   },
   "slug": "esphome-dev",
   "stage": "experimental",
+  "uart": true,
   "url": "https://next.esphome.io/",
   "version": "dev"
 }
