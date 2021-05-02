@@ -21,7 +21,7 @@ jobs:
       id: commit_version
       run: |
         git config user.name esphomebot
-        git config user.email contact@esphome.io
+        git config user.email esphome@nabucasa.com
         git add .
         git commit -m "Bump version to v${{ github.event.inputs.version }}"
         git push
@@ -37,7 +37,7 @@ jobs:
         release_name: ${{ github.event.inputs.version }}
         body: 'See https://beta.esphome.io/changelog/index.html'
         prerelease: true
-        commitish: ${{ steps.commit_version.outputs.commit_sha }}  
+        commitish: ${{ steps.commit_version.outputs.commit_sha }}
     - if: ${{ !contains(github.event.inputs.version, 'b') }}
       name: Create Stable Release
       uses: actions/create-release@v1
@@ -48,8 +48,7 @@ jobs:
         release_name: ${{ github.event.inputs.version }}
         body: 'See https://esphome.io/changelog/index.html'
         prerelease: false
-        commitish: ${{ steps.commit_version.outputs.commit_sha }} 
-
+        commitish: ${{ steps.commit_version.outputs.commit_sha }}
 
   deploy-community-addons:
     runs-on: ubuntu-latest
