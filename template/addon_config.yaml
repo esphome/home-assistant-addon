@@ -5,7 +5,7 @@ base: &base
     - amd64
     - armv7
     - aarch64
-  # Uses Hass.io API (auth)
+  # Uses Home Assistant Supervisor API (auth)
   hassio_api: true
   auth_api: true
   # Host network mode for mDNS
@@ -14,12 +14,12 @@ base: &base
   ingress: true
   ingress_port: 0
   panel_icon: 'mdi:chip'
-  # Automatically add UART devices to addon
+  # Automatically add UART devices to add-on
   uart: true
   ports:
     '6052/tcp': null
   ports_description:
-    '6052/tcp': "Web interface (Not required for Home Assistant Ingress)"
+    '6052/tcp': "Web interface (not required for Home Assistant ingress)"
   map:
     - ssl:ro
     - config:rw
@@ -40,7 +40,7 @@ esphome-dev:
   name: ESPHome (dev)
   version: 'dev'  # DEV
   slug: esphome-dev
-  description: "Development Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files"
+  description: "Development version of ESPHome add-on"
   url: https://next.esphome.io/
   stage: experimental
   options:
@@ -52,7 +52,7 @@ esphome-beta:
   name: ESPHome (beta)
   version: '1.18.0'  # BETA
   slug: esphome-beta
-  description: "Beta version of ESPHome Hass.io add-on."
+  description: "Beta version of ESPHome add-on"
   url: https://beta.esphome.io/
   image: esphome/esphome-hassio-{arch}
   stage: experimental
@@ -63,7 +63,7 @@ esphome-stable:
   name: ESPHome
   version: '1.18.0'  # STABLE
   slug: esphome
-  description: "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices."
+  description: "ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices"
   image: esphome/esphome-hassio-{arch}
 
 copy_files:
