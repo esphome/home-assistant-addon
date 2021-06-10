@@ -50,7 +50,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: '1.19.0b1'  # BETA
+  version: '1.19.0b2'  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome add-on."
   url: https://beta.esphome.io/
