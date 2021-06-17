@@ -33,7 +33,7 @@ base: &base
     relative_url: str?
     status_use_ping: bool?
   snapshot_exclude:
-    - */*/
+    - "*/*/"
   base_image: esphome/esphome-hassio-base-{arch}:3.1.0
 
 esphome-dev:
