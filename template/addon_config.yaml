@@ -1,4 +1,7 @@
 ---
+# When changing options in this file, please also run:
+#    python3 script/generate.py dev 
+# to update the dev addon config (beta/stable configs will be updated on next release by release script)
 base: &base
   url: https://esphome.io/
   arch:
