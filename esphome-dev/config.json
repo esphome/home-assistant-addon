@@ -36,6 +36,9 @@
     "streamer_mode": "bool?"
   },
   "slug": "esphome-dev",
+  "snapshot_exclude": [
+    "*/*/"
+  ],
   "stage": "experimental",
   "uart": true,
   "url": "https://next.esphome.io/",

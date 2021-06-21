@@ -1,4 +1,7 @@
 ---
+# When changing options in this file, please also run:
+#    python3 script/generate.py dev 
+# to update the dev addon config (beta/stable configs will be updated on next release by release script)
 base: &base
   url: https://esphome.io/
   arch:
@@ -32,7 +35,9 @@ base: &base
     streamer_mode: bool?
     relative_url: str?
     status_use_ping: bool?
-  base_image: esphome/esphome-hassio-base-{arch}:3.0.0
+  snapshot_exclude:
+    - "*/*/"
+  base_image: esphome/esphome-hassio-base-{arch}:3.1.0
 
 esphome-dev:
   <<: *base
@@ -50,7 +55,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: '1.18.0'  # BETA
+  version: '1.19.1'  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome add-on"
   url: https://beta.esphome.io/
@@ -61,7 +66,7 @@ esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: '1.18.0'  # STABLE
+  version: '1.19.1'  # STABLE
   slug: esphome
   description: "ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices"
   image: esphome/esphome-hassio-{arch}
@@ -71,3 +76,4 @@ copy_files:
   logo.png:
   README.md:
   DOCS.md:
+  CHANGELOG.md:
