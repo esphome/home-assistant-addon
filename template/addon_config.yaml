@@ -1,6 +1,6 @@
 ---
 # When changing options in this file, please also run:
-#    python3 script/generate.py dev 
+#    python3 script/generate.py dev
 # to update the dev addon config (beta/stable configs will be updated on next release by release script)
 base: &base
   url: https://esphome.io/
@@ -31,7 +31,6 @@ base: &base
     certfile: str?
     keyfile: str?
     leave_front_door_open: bool?
-    esphome_version: str?
     streamer_mode: bool?
     relative_url: str?
     status_use_ping: bool?
@@ -48,8 +47,6 @@ esphome-dev:
   description: "Development version of ESPHome add-on"
   url: https://next.esphome.io/
   stage: experimental
-  options:
-    esphome_version: dev
 
 esphome-beta:
   <<: *base
