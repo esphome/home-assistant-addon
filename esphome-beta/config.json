@@ -39,5 +39,5 @@
   "stage": "experimental",
   "uart": true,
   "url": "https://beta.esphome.io/",
-  "version": "1.21.0b1"
+  "version": "1.21.0b2"
 }
