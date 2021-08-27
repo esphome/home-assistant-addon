@@ -5,6 +5,9 @@
     "aarch64"
   ],
   "auth_api": true,
+  "backup_exclude": [
+    "*/*/"
+  ],
   "description": "Development version of ESPHome add-on",
   "hassio_api": true,
   "host_network": true,
@@ -32,9 +35,6 @@
     "streamer_mode": "bool?"
   },
   "slug": "esphome-dev",
-  "snapshot_exclude": [
-    "*/*/"
-  ],
   "stage": "experimental",
   "uart": true,
   "url": "https://next.esphome.io/",
