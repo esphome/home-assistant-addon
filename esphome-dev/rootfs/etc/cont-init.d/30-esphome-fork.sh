@@ -22,7 +22,7 @@ if bashio::config.has_value 'esphome_fork'; then
     bashio::log.info "Checking forked ESPHome"
     dev_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
     bashio::log.info "Installing esphome from fork '${esphome_fork}' (${full_url})..."
-    pip3 install -U --no-cache-dir "${full_url}" \
+    pip3 install -U --no-cache-dir "${full_url}" -qq \
       || bashio::exit.nok "Failed installing esphome pinned version."
     fork_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
 
@@ -31,6 +31,6 @@ if bashio::config.has_value 'esphome_fork'; then
       bashio::log.error "Reverting to standard ESPHome dev version as fork version does not match"
       bashio::log.error "Update (or ask the author to update) the branch"
       bashio::log.error "############################"
-      pip3 install -U --no-cache-dir -e /usr/src/esphome
+      pip3 install -U --no-cache-dir -e /opt/esphome -qq
     fi
 fi
