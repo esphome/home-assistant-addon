@@ -31,6 +31,6 @@ if bashio::config.has_value 'esphome_fork'; then
       bashio::log.error "Reverting to standard ESPHome dev version as fork version does not match"
       bashio::log.error "Update (or ask the author to update) the branch"
       bashio::log.error "############################"
-      pip3 install -U --no-cache-dir -e /opt/esphome -qq
+      pip3 install -U --no-cache-dir https://github.com/esphome/esphome/archive/dev.zip -qq
     fi
 fi
