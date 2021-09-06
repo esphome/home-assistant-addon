@@ -27,10 +27,14 @@ if bashio::config.has_value 'esphome_fork'; then
     fork_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
 
     if [[ "$fork_version" != "$dev_version" ]]; then
-      bashio::log.error "############################"
-      bashio::log.error "Reverting to standard ESPHome dev version as fork version does not match"
-      bashio::log.error "Update (or ask the author to update) the branch"
-      bashio::log.error "############################"
       pip3 install -U --no-cache-dir https://github.com/esphome/esphome/archive/dev.zip -qq
+      bashio::log.error "############################"
+      bashio::log.error "Uninstalled fork as version does not match"
+      bashio::log.error "Update (or ask the author to update) the branch"
+      bashio::log.error "This is important as the dev addon and the dev ESPHome"
+      bashio::log.error "branch can have changes that are not compatible with old forks"
+      bashio::log.error "and get reported as bugs which we cannot solve easily."
+      bashio::log.error "############################"
+      bashio::exit.nok
     fi
 fi
