@@ -47,6 +47,15 @@ esphome-dev:
   description: "Development version of ESPHome add-on"
   url: https://next.esphome.io/
   stage: experimental
+  schema:
+    ssl: bool?
+    certfile: str?
+    keyfile: str?
+    leave_front_door_open: bool?
+    streamer_mode: bool?
+    relative_url: str?
+    status_use_ping: bool?
+    esphome_fork: str?
 
 esphome-beta:
   <<: *base
