@@ -21,7 +21,7 @@ if bashio::config.has_value 'esphome_fork'; then
     full_url="https://github.com/${username}/esphome/archive/${ref}.zip"
     bashio::log.info "Checking forked ESPHome"
     dev_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
-    bashio::log.info "Installing esphome from fork '${esphome_version}' (${full_url})..."
+    bashio::log.info "Installing esphome from fork '${esphome_fork}' (${full_url})..."
     pip3 install -U --no-cache-dir "${full_url}" \
       || bashio::exit.nok "Failed installing esphome pinned version."
     fork_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
