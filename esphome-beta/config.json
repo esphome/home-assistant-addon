@@ -5,6 +5,9 @@
     "aarch64"
   ],
   "auth_api": true,
+  "backup_exclude": [
+    "*/*/"
+  ],
   "description": "Beta version of ESPHome add-on",
   "hassio_api": true,
   "host_network": true,
@@ -33,11 +36,8 @@
     "streamer_mode": "bool?"
   },
   "slug": "esphome-beta",
-  "snapshot_exclude": [
-    "*/*/"
-  ],
   "stage": "experimental",
   "uart": true,
   "url": "https://beta.esphome.io/",
-  "version": "2021.8.2"
+  "version": "2021.9.0b1"
 }
