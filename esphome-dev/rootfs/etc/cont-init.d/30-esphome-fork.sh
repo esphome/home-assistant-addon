@@ -27,7 +27,6 @@ if bashio::config.has_value 'esphome_fork'; then
     fork_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
 
     if [[ "$fork_version" != "$dev_version" ]]; then
-      pip3 install -U --no-cache-dir https://github.com/esphome/esphome/archive/dev.zip -qq
       bashio::log.error "############################"
       bashio::log.error "Uninstalled fork as version does not match"
       bashio::log.error "Update (or ask the author to update) the branch"
