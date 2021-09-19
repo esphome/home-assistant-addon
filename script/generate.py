@@ -39,7 +39,10 @@ def main(args):
             json.dump(conf, f, indent=2, sort_keys=True)
 
         for file_, conf_ in copyf.items():
-            copyfile(templ / file_, dir_ / file_)
+            if Path.exists(templ / channel.value / file_):
+                copyfile(templ / channel.value / file_, dir_ / file_)
+            else:
+                copyfile(templ / file_, dir_ / file_)
 
         path = dir_ / "FILES ARE GENERATED DO NOT EDIT"
         with open(path, "w") as f:
