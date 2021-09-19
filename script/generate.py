@@ -32,7 +32,7 @@ def main(args):
 
     for channel in args.channels:
         conf = config[f"esphome-{channel.value}"]
-        base_image = conf.pop("base_image")
+        base_image = conf.pop("base_image", None)
         dir_ = root / conf.pop("directory")
         path = dir_ / "config.json"
         with open(path, "w") as f:
