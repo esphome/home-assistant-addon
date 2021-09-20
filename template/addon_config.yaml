@@ -36,7 +36,6 @@ base: &base
     status_use_ping: bool?
   backup_exclude:
     - "*/*/"
-  base_image: esphome/esphome-hassio-base-{arch}:3.1.0
 
 esphome-dev:
   <<: *base
@@ -56,6 +55,7 @@ esphome-dev:
     relative_url: str?
     status_use_ping: bool?
     esphome_fork: str?
+  base_image: esphome/esphome-hassio-{arch}:dev
 
 esphome-beta:
   <<: *base
