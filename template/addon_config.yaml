@@ -55,7 +55,7 @@ esphome-dev:
     relative_url: str?
     status_use_ping: bool?
     esphome_fork: str?
-  base_image: esphome/esphome-hassio-{arch}:dev
+  base_image: ghcr.io/esphome/esphome-hassio-{arch}:dev
 
 esphome-beta:
   <<: *base
