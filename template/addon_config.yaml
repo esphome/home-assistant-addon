@@ -55,7 +55,7 @@ esphome-dev:
     relative_url: str?
     status_use_ping: bool?
     esphome_fork: str?
-  base_image: esphome/esphome-hassio-{arch}:dev
+  base_image: ghcr.io/esphome/esphome-hassio-{arch}:dev
 
 esphome-beta:
   <<: *base
@@ -65,7 +65,7 @@ esphome-beta:
   slug: esphome-beta
   description: "Beta version of ESPHome add-on"
   url: https://beta.esphome.io/
-  image: esphome/esphome-hassio-{arch}
+  image: ghcr.io/esphome/esphome-hassio-{arch}
   stage: experimental
 
 esphome-stable:
@@ -75,7 +75,7 @@ esphome-stable:
   version: '2021.9.1'  # STABLE
   slug: esphome
   description: "ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices"
-  image: esphome/esphome-hassio-{arch}
+  image: ghcr.io/esphome/esphome-hassio-{arch}
 
 copy_files:
   icon.png:

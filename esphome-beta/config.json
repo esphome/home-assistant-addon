@@ -11,7 +11,7 @@
   "description": "Beta version of ESPHome add-on",
   "hassio_api": true,
   "host_network": true,
-  "image": "esphome/esphome-hassio-{arch}",
+  "image": "ghcr.io/esphome/esphome-hassio-{arch}",
   "ingress": true,
   "ingress_port": 0,
   "map": [
