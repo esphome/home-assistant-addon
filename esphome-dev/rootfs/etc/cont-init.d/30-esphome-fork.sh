@@ -25,8 +25,10 @@ if bashio::config.has_value 'esphome_fork'; then
     curl -L -o /tmp/esphome.tar.gz "${full_url}" -qq \
       || bashio::exit.nok "Failed downloading ESPHome fork."
     bashio::log.info "Installing ESPHome from fork '${esphome_fork}' (${full_url})..."
-    tar -zxvf /tmp/esphome.tar.gz -C /esphome --strip-components=1 \
+    mkdir /esphome-fork
+    tar -zxvf /tmp/esphome.tar.gz -C /esphome-fork --strip-components=1 \
       || bashio::exit.nok "Failed installing ESPHome from fork."
+    pip install -U -e /esphome-fork || bashio::exit.nok "Failed installing ESPHome from fork."
     rm -f /tmp/esphome.tar.gz
     fork_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
 
