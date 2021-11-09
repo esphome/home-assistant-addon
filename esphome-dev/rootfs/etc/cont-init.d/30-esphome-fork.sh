@@ -26,7 +26,7 @@ if bashio::config.has_value 'esphome_fork'; then
       || bashio::exit.nok "Failed downloading ESPHome fork."
     bashio::log.info "Installing ESPHome from fork '${esphome_fork}' (${full_url})..."
     mkdir /esphome-fork
-    tar -zxvf /tmp/esphome.tar.gz -C /esphome-fork --strip-components=1 \
+    tar -zxf /tmp/esphome.tar.gz -C /esphome-fork --strip-components=1 \
       || bashio::exit.nok "Failed installing ESPHome from fork."
     pip install -U -e /esphome-fork || bashio::exit.nok "Failed installing ESPHome from fork."
     rm -f /tmp/esphome.tar.gz
