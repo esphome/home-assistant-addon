@@ -18,12 +18,18 @@ if bashio::config.has_value 'esphome_fork'; then
       username="esphome"
       ref=$esphome_fork
     fi
-    full_url="https://github.com/${username}/esphome/archive/${ref}.zip"
+    full_url="https://github.com/${username}/esphome/archive/${ref}.tar.gz"
     bashio::log.info "Checking forked ESPHome"
     dev_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
-    bashio::log.info "Installing esphome from fork '${esphome_fork}' (${full_url})..."
-    pip3 install -U --no-cache-dir "${full_url}" -qq \
-      || bashio::exit.nok "Failed installing esphome pinned version."
+    bashio::log.info "Downloading ESPHome from fork '${esphome_fork}' (${full_url})..."
+    curl -L -o /tmp/esphome.tar.gz "${full_url}" -qq \
+      || bashio::exit.nok "Failed downloading ESPHome fork."
+    bashio::log.info "Installing ESPHome from fork '${esphome_fork}' (${full_url})..."
+    mkdir /esphome-fork
+    tar -zxvf /tmp/esphome.tar.gz -C /esphome-fork --strip-components=1 \
+      || bashio::exit.nok "Failed installing ESPHome from fork."
+    pip install -U -e /esphome-fork || bashio::exit.nok "Failed installing ESPHome from fork."
+    rm -f /tmp/esphome.tar.gz
     fork_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
 
     if [[ "$fork_version" != "$dev_version" ]]; then
@@ -36,4 +42,5 @@ if bashio::config.has_value 'esphome_fork'; then
       bashio::log.error "############################"
       bashio::exit.nok
     fi
+    bashio::log.info "Installed ESPHome from fork '${esphome_fork}' (${full_url})..."
 fi
