@@ -30,6 +30,7 @@ jobs:
     - if: ${{ contains(github.event.inputs.version, 'b') }}
       name: Create Beta Release
       uses: actions/create-release@v1
+      continue-on-error: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -41,6 +42,7 @@ jobs:
     - if: ${{ !contains(github.event.inputs.version, 'b') }}
       name: Create Stable Release
       uses: actions/create-release@v1
+      continue-on-error: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
