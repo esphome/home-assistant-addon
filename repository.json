@@ -1,5 +1,5 @@
 {
-  "name": "ESPHome Home Assistant Add-Ons",
-  "url": "https://github.com/esphome/hassio",
+  "name": "ESPHome",
+  "url": "https://esphome.io",
   "maintainer": "ESPHome <esphome@nabucasa.com>"
 }

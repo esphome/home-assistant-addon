@@ -46,6 +46,7 @@ esphome-dev:
   description: "Development version of ESPHome add-on"
   url: https://next.esphome.io/
   stage: experimental
+  advanced: true
   schema:
     ssl: bool?
     certfile: str?
@@ -67,6 +68,7 @@ esphome-beta:
   url: https://beta.esphome.io/
   image: ghcr.io/esphome/esphome-hassio-{arch}
   stage: experimental
+  advanced: true
 
 esphome-stable:
   <<: *base
