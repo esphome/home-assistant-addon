@@ -1,4 +1,5 @@
 {
+  "advanced": true,
   "arch": [
     "amd64",
     "armv7",
