@@ -40,5 +40,5 @@
   "stage": "experimental",
   "uart": true,
   "url": "https://beta.esphome.io/",
-  "version": "2021.12.3"
+  "version": "2022.1.0b1"
 }
