@@ -1,0 +1,35 @@
+name: Update Community Repo
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: The version to release
+        required: true
+      beta:
+        description: Whether to release a beta version
+        required: false
+        default: false
+
+jobs:
+  deploy-community-addons:
+    runs-on: ubuntu-latest
+    steps:
+    - if: ${{ contains(github.event.inputs.version, 'b') || github.event.inputs.beta }}
+      name: Publish beta release to community-addons repository
+      run: |
+        docker run --rm hassioaddons/repository-updater:latest \
+          --repository hassio-addons/repository-beta \
+          --addon esphome \
+          --token "${TOKEN}"
+      env:
+        TOKEN: ${{ secrets.COMMUNITY_ADDONS_TOKEN }}
+    - if: ${{ !contains(github.event.inputs.version, 'b') }}
+      name: Publish stable release to community-addons repository
+      run: |
+        docker run --rm hassioaddons/repository-updater:latest \
+          --repository hassio-addons/repository \
+          --addon esphome \
+          --token "${TOKEN}"
+      env:
+        TOKEN: ${{ secrets.COMMUNITY_ADDONS_TOKEN }}
