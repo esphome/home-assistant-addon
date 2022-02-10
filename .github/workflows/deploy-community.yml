@@ -8,6 +8,7 @@ on:
         required: true
       beta:
         description: Whether to release a beta version
+        type: boolean
         required: false
         default: false
 
@@ -15,7 +16,7 @@ jobs:
   deploy-community-addons:
     runs-on: ubuntu-latest
     steps:
-    - if: ${{ contains(github.event.inputs.version, 'b') || github.event.inputs.beta }}
+    - if: ${{ contains(github.event.inputs.version, 'b') || github.event.inputs.beta == 'true' }}
       name: Publish beta release to community-addons repository
       run: |
         docker run --rm hassioaddons/repository-updater:latest \
