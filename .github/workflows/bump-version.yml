@@ -24,7 +24,7 @@ jobs:
         git config user.name esphomebot
         git config user.email esphome@nabucasa.com
         git add .
-        git commit -m "Bump version to v${{ github.event.inputs.version }}"
+        git commit -m "Bump version to ${{ github.event.inputs.version }}"
         git push
         COMMIT=$(git rev-parse HEAD)
         echo "::set-output name=commit_sha::${COMMIT}"
