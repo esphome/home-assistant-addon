@@ -16,6 +16,10 @@ jobs:
   deploy-community-addons:
     runs-on: ubuntu-latest
     steps:
+    - name: Git config
+      run: |
+        git config user.name esphomebot
+        git config user.email esphome@nabucasa.com
     - if: ${{ contains(github.event.inputs.version, 'b') || github.event.inputs.beta == 'true' }}
       name: Publish beta release to community-addons repository
       run: |
