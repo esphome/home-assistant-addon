@@ -57,20 +57,30 @@ jobs:
     runs-on: ubuntu-latest
     needs: [create-release]
     steps:
-    - name: Publish beta release to community-addons repository
-      run: |
-        docker run --rm hassioaddons/repository-updater:latest \
-          --repository hassio-addons/repository-beta \
-          --addon esphome \
-          --token "${TOKEN}"
-      env:
-        TOKEN: ${{ secrets.COMMUNITY_ADDONS_TOKEN }}
-    - if: ${{ !contains(github.event.inputs.version, 'b') }}
-      name: Publish stable release to community-addons repository
-      run: |
-        docker run --rm hassioaddons/repository-updater:latest \
-          --repository hassio-addons/repository \
-          --addon esphome \
-          --token "${TOKEN}"
-      env:
-        TOKEN: ${{ secrets.COMMUNITY_ADDONS_TOKEN }}
+      - name: Publish beta release to community-addons repository
+        uses: peter-evans/repository-dispatch@v1.1.3
+        with:
+          token: ${{ secrets.COMMUNITY_ADDONS_TOKEN }}
+          repository: hassio-addons/repository-beta
+          event-type: update
+          client-payload: >
+            {
+              "addon": "esphome",
+              "name": "ESPHome",
+              "repository": "esphome/home-assistant-addon",
+              "version": "${{ github.event.inputs.version }}"
+            }
+      - if: ${{ !contains(github.event.inputs.version, 'b') }}
+        name: Publish stable release to community-addons repository
+        uses: peter-evans/repository-dispatch@v1.1.3
+        with:
+          token: ${{ secrets.COMMUNITY_ADDONS_TOKEN }}
+          repository: hassio-addons/repository
+          event-type: update
+          client-payload: >
+            {
+              "addon": "esphome",
+              "name": "ESPHome",
+              "repository": "esphome/home-assistant-addon",
+              "version": "${{ github.event.inputs.version }}"
+            }
