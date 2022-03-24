@@ -4,7 +4,6 @@ import argparse
 import yaml
 from pathlib import Path
 from enum import Enum
-import json
 from shutil import copyfile
 import sys
 
@@ -34,9 +33,9 @@ def main(args):
         conf = config[f"esphome-{channel.value}"]
         base_image = conf.pop("base_image", None)
         dir_ = root / conf.pop("directory")
-        path = dir_ / "config.json"
+        path = dir_ / "config.yaml"
         with open(path, "w") as f:
-            json.dump(conf, f, indent=2, sort_keys=True)
+            yaml.dump(conf, f, indent=2, sort_keys=True, explicit_start=True)
 
         for file_, conf_ in copyf.items():
             if Path.exists(templ / channel.value / file_):
@@ -49,16 +48,14 @@ def main(args):
             f.write("Any edits should be made to the files in the 'template' directory")
 
         if channel == Channel.dev:
-            path = dir_ / "build.json"
+            path = dir_ / "build.yaml"
             build_conf = {
                 "build_from": {
                     arch: base_image.format(arch=arch) for arch in conf["arch"]
                 }
             }
             with open(path, "w") as f:
-                json.dump(build_conf, f, indent=2, sort_keys=True)
-
-        print(f"Wrote {path}")
+                yaml.dump(build_conf, f, indent=2, sort_keys=True, explicit_start=True)
 
 
 if __name__ == "__main__":
