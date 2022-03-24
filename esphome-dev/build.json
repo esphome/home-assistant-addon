@@ -1,7 +1,0 @@
-{
-  "build_from": {
-    "aarch64": "ghcr.io/esphome/esphome-hassio-aarch64:dev",
-    "amd64": "ghcr.io/esphome/esphome-hassio-amd64:dev",
-    "armv7": "ghcr.io/esphome/esphome-hassio-armv7:dev"
-  }
-}
