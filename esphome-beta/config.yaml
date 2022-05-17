@@ -34,4 +34,4 @@ slug: esphome-beta
 stage: experimental
 uart: true
 url: https://beta.esphome.io/
-version: 2022.5.0b3
+version: 2022.5.0b4
