@@ -18,7 +18,6 @@ if bashio::config.has_value 'esphome_fork'; then
       username="esphome"
       ref=$esphome_fork
     fi
-    rm -rf /esphome || bashio::exit.nok "Failed to remove ESPHome."
     full_url="https://github.com/${username}/esphome/archive/${ref}.tar.gz"
     bashio::log.info "Checking forked ESPHome"
     dev_version=$(python3 -c "from esphome.const import __version__; print(__version__)")
@@ -26,6 +25,7 @@ if bashio::config.has_value 'esphome_fork'; then
     curl -L -o /tmp/esphome.tar.gz "${full_url}" -qq \
       || bashio::exit.nok "Failed downloading ESPHome fork."
     bashio::log.info "Installing ESPHome from fork '${esphome_fork}' (${full_url})..."
+    rm -rf /esphome || bashio::exit.nok "Failed to remove ESPHome."
     mkdir /esphome
     tar -zxf /tmp/esphome.tar.gz -C /esphome --strip-components=1 \
       || bashio::exit.nok "Failed installing ESPHome from fork."
