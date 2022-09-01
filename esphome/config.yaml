@@ -32,4 +32,4 @@ schema:
 slug: esphome
 uart: true
 url: https://esphome.io/
-version: 2022.8.0
+version: 2022.8.1
