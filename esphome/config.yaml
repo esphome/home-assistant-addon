@@ -12,6 +12,7 @@ host_network: true
 image: ghcr.io/esphome/esphome-hassio-{arch}
 ingress: true
 ingress_port: 0
+init: false
 map:
 - ssl:ro
 - config:rw
