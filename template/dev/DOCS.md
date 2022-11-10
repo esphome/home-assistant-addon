@@ -1,40 +1,31 @@
-# Home Assistant Community Add-on: ESPHome
+# ESPHome DEV add on
 
-## Installation
+This is **development** version of the ESPHome add on.
 
-The installation of this add-on is pretty straightforward and not different in comparison to installing any other Home Assistant add-on.
+To deploy production nodes please use mainstream release add on.
 
-1. Search for the “ESPHome” add-on in the Supervisor add-on store.
-2. Press install to download the add-on and unpack it on your machine. This can take some time.
-3. Optional: If you're using SSL/TLS certificates and want to encrypt your communication to this add-on, please enter `true` into the `ssl` field and set the `fullchain` and `certfile` options accordingly.
-4. Start the add-on, check the logs of the add-on to see if everything went well.
-5. Click "OPEN WEB UI" to open the ESPHome dashboard. You will be asked for your Home Assistant credentials - ESPHome uses Home Assistant's authentication system to log you in.
-
-You can view the ESPHome documentation at https://esphome.io/
+The add on uses a version of ESPHome built automatically every day at 02:00 UTC. and is used to test components in development. See the `esphome_fork` configuration below to properly configure the add on. Once you update the configuration make sure to rebuild the image.
 
 ## Configuration
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
-
-Example add-on configuration:
-
-```json
-{
-  "ssl": false,
-  "certfile": "fullchain.pem",
-  "keyfile": "privkey.pem"
-}
-```
 
 ### Option: `esphome_fork`
 
 Install ESPHome from a fork or branch.
 For example to test a pull request, use `pull/XXXX/head` where `XXXX` is the PR number,
 or you can specify the username of the fork owner and branch `username:branch` which
-assumes the repository is named `esphome` still. 
+assumes the repository is named `esphome` still.
+
+If you need to test the latest commit on dev branch before the image is updated you can enter `dev` here.
 
 Please note that the fork or branch you are using **must** be up to date with ESPHome dev
-or the add-on **will not start**. 
+or the add-on **will not start**.
+
+
+## General ESPHome add on configurations
+
+General options also available in other versions.
 
 ### Option: `ssl`
 
