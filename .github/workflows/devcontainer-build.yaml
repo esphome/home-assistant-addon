@@ -37,5 +37,5 @@ jobs:
           context: .
           file: .devcontainer/Dockerfile
           tags: ghcr.io/${{ github.repository_owner }}/devcontainer:addons
-          push: ${{ github.event_name == 'pull_request' }}
+          push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64,linux/arm64
