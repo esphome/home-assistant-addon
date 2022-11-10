@@ -36,6 +36,8 @@ base: &base
     status_use_ping: bool?
   backup_exclude:
     - "*/*/"
+  # Disable docker init for s6
+  init: false
 
 esphome-dev:
   <<: *base
