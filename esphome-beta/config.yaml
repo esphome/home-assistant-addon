@@ -25,6 +25,7 @@ ports_description:
   6052/tcp: Web interface (not required for Home Assistant ingress)
 schema:
   certfile: str?
+  default_compile_process_limit: int(1,)?
   keyfile: str?
   leave_front_door_open: bool?
   relative_url: str?
@@ -35,4 +36,4 @@ slug: esphome-beta
 stage: experimental
 uart: true
 url: https://beta.esphome.io/
-version: 2022.11.3
+version: 2022.11.4
