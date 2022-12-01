@@ -24,6 +24,7 @@ ports_description:
   6052/tcp: Web interface (not required for Home Assistant ingress)
 schema:
   certfile: str?
+  default_compile_process_limit: int(1,)?
   esphome_fork: str?
   keyfile: str?
   leave_front_door_open: bool?

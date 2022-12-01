@@ -34,6 +34,7 @@ base: &base
     streamer_mode: bool?
     relative_url: str?
     status_use_ping: bool?
+    default_compile_process_limit: int(1,)?
   backup_exclude:
     - "*/*/"
   # Disable docker init for s6
@@ -58,6 +59,7 @@ esphome-dev:
     relative_url: str?
     status_use_ping: bool?
     esphome_fork: str?
+    default_compile_process_limit: int(1,)?
   base_image: ghcr.io/esphome/esphome-hassio-{arch}:dev
 
 esphome-beta:
