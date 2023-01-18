@@ -21,8 +21,6 @@ base: &base
   uart: true
   ports:
     '6052/tcp': null
-  ports_description:
-    '6052/tcp': "Web interface (not required for Home Assistant ingress)"
   map:
     - ssl:ro
     - config:rw

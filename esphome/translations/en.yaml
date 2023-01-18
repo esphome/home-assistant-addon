@@ -57,4 +57,4 @@ configuration:
       potentially private information. So for example WiFi (B)SSIDs (which could
       be used to find your location), usernames, etc.
 network:
-  6052/tcp: Web interface
+  6052/tcp: Web interface (not required for Home Assistant ingress)
