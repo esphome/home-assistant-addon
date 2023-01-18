@@ -1,0 +1,60 @@
+---
+configuration:
+  certfile:
+    name: Certificate file
+    description: >-
+      The certificate file to use for SSL. Note that this file must
+      exist in the /ssl/ folder.
+  default_compile_process_limit:
+    name: Default compile process limit
+    description: >-
+      The default compile process limit. This is the maximum number of
+      simultaneous compile processes that ESPHome will run.
+  esphome_fork:
+    name: Install ESPHome from a fork or branch
+    description: >-
+      For example to test a pull request, use `pull/XXXX/head` where `XXXX` is
+      the PR number, or you can specify the username of the fork owner and
+      branch `username:branch` which assumes the repository is named `esphome`
+      still.
+
+      If you need to test the latest commit on dev branch before the image is
+      updated you can enter `dev` here.
+
+      Please note that the fork or branch you are using **must** be up to
+      date with ESPHome dev or the add-on **will not start**.
+  keyfile:
+    name: Private key file
+    description: >-
+      The private key file to use for SSL. Note that this file must
+      exist in the /ssl/ folder.
+  leave_front_door_open:
+    name: Disable external authentication
+    description: >-
+      Disables external authentication when having opened the add-on
+      on an external port. **WARNING**: This is a security risk!
+  relative_url:
+    name: Relative URL
+    description: >-
+      Host the ESPHome dashboard under a relative URL, so that it can be
+      integrated into existing web proxies like NGINX under a relative URL.
+      Defaults to `/`.
+  ssl:
+    name: SSL
+    description: >-
+      Enables/Disables SSL (HTTPS) on the web interface.
+  status_use_ping:
+    name: Use ping for status
+    description: >-
+      By default the dashboard uses mDNS to check if nodes are online. This does
+      not work across subnets unless your router supports mDNS forwarding
+      or avahi. Enabling this option will use ICMP ping to check if nodes are
+      online.
+  streamer_mode:
+    name: Streamer mode
+    description: >-
+      Enables/Disables streamer mode, which makes ESPHome hide all
+      potentially private information. So for example WiFi (B)SSIDs (which could
+      be used to find your location), usernames, etc.
+network:
+  6052/tcp: Web interface (to use without Home Assistant)
