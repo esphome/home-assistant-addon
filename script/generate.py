@@ -35,7 +35,7 @@ def main(args):
         dir_ = root / conf.pop("directory")
         path = dir_ / "config.yaml"
         with open(path, "w") as f:
-            yaml.dump(conf, f, indent=2, sort_keys=True, explicit_start=True)
+            yaml.dump(conf, f, indent=2, sort_keys=False, explicit_start=True)
 
         for file_, conf_ in copyf.items():
             if Path.exists(templ / channel.value / file_):

@@ -27,14 +27,14 @@ base: &base
     - ssl:ro
     - config:rw
   schema:
+    status_use_ping: bool?
+    streamer_mode: bool?
+    default_compile_process_limit: int(1,)?
     ssl: bool?
     certfile: str?
     keyfile: str?
-    leave_front_door_open: bool?
-    streamer_mode: bool?
     relative_url: str?
-    status_use_ping: bool?
-    default_compile_process_limit: int(1,)?
+    leave_front_door_open: bool?
   backup_exclude:
     - "*/*/"
   # Disable docker init for s6
@@ -51,15 +51,15 @@ esphome-dev:
   stage: experimental
   advanced: true
   schema:
+    status_use_ping: bool?
+    streamer_mode: bool?
+    default_compile_process_limit: int(1,)?
+    esphome_fork: str?
     ssl: bool?
     certfile: str?
     keyfile: str?
-    leave_front_door_open: bool?
-    streamer_mode: bool?
     relative_url: str?
-    status_use_ping: bool?
-    esphome_fork: str?
-    default_compile_process_limit: int(1,)?
+    leave_front_door_open: bool?
   base_image: ghcr.io/esphome/esphome-hassio-{arch}:dev
 
 esphome-beta:
@@ -84,8 +84,9 @@ esphome-stable:
   image: ghcr.io/esphome/esphome-hassio-{arch}
 
 copy_files:
+  CHANGELOG.md:
+  DOCS.md:
   icon.png:
   logo.png:
   README.md:
-  DOCS.md:
-  CHANGELOG.md:
+  translations/en.yaml:

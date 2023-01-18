@@ -1,37 +1,37 @@
 ---
+url: https://esphome.io/
 arch:
 - amd64
 - armv7
 - aarch64
-auth_api: true
-backup_exclude:
-- '*/*/'
-description: ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices
 hassio_api: true
+auth_api: true
 host_network: true
-image: ghcr.io/esphome/esphome-hassio-{arch}
 ingress: true
 ingress_port: 0
-init: false
-map:
-- ssl:ro
-- config:rw
-name: ESPHome
 panel_icon: mdi:chip
+uart: true
 ports:
   6052/tcp: null
 ports_description:
   6052/tcp: Web interface (not required for Home Assistant ingress)
+map:
+- ssl:ro
+- config:rw
 schema:
-  certfile: str?
-  default_compile_process_limit: int(1,)?
-  keyfile: str?
-  leave_front_door_open: bool?
-  relative_url: str?
-  ssl: bool?
   status_use_ping: bool?
   streamer_mode: bool?
-slug: esphome
-uart: true
-url: https://esphome.io/
+  default_compile_process_limit: int(1,)?
+  ssl: bool?
+  certfile: str?
+  keyfile: str?
+  relative_url: str?
+  leave_front_door_open: bool?
+backup_exclude:
+- '*/*/'
+init: false
+name: ESPHome
 version: 2022.12.3
+slug: esphome
+description: ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices
+image: ghcr.io/esphome/esphome-hassio-{arch}
