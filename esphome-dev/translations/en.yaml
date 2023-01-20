@@ -23,6 +23,13 @@ configuration:
 
       Please note that the fork or branch you are using **must** be up to
       date with ESPHome dev or the add-on **will not start**.
+  home_assistant_dashboard_integration:
+    name: Home Assistant Dashboard Integration
+    description: >-
+      Enables/Disables the ESPHome dashboard integrating with Home Assistant
+      for automatic configuration of devices and device updates. If you use
+      multiple version of the ESPHome add-on, make sure it is enabled on a
+      single add-on only.
   keyfile:
     name: Private key file
     description: >-
