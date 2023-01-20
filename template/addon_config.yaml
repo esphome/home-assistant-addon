@@ -58,7 +58,7 @@ esphome-dev:
     keyfile: str?
     relative_url: str?
     leave_front_door_open: bool?
-  base_image: ghcr.io/esphome/esphome-hassio-{arch}:dev
+  base_image: ghcr.io/esphome/esphome-hassio:dev
 
 esphome-beta:
   <<: *base
@@ -68,7 +68,7 @@ esphome-beta:
   slug: esphome-beta
   description: "Beta version of ESPHome add-on"
   url: https://beta.esphome.io/
-  image: ghcr.io/esphome/esphome-hassio-{arch}
+  image: ghcr.io/esphome/esphome-hassio
   stage: experimental
   advanced: true
 
@@ -79,7 +79,7 @@ esphome-stable:
   version: '2022.12.3'  # STABLE
   slug: esphome
   description: "ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices"
-  image: ghcr.io/esphome/esphome-hassio-{arch}
+  image: ghcr.io/esphome/esphome-hassio
 
 copy_files:
   CHANGELOG.md:

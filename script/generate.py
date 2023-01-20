@@ -51,7 +51,7 @@ def main(args):
             path = dir_ / "build.yaml"
             build_conf = {
                 "build_from": {
-                    arch: base_image.format(arch=arch) for arch in conf["arch"]
+                    arch: base_image for arch in conf["arch"]
                 }
             }
             with open(path, "w") as f:
