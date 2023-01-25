@@ -47,8 +47,7 @@ jobs:
         git push
         COMMIT=$(git rev-parse HEAD)
         echo "::set-output name=commit_sha::${COMMIT}"
-    - if: ${{ contains(github.event.inputs.version, 'b') }}
-      name: Create Beta Release
+    - name: Create a Release
       uses: actions/create-release@v1.1.4
       continue-on-error: true
       env:
@@ -57,17 +56,5 @@ jobs:
         tag_name: ${{ github.event.inputs.version }}
         release_name: ${{ github.event.inputs.version }}
         body: ${{ github.event.inputs.content }}
-        prerelease: true
-        commitish: ${{ steps.commit_version.outputs.commit_sha }}
-    - if: ${{ !contains(github.event.inputs.version, 'b') }}
-      name: Create Stable Release
-      uses: actions/create-release@v1.1.4
-      continue-on-error: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.event.inputs.version }}
-        release_name: ${{ github.event.inputs.version }}
-        body: ${{ github.event.inputs.content }}
-        prerelease: false
+        prerelease: ${{ contains(github.event.inputs.version, 'b') }}
         commitish: ${{ steps.commit_version.outputs.commit_sha }}
