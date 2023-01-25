@@ -6,6 +6,9 @@ on:
       version:
         description: The version to release
         required: true
+      content:
+        description: The content of the release-notes
+        required: true
 
 jobs:
   create-release:
@@ -18,6 +21,22 @@ jobs:
         python-version: '3.x'
     - run: pip install -r script/requirements.txt
     - run: script/bump-version.py ${{ github.event.inputs.version }}
+    - name: Write Beta changelog
+      if: ${{ contains(github.event.inputs.version, 'b') }}
+      run: |
+        cat > esphome-beta/CHANGELOG.md << 'EOF'
+        ## ${{ github.event.inputs.version }}
+
+        ${{ github.event.inputs.content }}
+        EOF
+    - name: Write Stable changelog
+      if: ${{ !contains(github.event.inputs.version, 'b') }}
+      run: |
+        cat > esphome/CHANGELOG.md << 'EOF'
+        ## ${{ github.event.inputs.version }}
+
+        ${{ github.event.inputs.content }}
+        EOF
     - name: Commit version bump
       id: commit_version
       run: |
@@ -37,7 +56,7 @@ jobs:
       with:
         tag_name: ${{ github.event.inputs.version }}
         release_name: ${{ github.event.inputs.version }}
-        body: 'See https://beta.esphome.io/changelog/index.html'
+        body: ${{ github.event.inputs.content }}
         prerelease: true
         commitish: ${{ steps.commit_version.outputs.commit_sha }}
     - if: ${{ !contains(github.event.inputs.version, 'b') }}
@@ -49,6 +68,6 @@ jobs:
       with:
         tag_name: ${{ github.event.inputs.version }}
         release_name: ${{ github.event.inputs.version }}
-        body: 'See https://esphome.io/changelog/index.html'
+        body: ${{ github.event.inputs.content }}
         prerelease: false
         commitish: ${{ steps.commit_version.outputs.commit_sha }}
