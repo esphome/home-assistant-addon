@@ -54,6 +54,7 @@ esphome-dev:
   schema:
     status_use_ping: bool?
     streamer_mode: bool?
+    home_assistant_dashboard_integration: bool?
     default_compile_process_limit: int(1,)?
     esphome_fork: str?
     ssl: bool?
