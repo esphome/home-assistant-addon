@@ -22,7 +22,6 @@ jobs:
     - run: pip install -r script/requirements.txt
     - run: script/bump-version.py ${{ github.event.inputs.version }}
     - name: Write Beta changelog
-      if: ${{ contains(github.event.inputs.version, 'b') }}
       run: |
         cat > esphome-beta/CHANGELOG.md << 'EOF'
         ## ${{ github.event.inputs.version }}
