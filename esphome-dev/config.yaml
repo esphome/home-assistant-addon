@@ -16,6 +16,8 @@ ports:
 map:
 - ssl:ro
 - config:rw
+discovery:
+- esphome
 schema:
   status_use_ping: bool?
   streamer_mode: bool?
@@ -35,3 +37,5 @@ slug: esphome-dev
 description: Development version of ESPHome add-on
 stage: experimental
 advanced: true
+options:
+  home_assistant_dashboard_integration: false

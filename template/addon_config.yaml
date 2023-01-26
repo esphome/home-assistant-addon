@@ -24,9 +24,12 @@ base: &base
   map:
     - ssl:ro
     - config:rw
+  discovery:
+    - esphome
   schema:
     status_use_ping: bool?
     streamer_mode: bool?
+    home_assistant_dashboard_integration: bool?
     default_compile_process_limit: int(1,)?
     ssl: bool?
     certfile: str?
@@ -59,6 +62,8 @@ esphome-dev:
     relative_url: str?
     leave_front_door_open: bool?
   base_image: ghcr.io/esphome/esphome-hassio:dev
+  options:
+      home_assistant_dashboard_integration: false
 
 esphome-beta:
   <<: *base
@@ -71,6 +76,8 @@ esphome-beta:
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
   advanced: true
+  options:
+      home_assistant_dashboard_integration: false
 
 esphome-stable:
   <<: *base
