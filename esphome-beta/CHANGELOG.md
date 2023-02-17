@@ -1,4 +1,4 @@
-## 2023.2.1
+## 2023.2.2
 
-- Add ESPHome version to generated platformio.ini [esphome#4443](https://github.com/esphome/esphome/pull/4443) by [@jesserockz](https://github.com/jesserockz)
+- Fix adoption of variants and pico-w [esphome#4455](https://github.com/esphome/esphome/pull/4455) by [@jesserockz](https://github.com/jesserockz)
 
