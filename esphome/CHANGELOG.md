@@ -1,4 +1,5 @@
-## 2023.2.2
+## 2023.2.3
 
-- Fix adoption of variants and pico-w [esphome#4455](https://github.com/esphome/esphome/pull/4455) by [@jesserockz](https://github.com/jesserockz)
+- Fix MQTT discovery for climate after preset implementation [esphome#4451](https://github.com/esphome/esphome/pull/4451) by [@jmichiel](https://github.com/jmichiel)
+- Update distribution manifest [esphome#4459](https://github.com/esphome/esphome/pull/4459) by [@jesserockz](https://github.com/jesserockz)
 
