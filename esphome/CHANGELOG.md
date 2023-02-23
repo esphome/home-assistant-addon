@@ -1,5 +1,6 @@
-## 2023.2.3
+## 2023.2.4
 
-- Fix MQTT discovery for climate after preset implementation [esphome#4451](https://github.com/esphome/esphome/pull/4451) by [@jmichiel](https://github.com/jmichiel)
-- Update distribution manifest [esphome#4459](https://github.com/esphome/esphome/pull/4459) by [@jesserockz](https://github.com/jesserockz)
+- BL0939 state_class set for energy sensors [esphome#4463](https://github.com/esphome/esphome/pull/4463) by [@konsulten](https://github.com/konsulten)
+- fix wiegand tag parity [esphome#4476](https://github.com/esphome/esphome/pull/4476) by [@ssieb](https://github.com/ssieb)
+- Fix multiple remote_receivers with triggers [esphome#4477](https://github.com/esphome/esphome/pull/4477) by [@jesserockz](https://github.com/jesserockz)
 
