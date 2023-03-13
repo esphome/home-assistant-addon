@@ -1,9 +1,9 @@
-## 2023.3.0b2
+## 2023.3.0b3
 
-- Fix ethernet clk_mode for GPIO0_OUT [esphome#4307](https://github.com/esphome/esphome/pull/4307) by [@jorticus](https://github.com/jorticus)
-- Add ESP32-S3 support in NeoPixelBus component [esphome#4114](https://github.com/esphome/esphome/pull/4114) by [@rcloran](https://github.com/rcloran)
-- Renaming and extending the ili9341 to the ili9xxx component [esphome#4275](https://github.com/esphome/esphome/pull/4275) by [@nielsnl68](https://github.com/nielsnl68) (new-integration) (breaking-change)
-- Drop unused, broken logging macros [esphome#4534](https://github.com/esphome/esphome/pull/4534) by [@oxan](https://github.com/oxan)
-- Revert storing Font glyphs in manually-allocated memory [esphome#4516](https://github.com/esphome/esphome/pull/4516) by [@oxan](https://github.com/oxan)
-- Correct BME680 gas calculation and heater_off [esphome#4498](https://github.com/esphome/esphome/pull/4498) by [@CarlosGS](https://github.com/CarlosGS)
+- Add support for new mpu6050 clones responding with 0x70 address [esphome#4546](https://github.com/esphome/esphome/pull/4546) by [@jakehdk](https://github.com/jakehdk)
+- Add carbon dioxide device class to scd30 sensor schema. [esphome#4547](https://github.com/esphome/esphome/pull/4547) by [@murrayma](https://github.com/murrayma)
+- Feat: add support for hex color in color component [esphome#4493](https://github.com/esphome/esphome/pull/4493) by [@dorianim](https://github.com/dorianim)
+- Allow AUTO_LOAD to be a function [esphome#4550](https://github.com/esphome/esphome/pull/4550) by [@jesserockz](https://github.com/jesserockz)
+- On the ILI9xxx display's enable the psram on esp32 and allow big screen [esphome#4551](https://github.com/esphome/esphome/pull/4551) by [@nielsnl68](https://github.com/nielsnl68)
+- Map gpio pins for touch on esp32-s2/s3 [esphome#4552](https://github.com/esphome/esphome/pull/4552) by [@jesserockz](https://github.com/jesserockz)
 
