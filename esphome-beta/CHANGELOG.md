@@ -1,6 +1,5 @@
-## 2023.3.0b4
+## 2023.3.0b5
 
-- pipsolar component. Correct the sscanf format for QPIG command parsin… [esphome#4165](https://github.com/esphome/esphome/pull/4165) by [@eroldan](https://github.com/eroldan)
-- Add state class back to uptime sensor [esphome#4557](https://github.com/esphome/esphome/pull/4557) by [@DAVe3283](https://github.com/DAVe3283)
-- Added response for Tuya RSSI command [esphome#4549](https://github.com/esphome/esphome/pull/4549) by [@catalin2402](https://github.com/catalin2402)
+- Remove switch actions during config; bump setup priority [esphome#4563](https://github.com/esphome/esphome/pull/4563) by [@kbx81](https://github.com/kbx81)
+- Mark esp32_touch supported only on standard esp32 variant [esphome#4562](https://github.com/esphome/esphome/pull/4562) by [@jesserockz](https://github.com/jesserockz)
 
