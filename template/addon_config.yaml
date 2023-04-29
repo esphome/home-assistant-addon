@@ -90,7 +90,6 @@ esphome-stable:
   image: ghcr.io/esphome/esphome-hassio
 
 copy_files:
-  CHANGELOG.md:
   DOCS.md:
   icon.png:
   logo.png:
