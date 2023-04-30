@@ -1,4 +1,4 @@
-# ESPHome Home Assistant Add-On
+# ESPHome Add-On
 
 [![ESPHome logo](https://raw.githubusercontent.com/esphome/hassio/main/esphome-dev/logo.png)](https://esphome.io/)
 
