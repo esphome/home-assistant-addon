@@ -1,5 +1,4 @@
-## 2023.5.1
+## 2023.5.2
 
-- Remove i2c dependency from ttp229_bsf [esphome#4851](https://github.com/esphome/esphome/pull/4851) by [@jesserockz](https://github.com/jesserockz)
-- Sprinkler fixes [esphome#4816](https://github.com/esphome/esphome/pull/4816) by [@kbx81](https://github.com/kbx81)
+- Fix i2s_audio media_player mutex acquisition [esphome#4867](https://github.com/esphome/esphome/pull/4867) by [@kroimon](https://github.com/kroimon)
 
