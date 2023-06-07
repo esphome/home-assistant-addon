@@ -29,6 +29,6 @@ jobs:
       - name: 🛠 Generate files from template
         run: python script/generate.py ${{ matrix.channels.channel }}
       - name: 🚀 Run Home Assistant Add-on Lint on ${{ matrix.channels.channel }}
-        uses: frenck/action-addon-linter@v2.12.0
+        uses: frenck/action-addon-linter@v2.13.1
         with:
           path: "./${{ matrix.channels.folder }}"
