@@ -1,7 +1,6 @@
-## 2023.6.0b3
+## 2023.6.0b4
 
-- Fix for Fujitsu AC not having Quiet Fan Mode [esphome#4962](https://github.com/esphome/esphome/pull/4962) by [@TaruDesigns](https://github.com/TaruDesigns)
-- Store app comment and compilation_time in flash [esphome#4945](https://github.com/esphome/esphome/pull/4945) by [@bdraco](https://github.com/bdraco)
-- Construct web_server assets at build time instead of run time [esphome#4944](https://github.com/esphome/esphome/pull/4944) by [@bdraco](https://github.com/bdraco)
-- Update pca9685_output.cpp [esphome#4929](https://github.com/esphome/esphome/pull/4929) by [@standahabich](https://github.com/standahabich)
+- Apply configured IIR filter setting in generated BMP280 code [esphome#4975](https://github.com/esphome/esphome/pull/4975) by [@murrayma](https://github.com/murrayma)
+- Make growatt play nicer with other modbus components. [esphome#4947](https://github.com/esphome/esphome/pull/4947) by [@onnlucky](https://github.com/onnlucky)
+- Bump esphome-dashboard to 20230621.0 [esphome#4980](https://github.com/esphome/esphome/pull/4980) by [@jesserockz](https://github.com/jesserockz)
 
