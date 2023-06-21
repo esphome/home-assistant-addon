@@ -6,6 +6,7 @@ from pathlib import Path
 from enum import Enum
 from shutil import copyfile
 import sys
+import os
 
 
 class Channel(Enum):
@@ -37,7 +38,8 @@ def main(args):
         with open(path, "w") as f:
             yaml.dump(conf, f, indent=2, sort_keys=False, explicit_start=True)
 
-        for file_, conf_ in copyf.items():
+        for file_ in copyf:
+            os.makedirs(dir_ / Path(file_).parent, exist_ok=True)
             if Path.exists(templ / channel.value / file_):
                 copyfile(templ / channel.value / file_, dir_ / file_)
             else:
