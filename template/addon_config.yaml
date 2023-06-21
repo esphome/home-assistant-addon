@@ -90,8 +90,11 @@ esphome-stable:
   image: ghcr.io/esphome/esphome-hassio
 
 copy_files:
-  DOCS.md:
-  icon.png:
-  logo.png:
-  README.md:
-  translations/en.yaml:
+  - DOCS.md
+  - icon.png
+  - logo.png
+  - README.md
+  - translations/en.yaml
+  - images/dht-example.png
+  - images/screenshot.png
+  - images/temperature-humidity.png
