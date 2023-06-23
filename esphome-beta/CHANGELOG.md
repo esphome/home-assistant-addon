@@ -1,5 +1,5 @@
-## 2023.6.1
+## 2023.6.2
 
-- Make ethernet_info work with esp-idf framework [esphome#4976](https://github.com/esphome/esphome/pull/4976) by [@HeMan](https://github.com/HeMan)
-- display: fix white screen on binary displays [esphome#4991](https://github.com/esphome/esphome/pull/4991) by [@ayufan](https://github.com/ayufan)
+- remove unused static declarations [esphome#4993](https://github.com/esphome/esphome/pull/4993) by [@ssieb](https://github.com/ssieb)
+- Fix rp2040 pio tool download [esphome#4994](https://github.com/esphome/esphome/pull/4994) by [@jesserockz](https://github.com/jesserockz) (new-integration)
 
