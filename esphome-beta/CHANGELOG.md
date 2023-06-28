@@ -1,5 +1,7 @@
-## 2023.6.2
+## 2023.6.3
 
-- remove unused static declarations [esphome#4993](https://github.com/esphome/esphome/pull/4993) by [@ssieb](https://github.com/ssieb)
-- Fix rp2040 pio tool download [esphome#4994](https://github.com/esphome/esphome/pull/4994) by [@jesserockz](https://github.com/jesserockz) (new-integration)
+- Update webserver to 56d73b5 [esphome#5007](https://github.com/esphome/esphome/pull/5007) by [@jesserockz](https://github.com/jesserockz)
+- Synchronise Device Classes from Home Assistant [esphome#5018](https://github.com/esphome/esphome/pull/5018) by [@esphomebot](https://github.com/esphomebot)
+- Fixes compressed downloads [esphome#5014](https://github.com/esphome/esphome/pull/5014) by [@fdcastel](https://github.com/fdcastel)
+- Add CONFIG_BT_BLE_42_FEATURES_SUPPORTED for ble [esphome#5008](https://github.com/esphome/esphome/pull/5008) by [@jesserockz](https://github.com/jesserockz)
 
