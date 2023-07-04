@@ -1,7 +1,8 @@
-## 2023.6.3
+## 2023.6.4
 
-- Update webserver to 56d73b5 [esphome#5007](https://github.com/esphome/esphome/pull/5007) by [@jesserockz](https://github.com/jesserockz)
-- Synchronise Device Classes from Home Assistant [esphome#5018](https://github.com/esphome/esphome/pull/5018) by [@esphomebot](https://github.com/esphomebot)
-- Fixes compressed downloads [esphome#5014](https://github.com/esphome/esphome/pull/5014) by [@fdcastel](https://github.com/fdcastel)
-- Add CONFIG_BT_BLE_42_FEATURES_SUPPORTED for ble [esphome#5008](https://github.com/esphome/esphome/pull/5008) by [@jesserockz](https://github.com/jesserockz)
+- [SCD30] Disable negative temperature offset [esphome#4850](https://github.com/esphome/esphome/pull/4850) by [@ardichoke](https://github.com/ardichoke)
+- fix template binary_sensor publish_initial_state option [esphome#5033](https://github.com/esphome/esphome/pull/5033) by [@dudanov](https://github.com/dudanov)
+- Add alarm to reserved ids [esphome#5042](https://github.com/esphome/esphome/pull/5042) by [@grahambrown11](https://github.com/grahambrown11)
+- Advertise noise is enabled [esphome#5034](https://github.com/esphome/esphome/pull/5034) by [@bdraco](https://github.com/bdraco)
+- Update webserver to ea86d81 [esphome#5023](https://github.com/esphome/esphome/pull/5023) by [@jesserockz](https://github.com/jesserockz)
 
