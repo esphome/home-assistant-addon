@@ -1,8 +1,5 @@
-## 2023.6.4
+## 2023.6.5
 
-- [SCD30] Disable negative temperature offset [esphome#4850](https://github.com/esphome/esphome/pull/4850) by [@ardichoke](https://github.com/ardichoke)
-- fix template binary_sensor publish_initial_state option [esphome#5033](https://github.com/esphome/esphome/pull/5033) by [@dudanov](https://github.com/dudanov)
-- Add alarm to reserved ids [esphome#5042](https://github.com/esphome/esphome/pull/5042) by [@grahambrown11](https://github.com/grahambrown11)
-- Advertise noise is enabled [esphome#5034](https://github.com/esphome/esphome/pull/5034) by [@bdraco](https://github.com/bdraco)
-- Update webserver to ea86d81 [esphome#5023](https://github.com/esphome/esphome/pull/5023) by [@jesserockz](https://github.com/jesserockz)
+- Fix bulk and single Bluetooth parser coexistence [esphome#5073](https://github.com/esphome/esphome/pull/5073) by [@bdraco](https://github.com/bdraco)
+- binary_sensor: Validate max_length for on_click/on_double_click [esphome#5068](https://github.com/esphome/esphome/pull/5068) by [@kpfleming](https://github.com/kpfleming)
 
