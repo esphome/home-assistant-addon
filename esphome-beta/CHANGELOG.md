@@ -1,8 +1,8 @@
-## 2023.7.0b2
+## 2023.7.0b3
 
-- Dont do mqtt ip lookup if `use_address` has ip address [esphome#5096](https://github.com/esphome/esphome/pull/5096) by [@jesserockz](https://github.com/jesserockz)
-- ESP32 enable ADC2 when wifi is disabled [esphome#4381](https://github.com/esphome/esphome/pull/4381) by [@pciavald](https://github.com/pciavald)
-- [Sprinkler] Resume fixes [esphome#5100](https://github.com/esphome/esphome/pull/5100) by [@hostcc](https://github.com/hostcc)
-- Remove template switch restore_state [esphome#5106](https://github.com/esphome/esphome/pull/5106) by [@jesserockz](https://github.com/jesserockz) (breaking-change)
-- Add timeout filter [esphome#5104](https://github.com/esphome/esphome/pull/5104) by [@clydebarrow](https://github.com/clydebarrow)
+- P1 values for capacity tariff in Belgium [esphome#5081](https://github.com/esphome/esphome/pull/5081) by [@bwynants](https://github.com/bwynants)
+- airthings_wave: Silence compiler warnings [esphome#5098](https://github.com/esphome/esphome/pull/5098) by [@kpfleming](https://github.com/kpfleming)
+- Sigma delta fix [esphome#4911](https://github.com/esphome/esphome/pull/4911) by [@PlainTechEnthusiast](https://github.com/PlainTechEnthusiast)
+- [LD2410] Remove baud_rate check [esphome#5112](https://github.com/esphome/esphome/pull/5112) by [@voed](https://github.com/voed)
+- Fix silence detection flag on voice assistant [esphome#5120](https://github.com/esphome/esphome/pull/5120) by [@jesserockz](https://github.com/jesserockz)
 
