@@ -27,7 +27,6 @@ schema:
   ssl: bool?
   certfile: str?
   keyfile: str?
-  relative_url: str?
   leave_front_door_open: bool?
 backup_exclude:
 - '*/*/'
