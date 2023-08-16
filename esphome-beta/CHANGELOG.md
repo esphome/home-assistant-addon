@@ -1,12 +1,8 @@
-## 2023.8.0b2
+## 2023.8.0b3
 
-- Read string of bool env and match against well known values [esphome#5232](https://github.com/esphome/esphome/pull/5232) by [@jesserockz](https://github.com/jesserockz)
-- fix aeha data template [esphome#5231](https://github.com/esphome/esphome/pull/5231) by [@ssieb](https://github.com/ssieb)
-- Expose start to speaker interface [esphome#5228](https://github.com/esphome/esphome/pull/5228) by [@jesserockz](https://github.com/jesserockz)
-- New features added for Haier integration [esphome#5196](https://github.com/esphome/esphome/pull/5196) by [@paveldn](https://github.com/paveldn)
-- pca9554 cache reads [esphome#5137](https://github.com/esphome/esphome/pull/5137) by [@hwstar](https://github.com/hwstar)
-- fix midea: undo approved PR#4053 [esphome#5233](https://github.com/esphome/esphome/pull/5233) by [@dudanov](https://github.com/dudanov)
-- Fixing smartair2 protocol implementation if no Wi-Fi [esphome#5238](https://github.com/esphome/esphome/pull/5238) by [@paveldn](https://github.com/paveldn)
-- tuya: add time sync callback only once to prevent memleak [esphome#5234](https://github.com/esphome/esphome/pull/5234) by [@afflux](https://github.com/afflux)
-- Fix duplicate tuya time warning [esphome#5243](https://github.com/esphome/esphome/pull/5243) by [@jesserockz](https://github.com/jesserockz)
+- Change XL9535 `setup_priority` to IO [esphome#5246](https://github.com/esphome/esphome/pull/5246) by [@mreditor97](https://github.com/mreditor97)
+- rmt_base additional minor changes [esphome#5245](https://github.com/esphome/esphome/pull/5245) by [@dudanov](https://github.com/dudanov)
+- Fix 24 bit signed integer parsing in sml parser [esphome#5250](https://github.com/esphome/esphome/pull/5250) by [@mulder-fbi](https://github.com/mulder-fbi)
+- Fix IDFI2CBus::writev ignoring stop parameter [esphome#4840](https://github.com/esphome/esphome/pull/4840) by [@CarsonF](https://github.com/CarsonF)
+- Add configuration flow abilites to the ld2410 component [esphome#4434](https://github.com/esphome/esphome/pull/4434) by [@regevbr](https://github.com/regevbr) (new-integration) (notable-change) (breaking-change)
 
