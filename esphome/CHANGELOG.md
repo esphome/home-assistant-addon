@@ -1,8 +1,8 @@
-## 2023.8.2
+## 2023.8.3
 
-- Move libcairo to all architectures in docker [esphome#5276](https://github.com/esphome/esphome/pull/5276) by [@jesserockz](https://github.com/jesserockz)
-- Resolve offline ESPs in dashboard when using ESPHOME_DASHBOARD_USE_PING=true [esphome#5281](https://github.com/esphome/esphome/pull/5281) by [@mwolter805](https://github.com/mwolter805)
-- Align SPI data rates in C++ code with Python [esphome#5284](https://github.com/esphome/esphome/pull/5284) by [@clydebarrow](https://github.com/clydebarrow)
-- Change htu21d sensors from required to optional [esphome#5285](https://github.com/esphome/esphome/pull/5285) by [@jesserockz](https://github.com/jesserockz)
-- Reserve keyword "clock" [esphome#5279](https://github.com/esphome/esphome/pull/5279) by [@clydebarrow](https://github.com/clydebarrow)
+- Introduce cv.temperature_delta and fix problematic thermostat configuration behavior [esphome#5297](https://github.com/esphome/esphome/pull/5297) by [@sebastianrasor](https://github.com/sebastianrasor)
+- fix to PR # 3887 MQTT connection not using discovery: false [esphome#5275](https://github.com/esphome/esphome/pull/5275) by [@luka6000](https://github.com/luka6000)
+- Attempt to fix secret blurring [esphome#5326](https://github.com/esphome/esphome/pull/5326) by [@jesserockz](https://github.com/jesserockz)
+- Bugfix: disable channels after IO if multiple tca9548a  I2C multiplexers are configured [esphome#5317](https://github.com/esphome/esphome/pull/5317) by [@kahrendt](https://github.com/kahrendt)
+- Fix checksum calculation for pipsolar [esphome#5299](https://github.com/esphome/esphome/pull/5299) by [@Mat931](https://github.com/Mat931)
 
