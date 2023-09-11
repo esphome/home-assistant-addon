@@ -34,7 +34,6 @@ base: &base
     ssl: bool?
     certfile: str?
     keyfile: str?
-    relative_url: str?
     leave_front_door_open: bool?
   backup_exclude:
     - "*/*/"
@@ -60,7 +59,6 @@ esphome-dev:
     ssl: bool?
     certfile: str?
     keyfile: str?
-    relative_url: str?
     leave_front_door_open: bool?
   base_image: ghcr.io/esphome/esphome-hassio:dev
   options:
