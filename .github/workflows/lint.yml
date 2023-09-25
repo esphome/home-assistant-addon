@@ -19,7 +19,7 @@ jobs:
             channel: dev
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v4.0.0
+        uses: actions/checkout@v4.1.0
       - name: 🛠 Setup Python
         uses: actions/setup-python@v4
         with:
