@@ -1,8 +1,9 @@
-## 2023.10.0b2
+## 2023.10.0b3
 
-- Update htu21d.cpp, fix publishing of heater level [esphome#5520](https://github.com/esphome/esphome/pull/5520) by [@Nippey](https://github.com/Nippey)
-- BD5758D - Add delays and ACKs [esphome#5524](https://github.com/esphome/esphome/pull/5524) by [@Cossid](https://github.com/Cossid)
-- Update Improv BLE component [esphome#5518](https://github.com/esphome/esphome/pull/5518) by [@jesserockz](https://github.com/jesserockz)
-- SM10BIT_BASE - Add delays and ACKs, clear all channels before sleeping. [esphome#5526](https://github.com/esphome/esphome/pull/5526) by [@Cossid](https://github.com/Cossid)
-- BP1658CJ - Clear all channels before sleeping. [esphome#5525](https://github.com/esphome/esphome/pull/5525) by [@Cossid](https://github.com/Cossid)
+- Prometheus fix for esp-idf and fix newlines [esphome#5536](https://github.com/esphome/esphome/pull/5536) by [@jesserockz](https://github.com/jesserockz)
+- Make IPAddress's operator!= compare values, not memory addresses. [esphome#5537](https://github.com/esphome/esphome/pull/5537) by [@raineth](https://github.com/raineth)
+- Add change i2c address and allow multi conf for TB6612FNG  [esphome#5492](https://github.com/esphome/esphome/pull/5492) by [@max246](https://github.com/max246)
+- Add stream start and end events [esphome#5545](https://github.com/esphome/esphome/pull/5545) by [@jesserockz](https://github.com/jesserockz)
+- Fix esp32_improv authorizer with no binary sensors in config [esphome#5546](https://github.com/esphome/esphome/pull/5546) by [@jesserockz](https://github.com/jesserockz)
+- More voice assistant fixes [esphome#5547](https://github.com/esphome/esphome/pull/5547) by [@jesserockz](https://github.com/jesserockz)
 
