@@ -21,9 +21,9 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v4.0.0
       - name: 🛠 Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v4.7.1
         with:
-          python-version: '3.x'
+          python-version: '3.11'
       - name: 🛠 Install dependencies
         run: pip install -r script/requirements.txt
       - name: 🛠 Generate files from template
