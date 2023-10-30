@@ -16,9 +16,9 @@ jobs:
     continue-on-error: true
     steps:
     - uses: actions/checkout@v4.0.0
-    - uses: actions/setup-python@v4
+    - uses: actions/setup-python@v4.7.1
       with:
-        python-version: '3.x'
+        python-version: '3.11'
     - run: pip install -r script/requirements.txt
     - run: script/bump-version.py ${{ github.event.inputs.version }}
     - name: Write Beta changelog
