@@ -68,7 +68,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: '2023.10.5'  # BETA
+  version: '2023.10.6'  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome add-on"
   url: https://beta.esphome.io/
@@ -82,7 +82,7 @@ esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: '2023.10.5'  # STABLE
+  version: '2023.10.6'  # STABLE
   slug: esphome
   description: "ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices"
   image: ghcr.io/esphome/esphome-hassio
