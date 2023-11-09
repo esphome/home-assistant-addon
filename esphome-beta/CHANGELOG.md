@@ -1,8 +1,6 @@
-## 2023.11.0b2
+## 2023.11.0b3
 
-- Handle nanoseconds in config [esphome#5695](https://github.com/esphome/esphome/pull/5695) by [@jesserockz](https://github.com/jesserockz)
-- Fix esp32_rmt_led_strip custom timing units [esphome#5696](https://github.com/esphome/esphome/pull/5696) by [@jesserockz](https://github.com/jesserockz) (breaking-change)
-- Fix static assets cache logic [esphome#5700](https://github.com/esphome/esphome/pull/5700) by [@bdraco](https://github.com/bdraco)
-- Use piwheels for armv7 docker image builds [esphome#5703](https://github.com/esphome/esphome/pull/5703) by [@bdraco](https://github.com/bdraco)
-- fix: Fix broken bluetooth_proxy and ble_clients after BLE enable/disable [esphome#5704](https://github.com/esphome/esphome/pull/5704) by [@Rapsssito](https://github.com/Rapsssito)
+- Bump aioesphomeapi to 18.2.7 [esphome#5706](https://github.com/esphome/esphome/pull/5706) by [@bdraco](https://github.com/bdraco)
+- Update Dockerfile to use piwheels for armv7 [esphome#5709](https://github.com/esphome/esphome/pull/5709) by [@bdraco](https://github.com/bdraco)
+- Bump zeroconf from 0.120.0 to 0.122.3 [esphome#5715](https://github.com/esphome/esphome/pull/5715) by [@dependabot[bot]](https://github.com/apps/dependabot)
 

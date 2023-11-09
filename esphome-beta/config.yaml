@@ -31,7 +31,7 @@ backup_exclude:
 - '*/*/'
 init: false
 name: ESPHome (beta)
-version: 2023.11.0b2
+version: 2023.11.0b3
 slug: esphome-beta
 description: Beta version of ESPHome add-on
 image: ghcr.io/esphome/esphome-hassio
