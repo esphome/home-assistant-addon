@@ -1,6 +1,5 @@
-## 2023.11.0b6
+## 2023.11.0b7
 
-- dashboard: remove usage of codecs module [esphome#5741](https://github.com/esphome/esphome/pull/5741) by [@bdraco](https://github.com/bdraco)
-- dashboard: Run get_serial_ports in the executor [esphome#5740](https://github.com/esphome/esphome/pull/5740) by [@bdraco](https://github.com/bdraco)
-- Generate partitions.csv based on flash size [esphome#5697](https://github.com/esphome/esphome/pull/5697) by [@kbx81](https://github.com/kbx81)
+- Allow setup to continue past mqtt if network/wifi is disabled [esphome#5754](https://github.com/esphome/esphome/pull/5754) by [@jesserockz](https://github.com/jesserockz)
+- Dont dump wifi info when disabled [esphome#5755](https://github.com/esphome/esphome/pull/5755) by [@jesserockz](https://github.com/jesserockz)
 
