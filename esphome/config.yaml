@@ -31,7 +31,7 @@ backup_exclude:
 - '*/*/'
 init: false
 name: ESPHome
-version: 2023.11.2
+version: 2023.11.3
 slug: esphome
 description: ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices
 image: ghcr.io/esphome/esphome-hassio

@@ -1,7 +1,8 @@
-## 2023.11.2
+## 2023.11.3
 
-- Bump aioesphomeapi from 18.4.0 to 18.4.1 [esphome#5767](https://github.com/esphome/esphome/pull/5767) by [@dependabot[bot]](https://github.com/apps/dependabot)
-- Bump aioesphomeapi from 18.4.1 to 18.5.2 [esphome#5780](https://github.com/esphome/esphome/pull/5780) by [@dependabot[bot]](https://github.com/apps/dependabot)
-- fix 32-bit arm [esphome#5781](https://github.com/esphome/esphome/pull/5781) by [@ssieb](https://github.com/ssieb)
-- Add 2MB option for partitions.csv generation and restore use of user-defined partitions [esphome#5779](https://github.com/esphome/esphome/pull/5779) by [@kbx81](https://github.com/kbx81)
+- include payload_open when a lock supports OPEN [esphome#5809](https://github.com/esphome/esphome/pull/5809) by [@ccutrer](https://github.com/ccutrer)
+- dashboard: Fix online status when api is disabled [esphome#5791](https://github.com/esphome/esphome/pull/5791) by [@bdraco](https://github.com/bdraco)
+- fix: compile errors with fonts [esphome#5808](https://github.com/esphome/esphome/pull/5808) by [@cvandesande](https://github.com/cvandesande)
+- Early return when there are no wifi scan results [esphome#5797](https://github.com/esphome/esphome/pull/5797) by [@jesserockz](https://github.com/jesserockz)
+- Add some additional VA triggers, part 2 [esphome#5811](https://github.com/esphome/esphome/pull/5811) by [@kbx81](https://github.com/kbx81)
 
