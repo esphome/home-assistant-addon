@@ -39,6 +39,8 @@ base: &base
     - "*/*/"
   # Disable docker init for s6
   init: false
+  # Make sure dashboard is available for core
+  startup: services
 
 esphome-dev:
   <<: *base
