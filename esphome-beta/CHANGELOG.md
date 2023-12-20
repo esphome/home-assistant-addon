@@ -1,4 +1,5 @@
-## 2023.12.0b5
+## 2023.12.0b6
 
-- rename set_raw_touch_position_ to add_raw_touch_position_ [esphome#5962](https://github.com/esphome/esphome/pull/5962) by [@nielsnl68](https://github.com/nielsnl68)
+- image: allow the image to by auto-loaded by animation [esphome#5139](https://github.com/esphome/esphome/pull/5139) by [@ayufan](https://github.com/ayufan)
+- Fix pin reuse error with pin expanders [esphome#5973](https://github.com/esphome/esphome/pull/5973) by [@jesserockz](https://github.com/jesserockz)
 
