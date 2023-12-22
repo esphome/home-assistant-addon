@@ -1,8 +1,8 @@
-## 2023.12.2
+## 2023.12.3
 
-- ESP32-S3 and ESP-IDF don't play well with USB_CDC and need USB_SERIAL_JTAG [esphome#5929](https://github.com/esphome/esphome/pull/5929) by [@clydebarrow](https://github.com/clydebarrow)
-- Update libtiff6 [esphome#5985](https://github.com/esphome/esphome/pull/5985) by [@cvandesande](https://github.com/cvandesande)
-- Override GPIOs 12 and 13 on the airm2m (LuatOS) board  [esphome#5982](https://github.com/esphome/esphome/pull/5982) by [@davidmonro](https://github.com/davidmonro)
-- Add workaround for crash in Arduino 2.0.9 when CDC is configured [esphome#5987](https://github.com/esphome/esphome/pull/5987) by [@kbx81](https://github.com/kbx81)
-- web_server.py: return empty content when file doesn't exist [esphome#5980](https://github.com/esphome/esphome/pull/5980) by [@jessicah](https://github.com/jessicah)
+- Fix unexpected disconnects when outgoing buffer is full during keepalive [esphome#5988](https://github.com/esphome/esphome/pull/5988) by [@bdraco](https://github.com/bdraco)
+- Regenerate api_pb2 after manual changes were added incorrectly in #5732 [esphome#5990](https://github.com/esphome/esphome/pull/5990) by [@jesserockz](https://github.com/jesserockz)
+- Improved sensor readings in htu21d component. [esphome#5839](https://github.com/esphome/esphome/pull/5839) by [@matzman666](https://github.com/matzman666)
+- Fix dashboard logs when api is disabled and using MQTT [esphome#5992](https://github.com/esphome/esphome/pull/5992) by [@bdraco](https://github.com/bdraco)
+- Fix broken configs with non-existent components [esphome#5993](https://github.com/esphome/esphome/pull/5993) by [@jesserockz](https://github.com/jesserockz)
 
