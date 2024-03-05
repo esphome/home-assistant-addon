@@ -1,12 +1,8 @@
-## 2024.2.1
+## 2024.2.2
 
-- Add missing timeout to "async_request" [esphome#6267](https://github.com/esphome/esphome/pull/6267) by [@jesserockz](https://github.com/jesserockz)
-- Bump zeroconf timeout to 3000 [esphome#6270](https://github.com/esphome/esphome/pull/6270) by [@jesserockz](https://github.com/jesserockz)
-- web_server: Add a position property for cover entities that have the supports position trait [esphome#6269](https://github.com/esphome/esphome/pull/6269) by [@DanielBaulig](https://github.com/DanielBaulig)
-- allow multiple emc2101 [esphome#6272](https://github.com/esphome/esphome/pull/6272) by [@ssieb](https://github.com/ssieb)
-- Fix RP2040 SPI pin validation [esphome#6277](https://github.com/esphome/esphome/pull/6277) by [@kbx81](https://github.com/kbx81)
-- dashboard: move storage json update to a background task in edit save [esphome#6280](https://github.com/esphome/esphome/pull/6280) by [@bdraco](https://github.com/bdraco)
-- make output optional for speed fan [esphome#6274](https://github.com/esphome/esphome/pull/6274) by [@ssieb](https://github.com/ssieb)
-- fix throttle average nan handling [esphome#6275](https://github.com/esphome/esphome/pull/6275) by [@ssieb](https://github.com/ssieb)
-- Fix thermostat supplemental actions [esphome#6282](https://github.com/esphome/esphome/pull/6282) by [@kbx81](https://github.com/kbx81)
+- CSE7766: Fix energy calculation [esphome#6286](https://github.com/esphome/esphome/pull/6286) by [@puuu](https://github.com/puuu)
+- handling with the negative temperature in the sensor tmp102 [esphome#6316](https://github.com/esphome/esphome/pull/6316) by [@FlyingFeng2021](https://github.com/FlyingFeng2021)
+- fix tmp102 negative calculation [esphome#6320](https://github.com/esphome/esphome/pull/6320) by [@ssieb](https://github.com/ssieb)
+- auto load output for now [esphome#6309](https://github.com/esphome/esphome/pull/6309) by [@ssieb](https://github.com/ssieb)
+- Add wake word phrase to voice assistant start command [esphome#6290](https://github.com/esphome/esphome/pull/6290) by [@jesserockz](https://github.com/jesserockz)
 
