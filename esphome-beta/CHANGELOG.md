@@ -1,11 +1,8 @@
-## 2024.3.0b3
+## 2024.3.0b4
 
-- Use AQI device class [esphome#6376](https://github.com/esphome/esphome/pull/6376) by [@fgsch](https://github.com/fgsch)
-- Fix list-components when PR is not targeting dev [esphome#6375](https://github.com/esphome/esphome/pull/6375) by [@jesserockz](https://github.com/jesserockz)
-- allow negative ppm for sensair [esphome#6385](https://github.com/esphome/esphome/pull/6385) by [@ssieb](https://github.com/ssieb)
-- microWakeWord - add new ops and small improvements [esphome#6360](https://github.com/esphome/esphome/pull/6360) by [@kahrendt](https://github.com/kahrendt)
-- Fix compilation for uponor_smatrix without time component [esphome#6389](https://github.com/esphome/esphome/pull/6389) by [@kroimon](https://github.com/kroimon)
-- Shows component operation time in `ms` [esphome#6388](https://github.com/esphome/esphome/pull/6388) by [@edwardtfn](https://github.com/edwardtfn)
-- IPv6 can't be enabled for libretiny [esphome#6387](https://github.com/esphome/esphome/pull/6387) by [@HeMan](https://github.com/HeMan)
-- Replace name and friendly name in full adopted configs [esphome#4456](https://github.com/esphome/esphome/pull/4456) by [@jesserockz](https://github.com/jesserockz)
+- Fix bug in `remote_base` conditional [esphome#6281](https://github.com/esphome/esphome/pull/6281) by [@swoboda1337](https://github.com/swoboda1337)
+- Fix sending packets to uponor_smatrix devices [esphome#6392](https://github.com/esphome/esphome/pull/6392) by [@kroimon](https://github.com/kroimon)
+- Fix wrong initialization of vectors in ade7953_i2c [esphome#6393](https://github.com/esphome/esphome/pull/6393) by [@kroimon](https://github.com/kroimon)
+- ld2420: Firmware v1.5.4+ bug workaround [esphome#6168](https://github.com/esphome/esphome/pull/6168) by [@descipher](https://github.com/descipher)
+- Require xsrf/csrf when using a password [esphome#6396](https://github.com/esphome/esphome/pull/6396) by [@jesserockz](https://github.com/jesserockz)
 
