@@ -1,7 +1,6 @@
-## 2024.3.1
+## 2024.3.2
 
-- AHT10: Fix bug [esphome#6409](https://github.com/esphome/esphome/pull/6409) by [@clydebarrow](https://github.com/clydebarrow)
-- microWakeWord: Fix model path joining [esphome#6426](https://github.com/esphome/esphome/pull/6426) by [@ebw44](https://github.com/ebw44)
-- Don't compile strptime unless its required [esphome#6424](https://github.com/esphome/esphome/pull/6424) by [@gabest11](https://github.com/gabest11)
-- Fix editor live validation [esphome#6431](https://github.com/esphome/esphome/pull/6431) by [@bdraco](https://github.com/bdraco)
+- Fix logger compile error on ESP32-C6 [esphome#6323](https://github.com/esphome/esphome/pull/6323) by [@DAVe3283](https://github.com/DAVe3283)
+- Add missing ethernet types [esphome#6444](https://github.com/esphome/esphome/pull/6444) by [@ssieb](https://github.com/ssieb)
+- fix: changing the content source when playing is paused blocks the player [esphome#6454](https://github.com/esphome/esphome/pull/6454) by [@NewoPL](https://github.com/NewoPL)
 
