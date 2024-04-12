@@ -16,11 +16,11 @@ base: &base
   # Ingress settings
   ingress: true
   ingress_port: 0
-  panel_icon: 'mdi:chip'
+  panel_icon: "mdi:chip"
   # Automatically add UART devices to add-on
   uart: true
   ports:
-    '6052/tcp': null
+    "6052/tcp": null
   map:
     - ssl:ro
     - config:rw
@@ -46,10 +46,11 @@ esphome-dev:
   <<: *base
   directory: esphome-dev
   name: ESPHome (dev)
-  version: 'dev'  # DEV
+  version: "2024.5.0-dev20240411"  # DEV
   slug: esphome-dev
   description: "Development version of ESPHome add-on"
   url: https://next.esphome.io/
+  image: ghcr.io/esphome/esphome-hassio
   stage: experimental
   advanced: true
   schema:
@@ -62,15 +63,14 @@ esphome-dev:
     certfile: str?
     keyfile: str?
     leave_front_door_open: bool?
-  base_image: ghcr.io/esphome/esphome-hassio:dev
   options:
-      home_assistant_dashboard_integration: false
+    home_assistant_dashboard_integration: false
 
 esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: '2024.4.0b2'  # BETA
+  version: "2024.4.0b2"  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome add-on"
   url: https://beta.esphome.io/
@@ -78,13 +78,13 @@ esphome-beta:
   stage: experimental
   advanced: true
   options:
-      home_assistant_dashboard_integration: false
+    home_assistant_dashboard_integration: false
 
 esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: '2024.3.2'  # STABLE
+  version: "2024.3.2"  # STABLE
   slug: esphome
   description: "ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices"
   image: ghcr.io/esphome/esphome-hassio
