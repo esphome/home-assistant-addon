@@ -1,6 +1,6 @@
-## 2024.4.0b2
+## 2024.4.0b3
 
-- Add dooya remote transmitter test [esphome#6508](https://github.com/esphome/esphome/pull/6508) by [@jesserockz](https://github.com/jesserockz)
-- ads1115: remove auto-load and split sensor into platform folder [esphome#5981](https://github.com/esphome/esphome/pull/5981) by [@jesserockz](https://github.com/jesserockz) (new-platform)
-- Bump esphome-dashboard to 20240412.0 [esphome#6517](https://github.com/esphome/esphome/pull/6517) by [@jesserockz](https://github.com/jesserockz)
+- Fix missing ifdefs in voice assistant [esphome#6520](https://github.com/esphome/esphome/pull/6520) by [@jesserockz](https://github.com/jesserockz)
+- Fix project version longer than 30 characters breaking compilation [esphome#6535](https://github.com/esphome/esphome/pull/6535) by [@jesserockz](https://github.com/jesserockz)
+- Fix no-release bug on ft6x36 [esphome#6527](https://github.com/esphome/esphome/pull/6527) by [@clydebarrow](https://github.com/clydebarrow)
 
