@@ -50,6 +50,7 @@ jobs:
       - name: Create a Release
         uses: actions/create-release@v1.1.4
         continue-on-error: true
+        if: ${{ !contains(github.event.inputs.version, 'dev') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
