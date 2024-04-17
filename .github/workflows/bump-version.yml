@@ -15,45 +15,47 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-    - uses: actions/checkout@v4.1.1
-    - uses: actions/setup-python@v4.8.0
-      with:
-        python-version: '3.11'
-    - run: pip install -r script/requirements.txt
-    - run: script/bump-version.py ${{ github.event.inputs.version }}
-    - name: Write Beta changelog
-      run: |
-        cat > esphome-beta/CHANGELOG.md << 'EOF'
-        ## ${{ github.event.inputs.version }}
+      - uses: actions/checkout@v4.1.1
+      - uses: actions/setup-python@v4.8.0
+        with:
+          python-version: "3.11"
+      - run: pip install -r script/requirements.txt
+      - run: script/bump-version.py ${{ github.event.inputs.version }}
+      - name: Write Beta changelog
+        if: ${{ !contains(github.event.inputs.version, 'dev') }}
+        run: |
+          cat > esphome-beta/CHANGELOG.md << 'EOF'
+          ## ${{ github.event.inputs.version }}
 
-        ${{ github.event.inputs.content }}
-        EOF
-    - name: Write Stable changelog
-      if: ${{ !contains(github.event.inputs.version, 'b') }}
-      run: |
-        cat > esphome/CHANGELOG.md << 'EOF'
-        ## ${{ github.event.inputs.version }}
+          ${{ github.event.inputs.content }}
+          EOF
+      - name: Write Stable changelog
+        if: ${{ !contains(github.event.inputs.version, 'b') && !contains(github.event.inputs.version, 'dev')  }}
+        run: |
+          cat > esphome/CHANGELOG.md << 'EOF'
+          ## ${{ github.event.inputs.version }}
 
-        ${{ github.event.inputs.content }}
-        EOF
-    - name: Commit version bump
-      id: commit_version
-      run: |
-        git config user.name esphomebot
-        git config user.email esphome@nabucasa.com
-        git add .
-        git commit -m "Bump version to ${{ github.event.inputs.version }}"
-        git push
-        COMMIT=$(git rev-parse HEAD)
-        echo "::set-output name=commit_sha::${COMMIT}"
-    - name: Create a Release
-      uses: actions/create-release@v1.1.4
-      continue-on-error: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.event.inputs.version }}
-        release_name: ${{ github.event.inputs.version }}
-        body: ${{ github.event.inputs.content }}
-        prerelease: ${{ contains(github.event.inputs.version, 'b') }}
-        commitish: ${{ steps.commit_version.outputs.commit_sha }}
+          ${{ github.event.inputs.content }}
+          EOF
+      - name: Commit version bump
+        id: commit_version
+        run: |
+          git config user.name esphomebot
+          git config user.email esphome@nabucasa.com
+          git add .
+          git commit -m "Bump version to ${{ github.event.inputs.version }}"
+          git push
+          COMMIT=$(git rev-parse HEAD)
+          echo "::set-output name=commit_sha::${COMMIT}"
+      - name: Create a Release
+        uses: actions/create-release@v1.1.4
+        continue-on-error: true
+        if: ${{ !contains(github.event.inputs.version, 'dev') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.event.inputs.version }}
+          release_name: ${{ github.event.inputs.version }}
+          body: ${{ github.event.inputs.content }}
+          prerelease: ${{ contains(github.event.inputs.version, 'b') }}
+          commitish: ${{ steps.commit_version.outputs.commit_sha }}

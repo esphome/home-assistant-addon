@@ -1,1 +1,1 @@
-See https://esphome.io/changelog/index.html
+See https://github.com/esphome/esphome/commits/dev
