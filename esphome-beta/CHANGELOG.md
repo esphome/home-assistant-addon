@@ -1,6 +1,7 @@
-## 2024.5.0b3
+## 2024.5.0b4
 
-- [core] Ensure that a generated ID name is distinct from its type. [esphome#6706](https://github.com/esphome/esphome/pull/6706) by [@clydebarrow](https://github.com/clydebarrow)
-- [color] Fix crash when hex color parses as int, improve error reporting. [esphome#6707](https://github.com/esphome/esphome/pull/6707) by [@clydebarrow](https://github.com/clydebarrow)
-- [github] Fix digest artifact name [esphome#6710](https://github.com/esphome/esphome/pull/6710) by [@jesserockz](https://github.com/jesserockz)
+- fix(ltr390): stuck ALS values when configured for ALS+UV readings [esphome#6723](https://github.com/esphome/esphome/pull/6723) by [@CodeInPolish](https://github.com/CodeInPolish)
+- Set FEATURE_API_AUDIO flag also if the speaker component is not used [esphome#6712](https://github.com/esphome/esphome/pull/6712) by [@gnumpi](https://github.com/gnumpi)
+- Bump platformio from 6.1.13 to 6.1.15 [esphome#6634](https://github.com/esphome/esphome/pull/6634) by [@dependabot[bot]](https://github.com/apps/dependabot)
+- Fix ESPHOME_PROJECT_VERSION_30 [esphome#6731](https://github.com/esphome/esphome/pull/6731) by [@jesserockz](https://github.com/jesserockz)
 
