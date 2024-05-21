@@ -1,7 +1,7 @@
-## 2024.5.1
+## 2024.5.2
 
-- Add device_class to valve core config [esphome#6765](https://github.com/esphome/esphome/pull/6765) by [@acshef](https://github.com/acshef)
-- Synchronise Device Classes from Home Assistant [esphome#6768](https://github.com/esphome/esphome/pull/6768) by [@esphomebot](https://github.com/esphomebot)
-- Fix Upload from Dashboard with MQTT discovery. [esphome#6774](https://github.com/esphome/esphome/pull/6774) by [@Links2004](https://github.com/Links2004)
-- Fix MQTT dashboard discovery (Exception in MqttStatusThread). [esphome#6775](https://github.com/esphome/esphome/pull/6775) by [@Links2004](https://github.com/Links2004)
+- Revert "Fix MQTT dashboard discovery (Exception in MqttStatusThread)." [esphome#6782](https://github.com/esphome/esphome/pull/6782) by [@bdraco](https://github.com/bdraco)
+- Fix DashboardEntries.all() call [esphome#6783](https://github.com/esphome/esphome/pull/6783) by [@bdraco](https://github.com/bdraco)
+- [remote_receiver] Add better error message for tolerance breaking change [esphome#6784](https://github.com/esphome/esphome/pull/6784) by [@jesserockz](https://github.com/jesserockz)
+- Update webserver local assets to 20240519-215627 [esphome#6779](https://github.com/esphome/esphome/pull/6779) by [@esphomebot](https://github.com/esphomebot)
 
