@@ -1,5 +1,6 @@
-## 2024.5.4
+## 2024.5.5
 
-- [web_server_base] Bump ESPAsyncWebServer-esphome to 3.2.2 [esphome#6797](https://github.com/esphome/esphome/pull/6797) by [@jesserockz](https://github.com/jesserockz)
-- [helpers] Move Base64 string to cpp [esphome#6819](https://github.com/esphome/esphome/pull/6819) by [@gabest11](https://github.com/gabest11)
+- [voice_assistant] Half the microphone ringbuffer size [esphome#6830](https://github.com/esphome/esphome/pull/6830) by [@jesserockz](https://github.com/jesserockz)
+- [i2s_speaker] Add buffer allocation failure checks [esphome#6829](https://github.com/esphome/esphome/pull/6829) by [@jesserockz](https://github.com/jesserockz)
+- [improv_serial] Fix for IDF 4.4.7 [esphome#6855](https://github.com/esphome/esphome/pull/6855) by [@kbx81](https://github.com/kbx81)
 
