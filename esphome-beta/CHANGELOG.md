@@ -1,6 +1,6 @@
-## 2024.5.0b3
+## 2024.5.5
 
-- [core] Ensure that a generated ID name is distinct from its type. [esphome#6706](https://github.com/esphome/esphome/pull/6706) by [@clydebarrow](https://github.com/clydebarrow)
-- [color] Fix crash when hex color parses as int, improve error reporting. [esphome#6707](https://github.com/esphome/esphome/pull/6707) by [@clydebarrow](https://github.com/clydebarrow)
-- [github] Fix digest artifact name [esphome#6710](https://github.com/esphome/esphome/pull/6710) by [@jesserockz](https://github.com/jesserockz)
+- [voice_assistant] Half the microphone ringbuffer size [esphome#6830](https://github.com/esphome/esphome/pull/6830) by [@jesserockz](https://github.com/jesserockz)
+- [i2s_speaker] Add buffer allocation failure checks [esphome#6829](https://github.com/esphome/esphome/pull/6829) by [@jesserockz](https://github.com/jesserockz)
+- [improv_serial] Fix for IDF 4.4.7 [esphome#6855](https://github.com/esphome/esphome/pull/6855) by [@kbx81](https://github.com/kbx81)
 

@@ -46,7 +46,7 @@ esphome-dev:
   <<: *base
   directory: esphome-dev
   name: ESPHome (dev)
-  version: "2024.6.0-dev20240510"  # DEV
+  version: "2024.6.0-dev20240609"  # DEV
   slug: esphome-dev
   description: "Development version of ESPHome add-on"
   url: https://next.esphome.io/
@@ -70,7 +70,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: "2024.5.0b3"  # BETA
+  version: "2024.5.5"  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome add-on"
   url: https://beta.esphome.io/
@@ -84,7 +84,7 @@ esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: "2024.4.2"  # STABLE
+  version: "2024.5.5"  # STABLE
   slug: esphome
   description: "ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices"
   image: ghcr.io/esphome/esphome-hassio

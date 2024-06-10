@@ -1,7 +1,6 @@
-## 2024.4.2
+## 2024.5.5
 
-- Fix SHT3xd fails sometimes in 2024.4.0 [esphome#6592](https://github.com/esphome/esphome/pull/6592) by [@mrtoy-me](https://github.com/mrtoy-me)
-- allow defaults with no include vars [esphome#6613](https://github.com/esphome/esphome/pull/6613) by [@ssieb](https://github.com/ssieb)
-- Revert #6458 [esphome#6650](https://github.com/esphome/esphome/pull/6650) by [@tronikos](https://github.com/tronikos)
-- [i2s_audio.microphone] Fixing adc bug [esphome#6654](https://github.com/esphome/esphome/pull/6654) by [@jesserockz](https://github.com/jesserockz)
+- [voice_assistant] Half the microphone ringbuffer size [esphome#6830](https://github.com/esphome/esphome/pull/6830) by [@jesserockz](https://github.com/jesserockz)
+- [i2s_speaker] Add buffer allocation failure checks [esphome#6829](https://github.com/esphome/esphome/pull/6829) by [@jesserockz](https://github.com/jesserockz)
+- [improv_serial] Fix for IDF 4.4.7 [esphome#6855](https://github.com/esphome/esphome/pull/6855) by [@kbx81](https://github.com/kbx81)
 
