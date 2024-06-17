@@ -1,7 +1,6 @@
-## 2024.6.0b2
+## 2024.6.0b3
 
-- [CI] Fix for sdl [esphome#6892](https://github.com/esphome/esphome/pull/6892) by [@jesserockz](https://github.com/jesserockz)
-- Add operation_speed option to X9C component [esphome#6890](https://github.com/esphome/esphome/pull/6890) by [@oliverhihn](https://github.com/oliverhihn)
-- [host] Execute host program when using run command [esphome#6897](https://github.com/esphome/esphome/pull/6897) by [@jesserockz](https://github.com/jesserockz)
-- Bump esphome-dashboard to 20240613.0 [esphome#6901](https://github.com/esphome/esphome/pull/6901) by [@jesserockz](https://github.com/jesserockz)
+- Synchronise Device Classes from Home Assistant [esphome#6904](https://github.com/esphome/esphome/pull/6904) by [@esphomebot](https://github.com/esphomebot)
+- [ili9xxx] Fix init for GC9A01A [esphome#6913](https://github.com/esphome/esphome/pull/6913) by [@jesserockz](https://github.com/jesserockz)
+- [mqtt] Fix datetime copy pasta [esphome#6914](https://github.com/esphome/esphome/pull/6914) by [@jesserockz](https://github.com/jesserockz)
 
