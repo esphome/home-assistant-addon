@@ -33,7 +33,7 @@ backup_exclude:
 init: false
 startup: services
 name: ESPHome (dev)
-version: 2024.7.0-dev20240621
+version: 2024.7.0-dev20240622
 slug: esphome-dev
 description: Development version of ESPHome add-on
 image: ghcr.io/esphome/esphome-hassio
