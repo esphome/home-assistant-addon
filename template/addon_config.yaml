@@ -46,7 +46,7 @@ esphome-dev:
   <<: *base
   directory: esphome-dev
   name: ESPHome (dev)
-  version: "2024.7.0-dev20240622"  # DEV
+  version: "2024.7.0-dev20240623"  # DEV
   slug: esphome-dev
   description: "Development version of ESPHome add-on"
   url: https://next.esphome.io/
