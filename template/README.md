@@ -7,7 +7,7 @@
 
 ## About
 
-This add-on allows you to manage and program your ESP8266 and ESP32 based microcontrollers
+This add-on allows you to manage and program your ESP8266, ESP32, RP2040, BK72xx and RTL87xx based microcontrollers
 directly through Home Assistant **with no programming experience required**. All you need to do
 is write YAML configuration files; the rest (over-the-air updates, compiling) is all
 handled by ESPHome.
