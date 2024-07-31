@@ -1,5 +1,6 @@
-## 2024.7.2
+## 2024.7.3
 
-- [http_request] Change default timeout to 4.5s [esphome#7123](https://github.com/esphome/esphome/pull/7123) by [@jesserockz](https://github.com/jesserockz)
-- [http_request] Fix ESP-IDF follow redirect [esphome#7101](https://github.com/esphome/esphome/pull/7101) by [@dentra](https://github.com/dentra)
+- [pmwcs3] Add delay after sending REG_READ_START [esphome#7130](https://github.com/esphome/esphome/pull/7130) by [@thevogoncoder](https://github.com/thevogoncoder)
+- Fix for Mitsubishi units that only support cooling [esphome#7143](https://github.com/esphome/esphome/pull/7143) by [@RubyBailey](https://github.com/RubyBailey)
+- [micro_wake_word] Fix VAD detection and modify detection computation [esphome#7164](https://github.com/esphome/esphome/pull/7164) by [@kahrendt](https://github.com/kahrendt)
 
