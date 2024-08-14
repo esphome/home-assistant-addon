@@ -32,7 +32,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3.4.0
       - name: Build and Push
-        uses: docker/build-push-action@v6.4.1
+        uses: docker/build-push-action@v6.7.0
         with:
           context: .
           file: .devcontainer/Dockerfile
