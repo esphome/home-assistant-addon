@@ -32,7 +32,7 @@ backup_exclude:
 init: false
 startup: services
 name: ESPHome (beta)
-version: 2024.8.0b4
+version: 2024.8.0
 slug: esphome-beta
 description: Beta version of ESPHome add-on
 image: ghcr.io/esphome/esphome-hassio
