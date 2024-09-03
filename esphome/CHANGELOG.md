@@ -1,7 +1,7 @@
-## 2024.8.1
+## 2024.8.3
 
-- [lvgl] Bug fixes [esphome#7338](https://github.com/esphome/esphome/pull/7338) by [@clydebarrow](https://github.com/clydebarrow)
-- [core] Clean build if the loaded integrations changed [esphome#7344](https://github.com/esphome/esphome/pull/7344) by [@clydebarrow](https://github.com/clydebarrow)
-- [lvgl] Fix race condition involving numbers, switches etc. [esphome#7345](https://github.com/esphome/esphome/pull/7345) by [@clydebarrow](https://github.com/clydebarrow)
-- [api] Fix sending the ``once`` flag on ha entity subscription [esphome#7357](https://github.com/esphome/esphome/pull/7357) by [@jesserockz](https://github.com/jesserockz)
+- [datetime] Fix templated args [esphome#7368](https://github.com/esphome/esphome/pull/7368) by [@jesserockz](https://github.com/jesserockz)
+- Bump Dockerfile dependencies [esphome#7386](https://github.com/esphome/esphome/pull/7386) by [@jesserockz](https://github.com/jesserockz)
+- Enable IPv6 when manual IPv4 is enabled [esphome#7381](https://github.com/esphome/esphome/pull/7381) by [@HeMan](https://github.com/HeMan)
+- [core] Only clean build files with esp-idf [esphome#7388](https://github.com/esphome/esphome/pull/7388) by [@jesserockz](https://github.com/jesserockz)
 
