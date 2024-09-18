@@ -1,5 +1,6 @@
-## 2024.9.0b3
+## 2024.9.0b4
 
-- Add sample_bytes to media player supported format [esphome#7451](https://github.com/esphome/esphome/pull/7451) by [@synesthesiam](https://github.com/synesthesiam)
-- [docker] Bump git from 1:2.39.2-1.1 to 1:2.39.5-0+deb12u1 [esphome#7452](https://github.com/esphome/esphome/pull/7452) by [@jesserockz](https://github.com/jesserockz)
+- Add voice assistant configuration messages [esphome#7445](https://github.com/esphome/esphome/pull/7445) by [@synesthesiam](https://github.com/synesthesiam)
+- Dont replace project name spaces with underlines [esphome#7455](https://github.com/esphome/esphome/pull/7455) by [@jesserockz](https://github.com/jesserockz)
+- Add voice assistant methods for configuration [esphome#7459](https://github.com/esphome/esphome/pull/7459) by [@synesthesiam](https://github.com/synesthesiam)
 
