@@ -72,7 +72,7 @@ esphome-beta:
   name: ESPHome Device Compiler (beta)
   version: "2024.10.2"  # BETA
   slug: esphome-beta
-  description: "Beta version of ESPHome add-on"
+  description: "Beta version of ESPHome Device Compiler"
   url: https://beta.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
