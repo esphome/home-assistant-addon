@@ -1,4 +1,4 @@
-# ESPHome Dev Add-On
+# ESPHome Device Compiler (Development branch)
 
 [![ESPHome logo][logo]][website]
 
@@ -7,13 +7,13 @@
 
 ## About
 
-This add-on allows you to manage and program your ESP8266 and ESP32 based microcontrollers
-directly through Home Assistant **with no programming experience required**. All you need to do
-is write YAML configuration files; the rest (over-the-air updates, compiling) is all
+This add-on allows you to write configurations and turn your microcontrollers
+into smart home devices directly through Home Assistant **with no programming experience required**.
+All you need to do is write YAML configuration files; the rest (over-the-air updates, compiling) is all
 handled by ESPHome.
 
 <p align="center">
-<img title="ESPHome dashboard screenshot" src="https://github.com/esphome/home-assistant-addon/raw/main/esphome-dev/images/screenshot.png" width="700px"></img>
+<img title="ESPHome Device Compiler screenshot" src="https://github.com/esphome/home-assistant-addon/raw/main/esphome-dev/images/screenshot.png" width="700px"></img>
 </p>
 
 [View the ESPHome documentation][website]

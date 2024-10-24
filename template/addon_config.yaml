@@ -48,7 +48,7 @@ esphome-dev:
   name: ESPHome Device Compiler (dev)
   version: "2024.11.0-dev20241024"  # DEV
   slug: esphome-dev
-  description: "Development version of ESPHome add-on"
+  description: "Development version of ESPHome Device Compiler"
   url: https://next.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
