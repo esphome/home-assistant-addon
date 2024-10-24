@@ -7,7 +7,7 @@
 
 ## About
 
-This add-on allows you to write configurations and turn your ESP8266 and ESP32 based microcontrollers
+This add-on allows you to write configurations and turn your microcontrollers
 into smart home devices directly through Home Assistant **with no programming experience required**.
 All you need to do is write YAML configuration files; the rest (over-the-air updates, compiling) is all
 handled by ESPHome.
