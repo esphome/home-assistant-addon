@@ -45,7 +45,7 @@ base: &base
 esphome-dev:
   <<: *base
   directory: esphome-dev
-  name: ESPHome (dev)
+  name: ESPHome Device Compiler (dev)
   version: "2024.11.0-dev20241024"  # DEV
   slug: esphome-dev
   description: "Development version of ESPHome add-on"
@@ -69,7 +69,7 @@ esphome-dev:
 esphome-beta:
   <<: *base
   directory: esphome-beta
-  name: ESPHome (beta)
+  name: ESPHome Device Compiler (beta)
   version: "2024.10.2"  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome add-on"
@@ -83,10 +83,10 @@ esphome-beta:
 esphome-stable:
   <<: *base
   directory: esphome
-  name: ESPHome
+  name: ESPHome Device Compiler
   version: "2024.10.2"  # STABLE
   slug: esphome
-  description: "ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices"
+  description: "Build your own smart home devices using ESPHome, no programming experience required."
   image: ghcr.io/esphome/esphome-hassio
 
 copy_files:
