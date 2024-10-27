@@ -33,7 +33,7 @@ backup_exclude:
 init: false
 startup: services
 name: ESPHome Device Compiler (dev)
-version: 2024.11.0-dev20241026
+version: 2024.11.0-dev20241027
 slug: esphome-dev
 description: Development version of ESPHome Device Compiler
 image: ghcr.io/esphome/esphome-hassio
