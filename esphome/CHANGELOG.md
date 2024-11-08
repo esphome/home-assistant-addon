@@ -1,6 +1,6 @@
-## 2024.10.2
+## 2024.10.3
 
-- Humanized the missing MQTT log topic error message [esphome#7634](https://github.com/esphome/esphome/pull/7634) by [@solarkennedy](https://github.com/solarkennedy)
-- [lvgl] Some properties were not templatable (Bugfix) [esphome#7655](https://github.com/esphome/esphome/pull/7655) by [@clydebarrow](https://github.com/clydebarrow)
-- [voice_assistant] Bugfix: Fix crash on start [esphome#7662](https://github.com/esphome/esphome/pull/7662) by [@kahrendt](https://github.com/kahrendt)
+- [rpi_dpi_rgb] Fix get_width and height (Bugfix) [esphome#7675](https://github.com/esphome/esphome/pull/7675) by [@clydebarrow](https://github.com/clydebarrow)
+- Fixes modbus timing error [esphome#7674](https://github.com/esphome/esphome/pull/7674) by [@exciton](https://github.com/exciton)
+- [lvgl] Ensure images are configured before using them. (Bugfix) [esphome#7721](https://github.com/esphome/esphome/pull/7721) by [@clydebarrow](https://github.com/clydebarrow)
 
