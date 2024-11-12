@@ -19,9 +19,9 @@ jobs:
             channel: dev
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4.2.2
       - name: 🛠 Setup Python
-        uses: actions/setup-python@v5.2.0
+        uses: actions/setup-python@v5.3.0
         with:
           python-version: '3.11'
       - name: 🛠 Install dependencies
@@ -29,6 +29,6 @@ jobs:
       - name: 🛠 Generate files from template
         run: python script/generate.py ${{ matrix.channels.channel }}
       - name: 🚀 Run Home Assistant Add-on Lint on ${{ matrix.channels.channel }}
-        uses: frenck/action-addon-linter@v2.17.1
+        uses: frenck/action-addon-linter@v2.18.0
         with:
           path: "./${{ matrix.channels.folder }}"
