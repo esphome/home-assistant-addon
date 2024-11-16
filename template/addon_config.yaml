@@ -46,7 +46,7 @@ esphome-dev:
   <<: *base
   directory: esphome-dev
   name: ESPHome Device Compiler (dev)
-  version: "2024.12.0-dev20241115"  # DEV
+  version: "2024.12.0-dev20241116"  # DEV
   slug: esphome-dev
   description: "Development version of ESPHome Device Compiler"
   url: https://next.esphome.io/
