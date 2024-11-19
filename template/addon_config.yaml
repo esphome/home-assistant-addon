@@ -70,7 +70,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome Device Compiler (beta)
-  version: "2024.11.0b2"  # BETA
+  version: "2024.11.0b3"  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome Device Compiler"
   url: https://beta.esphome.io/
