@@ -1,5 +1,5 @@
-## 2024.11.0b3
+## 2024.11.0b4
 
-- TuyaFan control should use oscillation_type [esphome#7776](https://github.com/esphome/esphome/pull/7776) by [@pethans](https://github.com/pethans)
-- Bump esphome-dashboard to 20241118.0 [esphome#7782](https://github.com/esphome/esphome/pull/7782) by [@jesserockz](https://github.com/jesserockz)
+- [http_request] Feed watchdog timeout around http request functions [esphome#7786](https://github.com/esphome/esphome/pull/7786) by [@jesserockz](https://github.com/jesserockz)
+- Bump esphome-dashboard to 20241120.0 [esphome#7787](https://github.com/esphome/esphome/pull/7787) by [@jesserockz](https://github.com/jesserockz)
 
