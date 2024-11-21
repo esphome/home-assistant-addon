@@ -32,7 +32,7 @@ backup_exclude:
 init: false
 startup: services
 name: ESPHome Device Compiler
-version: 2024.11.0
+version: 2024.11.1
 slug: esphome
 description: Build your own smart home devices using ESPHome, no programming experience
   required.
