@@ -10,7 +10,6 @@ host_network: true
 ingress: true
 ingress_port: 0
 panel_icon: mdi:chip
-panel_title: ESPHome Compiler
 uart: true
 ports:
   6052/tcp: null
@@ -33,6 +32,7 @@ backup_exclude:
 init: false
 startup: services
 name: ESPHome Device Compiler (beta)
+panel_title: ESPHome Compiler (beta)
 version: 2024.11.1
 slug: esphome-beta
 description: Beta version of ESPHome Device Compiler
