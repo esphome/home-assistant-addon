@@ -10,6 +10,7 @@ host_network: true
 ingress: true
 ingress_port: 0
 panel_icon: mdi:chip
+panel_title: ESPHome Compiler
 uart: true
 ports:
   6052/tcp: null

@@ -17,6 +17,7 @@ base: &base
   ingress: true
   ingress_port: 0
   panel_icon: "mdi:chip"
+  panel_title: "ESPHome Compiler"
   # Automatically add UART devices to add-on
   uart: true
   ports:
