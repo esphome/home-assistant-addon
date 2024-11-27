@@ -1,10 +1,12 @@
-## 2024.11.1
+## 2024.11.2
 
-- [http_request] Fix within context with parameters. (Bugfix) [esphome#7790](https://github.com/esphome/esphome/pull/7790) by [@clydebarrow](https://github.com/clydebarrow)
-- [rtttl] Clamp gain between 0 and 1 [esphome#7793](https://github.com/esphome/esphome/pull/7793) by [@jesserockz](https://github.com/jesserockz)
-- [speaker] Add missing auto-load for ``audio`` [esphome#7794](https://github.com/esphome/esphome/pull/7794) by [@jesserockz](https://github.com/jesserockz)
-- [qspi_dbi] Fix garbled graphics on RM690B0 [esphome#7795](https://github.com/esphome/esphome/pull/7795) by [@manuelkasper](https://github.com/manuelkasper)
-- Check for min_version earlier in validation [esphome#7797](https://github.com/esphome/esphome/pull/7797) by [@spuder](https://github.com/spuder)
-- Fix for OTA mode not activating in safe_mode when OTA section has an on_xxxx action  [esphome#7796](https://github.com/esphome/esphome/pull/7796) by [@Dilbert66](https://github.com/Dilbert66)
-- Ensure storage I/O for ignored devices runs in the executor [esphome#7792](https://github.com/esphome/esphome/pull/7792) by [@bdraco](https://github.com/bdraco)
+- [lvgl] Bugfixes [esphome#7803](https://github.com/esphome/esphome/pull/7803) by [@clydebarrow](https://github.com/clydebarrow)
+- [docker] Leave run-time required libraries installed. [esphome#7804](https://github.com/esphome/esphome/pull/7804) by [@clydebarrow](https://github.com/clydebarrow)
+- [qspi_dbi] Fix init sequences (Bugfix) [esphome#7805](https://github.com/esphome/esphome/pull/7805) by [@clydebarrow](https://github.com/clydebarrow)
+- fix modbus crashing when bad data returned [esphome#7810](https://github.com/esphome/esphome/pull/7810) by [@ssieb](https://github.com/ssieb)
+- [Modbus Controller] Fix issue #6477. Online automation triggering Offline [esphome#7801](https://github.com/esphome/esphome/pull/7801) by [@0x3333](https://github.com/0x3333)
+- [fix] Status sensor does not check if required network component is missing [esphome#7734](https://github.com/esphome/esphome/pull/7734) by [@rvalitov](https://github.com/rvalitov)
+- keypad binary sensors should be initially off [esphome#7808](https://github.com/esphome/esphome/pull/7808) by [@ssieb](https://github.com/ssieb)
+- fix 32 char SSIDs [esphome#7834](https://github.com/esphome/esphome/pull/7834) by [@ssieb](https://github.com/ssieb)
+- [honeywell] use warning instead of failing [esphome#7862](https://github.com/esphome/esphome/pull/7862) by [@ssieb](https://github.com/ssieb)
 
