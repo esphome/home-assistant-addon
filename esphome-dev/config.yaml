@@ -34,7 +34,7 @@ init: false
 startup: services
 name: ESPHome Device Compiler (dev)
 panel_title: ESPHome Compiler (dev)
-version: 2024.12.0-dev20241209
+version: 2024.12.0-dev20241210
 slug: esphome-dev
 description: Development version of ESPHome Device Compiler
 image: ghcr.io/esphome/esphome-hassio
