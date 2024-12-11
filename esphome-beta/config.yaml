@@ -33,7 +33,7 @@ init: false
 startup: services
 name: ESPHome Device Compiler (beta)
 panel_title: ESPHome Compiler (beta)
-version: 2024.11.3
+version: 2024.12.0b1
 slug: esphome-beta
 description: Beta version of ESPHome Device Compiler
 image: ghcr.io/esphome/esphome-hassio
