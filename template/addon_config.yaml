@@ -45,11 +45,11 @@ base: &base
 esphome-dev:
   <<: *base
   directory: esphome-dev
-  name: ESPHome Device Compiler (dev)
-  panel_title: ESPHome Compiler (dev)
+  name: ESPHome Device Builder (dev)
+  panel_title: ESPHome Builder (dev)
   version: "2025.1.0-dev20241212"  # DEV
   slug: esphome-dev
-  description: "Development version of ESPHome Device Compiler"
+  description: "Development version of ESPHome Device Builder"
   url: https://next.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
@@ -70,11 +70,11 @@ esphome-dev:
 esphome-beta:
   <<: *base
   directory: esphome-beta
-  name: ESPHome Device Compiler (beta)
-  panel_title: ESPHome Compiler (beta)
+  name: ESPHome Device Builder (beta)
+  panel_title: ESPHome Builder (beta)
   version: "2024.12.0b1"  # BETA
   slug: esphome-beta
-  description: "Beta version of ESPHome Device Compiler"
+  description: "Beta version of ESPHome Device Builder"
   url: https://beta.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
@@ -85,8 +85,8 @@ esphome-beta:
 esphome-stable:
   <<: *base
   directory: esphome
-  name: ESPHome Device Compiler
-  panel_title: ESPHome Compiler
+  name: ESPHome Device Builder
+  panel_title: ESPHome Builder
   version: "2024.11.3"  # STABLE
   slug: esphome
   description: "Build your own smart home devices using ESPHome, no programming experience required."

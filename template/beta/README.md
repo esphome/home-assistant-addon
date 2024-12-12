@@ -1,4 +1,4 @@
-# ESPHome Device Compiler Beta
+# ESPHome Device Builder Beta
 
 [![ESPHome logo][logo]][website]
 
@@ -13,7 +13,7 @@ All you need to do is write YAML configuration files; the rest (over-the-air upd
 handled by ESPHome.
 
 <p align="center">
-<img title="ESPHome Device Compiler screenshot" src="https://github.com/esphome/home-assistant-addon/raw/main/esphome-beta/images/screenshot.png" width="700px"></img>
+<img title="ESPHome Device Builder screenshot" src="https://github.com/esphome/home-assistant-addon/raw/main/esphome-beta/images/screenshot.png" width="700px"></img>
 </p>
 
 [View the ESPHome documentation][website]
