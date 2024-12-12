@@ -49,7 +49,7 @@ esphome-dev:
   panel_title: ESPHome Builder (dev)
   version: "2025.1.0-dev20241212"  # DEV
   slug: esphome-dev
-  description: "Development version of ESPHome Device Compiler"
+  description: "Development version of ESPHome Device Builder"
   url: https://next.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
@@ -74,7 +74,7 @@ esphome-beta:
   panel_title: ESPHome Builder (beta)
   version: "2024.12.0b1"  # BETA
   slug: esphome-beta
-  description: "Beta version of ESPHome Device Compiler"
+  description: "Beta version of ESPHome Device Builder"
   url: https://beta.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
