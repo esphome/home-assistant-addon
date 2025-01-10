@@ -21,7 +21,7 @@ handled by ESPHome.
 ## Example
 
 With ESPHome, you can go from a few lines of YAML straight to a custom-made
-firmware. For example, to include a [DHT22][dht22].
+firmware. For example, to include a [DHT22][dht22]
 temperature and humidity sensor, you just need to include 8 lines of YAML
 in your configuration file:
 
