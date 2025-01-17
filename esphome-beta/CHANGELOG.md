@@ -1,5 +1,4 @@
-## 2024.12.2
+## 2024.12.4
 
-- [esp32] Fix flash size warning when using IDF [esphome#7983](https://github.com/esphome/esphome/pull/7983) by [@kbx81](https://github.com/kbx81)
-- [esp32_ble] Fix for Improv [esphome#7984](https://github.com/esphome/esphome/pull/7984) by [@kbx81](https://github.com/kbx81)
+- Bump python3-setuptools to 66.1.1-1+deb12u1 [esphome#8074](https://github.com/esphome/esphome/pull/8074) by [@jesserockz](https://github.com/jesserockz)
 

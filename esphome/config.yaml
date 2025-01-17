@@ -33,7 +33,7 @@ init: false
 startup: services
 name: ESPHome Device Builder
 panel_title: ESPHome Builder
-version: 2024.12.2
+version: 2024.12.4
 slug: esphome
 description: Build your own smart home devices using ESPHome, no programming experience
   required.
