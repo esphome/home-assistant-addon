@@ -6,7 +6,6 @@ base: &base
   url: https://esphome.io/
   arch:
     - amd64
-    - armv7
     - aarch64
   # Uses Home Assistant Supervisor API (auth)
   hassio_api: true
