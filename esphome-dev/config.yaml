@@ -2,7 +2,6 @@
 url: https://next.esphome.io/
 arch:
 - amd64
-- armv7
 - aarch64
 hassio_api: true
 auth_api: true
@@ -34,7 +33,7 @@ init: false
 startup: services
 name: ESPHome Device Builder (dev)
 panel_title: ESPHome Builder (dev)
-version: 2025.2.0-dev20250202
+version: 2025.2.0-dev20250205
 slug: esphome-dev
 description: Development version of ESPHome Device Builder
 image: ghcr.io/esphome/esphome-hassio
