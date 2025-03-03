@@ -1,8 +1,7 @@
-## 2025.2.1
+## 2025.2.2
 
-- Bump aioesphomeapi to 29.1.1 [esphome#8274](https://github.com/esphome/esphome/pull/8274) by [@bdraco](https://github.com/bdraco)
-- Fix BLE max notifications with ESP-IDF 5.x [esphome#8301](https://github.com/esphome/esphome/pull/8301) by [@bdraco](https://github.com/bdraco)
-- Update webserver local assets to 20250224-195901 [esphome#8312](https://github.com/esphome/esphome/pull/8312) by [@esphomebot](https://github.com/esphomebot)
-- Fix bluetooth race when disconnect called while still connecting [esphome#8297](https://github.com/esphome/esphome/pull/8297) by [@bdraco](https://github.com/bdraco)
-- [esp32_touch] Fix variants, add tests for variants [esphome#8320](https://github.com/esphome/esphome/pull/8320) by [@kbx81](https://github.com/kbx81)
+- Fix ``end_of_scan_`` not being called while disconnecting [esphome#8328](https://github.com/esphome/esphome/pull/8328) by [@bdraco](https://github.com/bdraco)
+- [audio] Determine http timeout based on duration since last successful read [esphome#8341](https://github.com/esphome/esphome/pull/8341) by [@kahrendt](https://github.com/kahrendt)
+- Bump aioesphomeapi to 29.3.2 [esphome#8353](https://github.com/esphome/esphome/pull/8353) by [@bdraco](https://github.com/bdraco)
+- [ltr390] Move calculation to allow dynamic setting of gain and resolution [esphome#8343](https://github.com/esphome/esphome/pull/8343) by [@jesserockz](https://github.com/jesserockz)
 
