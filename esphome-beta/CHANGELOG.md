@@ -1,6 +1,9 @@
-## 2025.3.1
+## 2025.3.2
 
-- [ft63x6] Get correct dimensions from display [esphome#8417](https://github.com/esphome/esphome/pull/8417) by [@clydebarrow](https://github.com/clydebarrow)
-- [lvgl] Set correct buffer size [esphome#8442](https://github.com/esphome/esphome/pull/8442) by [@clydebarrow](https://github.com/clydebarrow)
-- [lvgl] Ensure non-zero screen dimensions during init [esphome#8444](https://github.com/esphome/esphome/pull/8444) by [@clydebarrow](https://github.com/clydebarrow)
+- [gt911][cst226][ektf2232] Swap x and y calibration values  [esphome#8450](https://github.com/esphome/esphome/pull/8450) by [@clydebarrow](https://github.com/clydebarrow)
+- [font] More robust handling of fixed font sizes. [esphome#8443](https://github.com/esphome/esphome/pull/8443) by [@clydebarrow](https://github.com/clydebarrow)
+- fix 1bpp rendering [esphome#8463](https://github.com/esphome/esphome/pull/8463) by [@ssieb](https://github.com/ssieb)
+- [media_player] Don't reset enqueue command [esphome#8465](https://github.com/esphome/esphome/pull/8465) by [@kahrendt](https://github.com/kahrendt)
+- [speaker] Bugfix: Fix rapidly adding items to playlist [esphome#8466](https://github.com/esphome/esphome/pull/8466) by [@kahrendt](https://github.com/kahrendt)
+- [ld2450] Fix bluetooth state not reported correctly [esphome#8458](https://github.com/esphome/esphome/pull/8458) by [@kbx81](https://github.com/kbx81)
 
