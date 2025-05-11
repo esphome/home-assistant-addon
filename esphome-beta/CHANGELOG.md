@@ -1,10 +1,12 @@
-## 2025.4.1
+## 2025.4.2
 
-- Fix psram below idf 5 [esphome#8584](https://github.com/esphome/esphome/pull/8584) by [@jesserockz](https://github.com/jesserockz)
-- [lvgl] Ensure pages are created on the correct display [esphome#8596](https://github.com/esphome/esphome/pull/8596) by [@clydebarrow](https://github.com/clydebarrow)
-- Fix BLE connection loop caused by timeout and pending disconnect race [esphome#8597](https://github.com/esphome/esphome/pull/8597) by [@bdraco](https://github.com/bdraco)
-- [online_image] Fix printf format; comment fixes [esphome#8607](https://github.com/esphome/esphome/pull/8607) by [@clydebarrow](https://github.com/clydebarrow)
-- [watchdog] Fix for variants with single core [esphome#8602](https://github.com/esphome/esphome/pull/8602) by [@jesserockz](https://github.com/jesserockz)
-- [core] Fix setting of log level/verbose [esphome#8600](https://github.com/esphome/esphome/pull/8600) by [@clydebarrow](https://github.com/clydebarrow)
-- Update ens160_base.cpp – fix wrong double negative [esphome#8639](https://github.com/esphome/esphome/pull/8639) by [@steffenbanhardt](https://github.com/steffenbanhardt)
+- Fix unexpected widget update behavior [esphome#8260](https://github.com/esphome/esphome/pull/8260) by [@bdm310](https://github.com/bdm310)
+- [esp32_ble] Remove explicit and now incorrect ble override for esp32-c6 [esphome#8643](https://github.com/esphome/esphome/pull/8643) by [@jesserockz](https://github.com/jesserockz)
+- [media_player] Fix actions with id as value [esphome#8654](https://github.com/esphome/esphome/pull/8654) by [@jesserockz](https://github.com/jesserockz)
+- Fix typo preventing tt21100 from autosetting the touchscreen res. [esphome#8662](https://github.com/esphome/esphome/pull/8662) by [@raineth](https://github.com/raineth)
+- Fix HLW8012 sensor not returning values if change_mode_every is set to never [esphome#8456](https://github.com/esphome/esphome/pull/8456) by [@SuperPlusUser](https://github.com/SuperPlusUser)
+- [display] Fix Rect::inside [esphome#8679](https://github.com/esphome/esphome/pull/8679) by [@clydebarrow](https://github.com/clydebarrow)
+- [as3935_i2c] Remove redundant includes [esphome#8677](https://github.com/esphome/esphome/pull/8677) by [@clydebarrow](https://github.com/clydebarrow)
+- [lvgl] Allow padding to be negative [esphome#8671](https://github.com/esphome/esphome/pull/8671) by [@clydebarrow](https://github.com/clydebarrow)
+- [lvgl] Fix image property processing [esphome#8691](https://github.com/esphome/esphome/pull/8691) by [@clydebarrow](https://github.com/clydebarrow)
 
