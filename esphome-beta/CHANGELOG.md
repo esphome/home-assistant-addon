@@ -1,5 +1,7 @@
 ## 2025.6.0
 
+[**Read release announcement**](https://beta.esphome.io/changelog/2025.6.0)
+
 ## Full list of changes
 
 ### New Components

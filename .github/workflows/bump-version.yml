@@ -21,11 +21,19 @@ jobs:
           python-version: "3.11"
       - run: pip install -r script/requirements.txt
       - run: script/bump-version.py ${{ github.event.inputs.version }}
+      - name: Extract major version
+        id: extract_version
+        run: |
+          # Extract major version (e.g., 2025.6.0 from 2025.6.2 or 2025.6.0b3)
+          MAJOR_VERSION=$(echo "${{ github.event.inputs.version }}" | sed -E 's/^([0-9]+\.[0-9]+)\.[0-9]+.*/\1.0/')
+          echo "major_version=${MAJOR_VERSION}" >> $GITHUB_OUTPUT
       - name: Write Beta changelog
         if: ${{ !contains(github.event.inputs.version, 'dev') }}
         run: |
           cat > esphome-beta/CHANGELOG.md << 'EOF'
           ## ${{ github.event.inputs.version }}
+
+          [**Read release announcement**](https://beta.esphome.io/changelog/${{ steps.extract_version.outputs.major_version }})
 
           ${{ github.event.inputs.content }}
           EOF
@@ -34,6 +42,8 @@ jobs:
         run: |
           cat > esphome/CHANGELOG.md << 'EOF'
           ## ${{ github.event.inputs.version }}
+
+          [**Read release announcement**](https://esphome.io/changelog/${{ steps.extract_version.outputs.major_version }})
 
           ${{ github.event.inputs.content }}
           EOF
@@ -46,7 +56,7 @@ jobs:
           git commit -m "Bump version to ${{ github.event.inputs.version }}"
           git push
           COMMIT=$(git rev-parse HEAD)
-          echo "::set-output name=commit_sha::${COMMIT}"
+          echo "commit_sha=${COMMIT}" >> $GITHUB_OUTPUT
       - name: Create a Release
         uses: actions/create-release@v1.1.4
         continue-on-error: true
