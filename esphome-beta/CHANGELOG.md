@@ -1,11 +1,12 @@
-## 2025.6.1
+## 2025.6.2
 
 [**Read release announcement**](https://beta.esphome.io/changelog/2025.6.0)
 
-- Eliminate memory fragmentation with BLE event pool [esphome#9101](https://github.com/esphome/esphome/pull/9101) by [@bdraco](https://github.com/bdraco)
-- [nextion] Fix command spacing double timing and response blocking issues [esphome#9134](https://github.com/esphome/esphome/pull/9134) by [@edwardtfn](https://github.com/edwardtfn)
-- Fix missing BLE GAP events causing RSSI sensor and beacon failures [esphome#9138](https://github.com/esphome/esphome/pull/9138) by [@bdraco](https://github.com/bdraco)
-- [config validation] Add more ip address / network validators [esphome#9181](https://github.com/esphome/esphome/pull/9181) by [@jesserockz](https://github.com/jesserockz)
-- Fixes for setup of OpenThread either using TLV or entering Credentials directly [esphome#9157](https://github.com/esphome/esphome/pull/9157) by [@rwrozelle](https://github.com/rwrozelle)
-- Restore access to BLEScanResult as get_scan_result [esphome#9148](https://github.com/esphome/esphome/pull/9148) by [@myhomeiot](https://github.com/myhomeiot)
+- [lvgl] Fix dangling pointer issue with qrcode [esphome#9190](https://github.com/esphome/esphome/pull/9190) by [@clydebarrow](https://github.com/clydebarrow)
+- [audio] Bugfix: improve timeout handling [esphome#9221](https://github.com/esphome/esphome/pull/9221) by [@kahrendt](https://github.com/kahrendt)
+- [speaker] bugfix: continue to block tasks if stop flag is set [esphome#9222](https://github.com/esphome/esphome/pull/9222) by [@kahrendt](https://github.com/kahrendt)
+- [voice_assistant] Support streaming TTS responses and fixes crash for long responses [esphome#9224](https://github.com/esphome/esphome/pull/9224) by [@kahrendt](https://github.com/kahrendt)
+- [esp32] Change ``enable_lwip_mdns_queries`` default to ``True`` [esphome#9188](https://github.com/esphome/esphome/pull/9188) by [@scaiper](https://github.com/scaiper)
+- [mcp23xxx_base] fix pin interrupts [esphome#9244](https://github.com/esphome/esphome/pull/9244) by [@ssieb](https://github.com/ssieb)
+- [i2c] Disable i2c scan on certain idf versions [esphome#9237](https://github.com/esphome/esphome/pull/9237) by [@swoboda1337](https://github.com/swoboda1337)
 
