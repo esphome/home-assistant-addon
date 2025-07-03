@@ -1,12 +1,9 @@
-## 2025.6.2
+## 2025.6.3
 
 [**Read release announcement**](https://beta.esphome.io/changelog/2025.6.0)
 
-- [lvgl] Fix dangling pointer issue with qrcode [esphome#9190](https://github.com/esphome/esphome/pull/9190) by [@clydebarrow](https://github.com/clydebarrow)
-- [audio] Bugfix: improve timeout handling [esphome#9221](https://github.com/esphome/esphome/pull/9221) by [@kahrendt](https://github.com/kahrendt)
-- [speaker] bugfix: continue to block tasks if stop flag is set [esphome#9222](https://github.com/esphome/esphome/pull/9222) by [@kahrendt](https://github.com/kahrendt)
-- [voice_assistant] Support streaming TTS responses and fixes crash for long responses [esphome#9224](https://github.com/esphome/esphome/pull/9224) by [@kahrendt](https://github.com/kahrendt)
-- [esp32] Change ``enable_lwip_mdns_queries`` default to ``True`` [esphome#9188](https://github.com/esphome/esphome/pull/9188) by [@scaiper](https://github.com/scaiper)
-- [mcp23xxx_base] fix pin interrupts [esphome#9244](https://github.com/esphome/esphome/pull/9244) by [@ssieb](https://github.com/ssieb)
-- [i2c] Disable i2c scan on certain idf versions [esphome#9237](https://github.com/esphome/esphome/pull/9237) by [@swoboda1337](https://github.com/swoboda1337)
+- [uart] fix: missing uart_config_t struct initialisation [esphome#9235](https://github.com/esphome/esphome/pull/9235) by [@Rezoran](https://github.com/Rezoran)
+- Fix api log client crashing when api encryption is dynamic [esphome#9245](https://github.com/esphome/esphome/pull/9245) by [@jesserockz](https://github.com/jesserockz)
+- Fix crash when event last_event_type is null in web_server [esphome#9266](https://github.com/esphome/esphome/pull/9266) by [@bdraco](https://github.com/bdraco)
+- [http_request] allow retrieval of more than just the first header [esphome#9242](https://github.com/esphome/esphome/pull/9242) by [@candrews](https://github.com/candrews)
 
