@@ -1,19 +1,15 @@
-## 2025.7.2
+## 2025.7.3
 
 [**Read release announcement**](https://esphome.io/changelog/2025.7.0)
 
-- Fix template event web_server crash [esphome#9618](https://github.com/esphome/esphome/pull/9618) by [@AzonInc](https://github.com/AzonInc)
-- [api] Fix compilation error with char* lambdas in HomeAssistant services [esphome#9638](https://github.com/esphome/esphome/pull/9638) by [@bdraco](https://github.com/bdraco)
-- [wireguard] Fix boot loop when CONFIG_LWIP_TCPIP_CORE_LOCKING is enabled [esphome#9637](https://github.com/esphome/esphome/pull/9637) by [@bdraco](https://github.com/bdraco)
-- [scheduler] Fix cancellation of timers with empty string names [esphome#9641](https://github.com/esphome/esphome/pull/9641) by [@bdraco](https://github.com/bdraco)
-- [logger] fix on_message [esphome#9642](https://github.com/esphome/esphome/pull/9642) by [@ssieb](https://github.com/ssieb)
-- esp32_camera: deprecate i2c_pins; throw error if combined with i2c: block [esphome#9615](https://github.com/esphome/esphome/pull/9615) by [@RubenKelevra](https://github.com/RubenKelevra)
-- [scheduler] Fix DelayAction cancellation in restart mode scripts [esphome#9646](https://github.com/esphome/esphome/pull/9646) by [@bdraco](https://github.com/bdraco)
-- [lvgl] Fix meter rotation [esphome#9605](https://github.com/esphome/esphome/pull/9605) by [@clydebarrow](https://github.com/clydebarrow)
-- [libretiny] Remove unsupported lock-free queue and event pool implementations [esphome#9653](https://github.com/esphome/esphome/pull/9653) by [@bdraco](https://github.com/bdraco)
-- [lvgl] Prevent keyerror on min/max value widgets with no default [esphome#9660](https://github.com/esphome/esphome/pull/9660) by [@jesserockz](https://github.com/jesserockz)
-- Fix AsyncTCP version mismatch between platformio.ini and async_tcp component [esphome#9676](https://github.com/esphome/esphome/pull/9676) by [@bdraco](https://github.com/bdraco)
-- [speaker] Media player's pipeline properly returns playing state near end of file [esphome#9668](https://github.com/esphome/esphome/pull/9668) by [@kahrendt](https://github.com/kahrendt)
-- [voice_assistant] Use media player callbacks to track TTS response status [esphome#9670](https://github.com/esphome/esphome/pull/9670) by [@kahrendt](https://github.com/kahrendt)
-- [gpio] Disable interrupt mode by default for LibreTiny platforms [esphome#9687](https://github.com/esphome/esphome/pull/9687) by [@bdraco](https://github.com/bdraco)
+- [gpio] Auto-disable interrupts for shared GPIO pins in binary sensors [esphome#9701](https://github.com/esphome/esphome/pull/9701) by [@bdraco](https://github.com/bdraco)
+- Fix format string error in ota_web_server.cpp [esphome#9711](https://github.com/esphome/esphome/pull/9711) by [@tmpeh](https://github.com/tmpeh)
+- [sdl][mipi_spi] Respect clipping when drawing [esphome#9722](https://github.com/esphome/esphome/pull/9722) by [@JonasB2497](https://github.com/JonasB2497)
+- [esp32_touch] Fix setup mode in v1 driver [esphome#9725](https://github.com/esphome/esphome/pull/9725) by [@swoboda1337](https://github.com/swoboda1337)
+- [tuya] Update use of fan_schema [esphome#9762](https://github.com/esphome/esphome/pull/9762) by [@jesserockz](https://github.com/jesserockz)
+- [config_validation] Add support for suggesting alternate component/platform [esphome#9757](https://github.com/esphome/esphome/pull/9757) by [@kbx81](https://github.com/kbx81)
+- [core] Process pending loop enables during setup blocking phase [esphome#9787](https://github.com/esphome/esphome/pull/9787) by [@bdraco](https://github.com/bdraco)
+- [fastled_clockless, fastled_spi] Add suggested alternate when using IDF [esphome#9784](https://github.com/esphome/esphome/pull/9784) by [@kbx81](https://github.com/kbx81)
+- [neopixelbus] Add suggested alternate when using IDF [esphome#9783](https://github.com/esphome/esphome/pull/9783) by [@kbx81](https://github.com/kbx81)
+- [bme680_bsec] Add suggested alternate when using IDF [esphome#9785](https://github.com/esphome/esphome/pull/9785) by [@kbx81](https://github.com/kbx81)
 
