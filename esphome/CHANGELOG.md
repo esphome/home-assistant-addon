@@ -1,15 +1,11 @@
-## 2025.7.3
+## 2025.7.4
 
 [**Read release announcement**](https://esphome.io/changelog/2025.7.0)
 
-- [gpio] Auto-disable interrupts for shared GPIO pins in binary sensors [esphome#9701](https://github.com/esphome/esphome/pull/9701) by [@bdraco](https://github.com/bdraco)
-- Fix format string error in ota_web_server.cpp [esphome#9711](https://github.com/esphome/esphome/pull/9711) by [@tmpeh](https://github.com/tmpeh)
-- [sdl][mipi_spi] Respect clipping when drawing [esphome#9722](https://github.com/esphome/esphome/pull/9722) by [@JonasB2497](https://github.com/JonasB2497)
-- [esp32_touch] Fix setup mode in v1 driver [esphome#9725](https://github.com/esphome/esphome/pull/9725) by [@swoboda1337](https://github.com/swoboda1337)
-- [tuya] Update use of fan_schema [esphome#9762](https://github.com/esphome/esphome/pull/9762) by [@jesserockz](https://github.com/jesserockz)
-- [config_validation] Add support for suggesting alternate component/platform [esphome#9757](https://github.com/esphome/esphome/pull/9757) by [@kbx81](https://github.com/kbx81)
-- [core] Process pending loop enables during setup blocking phase [esphome#9787](https://github.com/esphome/esphome/pull/9787) by [@bdraco](https://github.com/bdraco)
-- [fastled_clockless, fastled_spi] Add suggested alternate when using IDF [esphome#9784](https://github.com/esphome/esphome/pull/9784) by [@kbx81](https://github.com/kbx81)
-- [neopixelbus] Add suggested alternate when using IDF [esphome#9783](https://github.com/esphome/esphome/pull/9783) by [@kbx81](https://github.com/kbx81)
-- [bme680_bsec] Add suggested alternate when using IDF [esphome#9785](https://github.com/esphome/esphome/pull/9785) by [@kbx81](https://github.com/kbx81)
+- [remote_receiver] Fix idle validation [esphome#9819](https://github.com/esphome/esphome/pull/9819) by [@swoboda1337](https://github.com/swoboda1337)
+- [gt911] i2c fixes [esphome#9822](https://github.com/esphome/esphome/pull/9822) by [@clydebarrow](https://github.com/clydebarrow)
+- fix: non-optional x/y target calculation for ld2450 [esphome#9849](https://github.com/esphome/esphome/pull/9849) by [@Hofferic](https://github.com/Hofferic)
+- [logger] Don't allow ``logger.log`` actions without configuring the ``logger`` [esphome#9821](https://github.com/esphome/esphome/pull/9821) by [@jesserockz](https://github.com/jesserockz)
+- Add seed flag when running setup with uv present [esphome#9932](https://github.com/esphome/esphome/pull/9932) by [@cryptk](https://github.com/cryptk)
+- Fail with old lerp [esphome#9914](https://github.com/esphome/esphome/pull/9914) by [@HeMan](https://github.com/HeMan)
 
