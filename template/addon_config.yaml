@@ -71,7 +71,7 @@ esphome-beta:
   directory: esphome-beta
   name: ESPHome Device Builder (beta)
   panel_title: ESPHome Builder (beta)
-  version: "2025.8.0b1"  # BETA
+  version: "2025.8.0b2"  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome Device Builder"
   url: https://beta.esphome.io/
