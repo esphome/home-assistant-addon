@@ -46,7 +46,7 @@ esphome-dev:
   directory: esphome-dev
   name: ESPHome Device Builder (dev)
   panel_title: ESPHome Builder (dev)
-  version: "2025.9.0-dev20250821"  # DEV
+  version: "2025.9.0-dev20250822"  # DEV
   slug: esphome-dev
   description: "Development version of ESPHome Device Builder"
   url: https://next.esphome.io/
