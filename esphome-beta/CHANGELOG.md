@@ -1,141 +1,20 @@
-## 2025.8.0
+## 2025.8.1
 
 [**Read release announcement**](https://beta.esphome.io/changelog/2025.8.0)
 
-## Release Overview
+- [api] Add zero-copy StringRef methods for compilation_time and effect_name [esphome#10257](https://github.com/esphome/esphome/pull/10257) by [@bdraco](https://github.com/bdraco)
+- [esp32_ble_client] Add log helper functions to reduce flash usage by 120 bytes [esphome#10243](https://github.com/esphome/esphome/pull/10243) by [@bdraco](https://github.com/bdraco)
+- [api] Add ``USE_API_HOMEASSISTANT_SERVICES`` if using ``tag_scanned`` action [esphome#10316](https://github.com/esphome/esphome/pull/10316) by [@jesserockz](https://github.com/jesserockz)
+- [http_request] Fix for host after ArduinoJson library bump [esphome#10348](https://github.com/esphome/esphome/pull/10348) by [@clydebarrow](https://github.com/clydebarrow)
+- [core] Improve error reporting for entity name conflicts with non-ASCII characters [esphome#10329](https://github.com/esphome/esphome/pull/10329) by [@bdraco](https://github.com/bdraco)
+- [pvvx_mithermometer] Fix race condition with BLE authentication [esphome#10327](https://github.com/esphome/esphome/pull/10327) by [@bdraco](https://github.com/bdraco)
+- [esp32_ble_client] Optimize BLE connection parameters for different connection types [esphome#10356](https://github.com/esphome/esphome/pull/10356) by [@bdraco](https://github.com/bdraco)
+- [esp32_ble] Increase GATT connection retry count to use full timeout window [esphome#10376](https://github.com/esphome/esphome/pull/10376) by [@bdraco](https://github.com/bdraco)
+- [script] Fix parallel mode scripts with delays cancelling each other [esphome#10324](https://github.com/esphome/esphome/pull/10324) by [@bdraco](https://github.com/bdraco)
+- [deep_sleep] Fix ESP32-C6 compilation error with gpio_deep_sleep_hold_en() [esphome#10345](https://github.com/esphome/esphome/pull/10345) by [@bdraco](https://github.com/bdraco)
+- [esp32_ble_client] Reduce log level for harmless BLE timeout race conditions [esphome#10339](https://github.com/esphome/esphome/pull/10339) by [@bdraco](https://github.com/bdraco)
+- [lvgl] Fix meter rotation [esphome#10342](https://github.com/esphome/esphome/pull/10342) by [@clydebarrow](https://github.com/clydebarrow)
+- [esp32_ble_tracker] Fix on_scan_end trigger compilation without USE_ESP32_BLE_DEVICE [esphome#10399](https://github.com/esphome/esphome/pull/10399) by [@bdraco](https://github.com/bdraco)
+- [test] Add integration test for light effect memory corruption fix [esphome#10417](https://github.com/esphome/esphome/pull/10417) by [@bdraco](https://github.com/bdraco)
+- [web_server] Use oi.esphome.io for css and js assets [esphome#10296](https://github.com/esphome/esphome/pull/10296) by [@clydebarrow](https://github.com/clydebarrow)
 
-ESPHome 2025.8.0 expands platform support with the introduction of Nordic nRF52 devices,
-adds mesh communication capabilities, and delivers significant performance improvements. This release
-focuses on architectural innovation and memory optimization while introducing new hardware possibilities.
-
-**Key Highlights:**
-
-- **New nRF52 platform** based on Zephyr RTOS opens Nordic semiconductor ecosystem
-- **ESP-NOW mesh communication** enables direct device-to-device connectivity
-- **High-performance MIPI DSI displays** for ESP32-P4 professional applications
-- **Extensive memory optimizations** with up to 10x performance improvements in key areas
-- **Python 3.11+ requirement** (breaking change - Python 3.10 support dropped)
-
-
-## NRF52 Platform Support
-
-
-ESPHome 2025.8.0 introduces comprehensive support for Nordic nRF52 series microcontrollers through the new
-[NRF52](https://esphome.io/components/nrf52) platform. This implementation is built on the Zephyr RTOS, providing a robust
-foundation for Nordic semiconductor devices.
-
-**Key Features:**
-
-- **Complete platform integration** with ESPHome's component ecosystem
-- **ADC support** for analog sensor reading with configurable resolution
-- **GPIO functionality** with interrupt support and pin configuration
-- **Zephyr debug component** for advanced debugging and development
-
-The nRF52 platform opens up new possibilities for low-power, Bluetooth-enabled devices while maintaining
-the familiar ESPHome configuration syntax and component compatibility.
-
-
-## ESP-NOW Communication
-
-The new [ESP-NOW](https://esphome.io/components/espnow) component brings device-to-device communication to ESP32 platforms without
-requiring WiFi infrastructure. ESP-NOW enables direct communication between ESP32 devices using the 2.4GHz
-band with minimal power consumption.
-
-**Applications:**
-
-- **Mesh sensor networks** - Sensors can communicate directly without WiFi routers
-- **Remote control systems** - Direct device control with low latency
-- **Backup communication** - Fallback when WiFi is unavailable
-- **Battery-powered devices** - Efficient communication for power-constrained applications
-
-This protocol is particularly valuable for distributed sensor networks and scenarios where traditional
-WiFi infrastructure is impractical or unavailable.
-
-
-## MIPI DSI Display Support
-
-ESPHome now supports high-performance MIPI DSI displays through the new [MIPI DSI](https://esphome.io/components/display/mipi_dsi)
-component, specifically designed for ESP32-P4 processors with DSI interfaces.
-
-**Benefits:**
-
-- **High-resolution displays** with excellent performance
-- **Hardware acceleration** through dedicated DSI controllers
-- **Reduced CPU overhead** compared to traditional SPI displays
-- **Professional display quality** for advanced applications
-
-This addition significantly expands ESPHome's display capabilities, enabling professional-grade user interfaces
-and high-resolution graphics applications.
-
-
-## Memory & Performance Optimizations
-
-ESPHome 2025.8.0 includes extensive optimizations focused on reducing memory usage and improving performance:
-
-**Flash Memory Savings:**
-
-- Conditional compilation removes unused API features (thousands of bytes saved)
-- Optimized protobuf implementations with zero-copy techniques
-- Reduced code duplication across components
-- Streamlined error handling and logging systems
-
-**Runtime Performance:**
-
-- 10x faster string encoding with optimized memcpy operations
-- Enhanced scheduler with reduced millis() calls
-- Improved BLE scanning with batched processing
-- Zero-copy protobuf fields for reduced memory allocations
-
-
-## Python 3.11+ Requirement
-
-Starting with ESPHome 2025.8.0, **Python 3.11 or higher is required** to run ESPHome. This change enables us to:
-
-- Utilize modern Python features and improvements
-- Remove legacy compatibility code that was needed for older Python versions
-- Maintain a more secure and efficient codebase
-
-**Why This Change?**
-
-Python 3.10 reaches its [end of life in October 2026](https://devguide.python.org/versions/). This
-upgrade is necessary for the project to move forward with modern development practices and maintain
-long-term security and maintainability.
-
-**What You Need to Do**
-
-Installation Method | Action Required
---------------------------|----------------------
-Home Assistant Add-on | **No action needed** - Already uses Python 3.12
-Container Images (Docker) | **No action needed** - Already uses Python 3.12
-Direct Installation (pip) | **Upgrade Python to 3.11+** before updating ESPHome
-
-> [!WARNING]
->
-> If you're running ESPHome directly on your machine with Python 3.10 or older, running ``pip install -U esphome``
-> will not upgrade beyond version 2025.7.x. You must upgrade your Python installation first.
-
-
-## Breaking Changes
-
-ESPHome 2025.8.0 includes several breaking changes that may require action on your part:
-
-**Bluetooth and BLE Changes**
-   - Bluetooth Proxy: Parsed advertisement support and V1 connection support removed to save memory
-   - BLE: Conditional compilation for advertising and service classes may reduce available features if not explicitly enabled
-   - May affect older components using deprecated Bluetooth features
-
-**API Optimizations**
-   - Deprecated protobuf fields removed (reduces flash usage)
-   - Conditional compilation for Home Assistant state/service subscriptions
-   - May affect custom API clients using deprecated fields
-
-**Component Filter Changes**
-   - [LD2410](https://esphome.io/components/sensor/ld2410) and [LD2450](https://esphome.io/components/sensor/ld2450) components now use native filters instead of ``throttle``
-   - See the component documentation for updated filter configuration
-
-**ESP32 Touch Sensor**
-   - Workaround implemented for ESP-IDF v5.4 regression
-   - May affect touch sensor behavior on newer ESP-IDF versions
-
-Most of these changes are automatic optimizations that shouldn't affect typical usage, but custom components
-or advanced configurations may need updates.
