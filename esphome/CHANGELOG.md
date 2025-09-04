@@ -1,12 +1,13 @@
-## 2025.8.2
+## 2025.8.3
 
 [**Read release announcement**](https://esphome.io/changelog/2025.8.0)
 
-- [wifi] Fix reconnection failures after adapter restart by not clearing netif pointers [esphome#10458](https://github.com/esphome/esphome/pull/10458) by [@bdraco](https://github.com/bdraco)
-- [mipi_spi] Fix dimensions [esphome#10443](https://github.com/esphome/esphome/pull/10443) by [@clydebarrow](https://github.com/clydebarrow)
-- [i2c] Perform register reads as single transactions [esphome#10389](https://github.com/esphome/esphome/pull/10389) by [@clydebarrow](https://github.com/clydebarrow)
-- [wifi] Fix retry with hidden networks. [esphome#10445](https://github.com/esphome/esphome/pull/10445) by [@clydebarrow](https://github.com/clydebarrow)
-- Fix AttributeError when uploading OTA to offline OpenThread devices [esphome#10459](https://github.com/esphome/esphome/pull/10459) by [@bdraco](https://github.com/bdraco)
-- [rtttl] Fix RTTTL for speakers [esphome#10381](https://github.com/esphome/esphome/pull/10381) by [@fortuna](https://github.com/fortuna)
-- [esphome] Fix OTA watchdog resets by validating all magic bytes before blocking [esphome#10401](https://github.com/esphome/esphome/pull/10401) by [@bdraco](https://github.com/bdraco)
+- [mcp4461] Fix reading level [esphome#10479](https://github.com/esphome/esphome/pull/10479) by [@p1ngb4ck](https://github.com/p1ngb4ck)
+- Fix incorrect entity count due to undefined execution order with globals [esphome#10497](https://github.com/esphome/esphome/pull/10497) by [@bdraco](https://github.com/bdraco)
+- [mipi_dsi] Fix config for Guition screen [esphome#10464](https://github.com/esphome/esphome/pull/10464) by [@clydebarrow](https://github.com/clydebarrow)
+- [mcp4461] Fix read transaction [esphome#10465](https://github.com/esphome/esphome/pull/10465) by [@clydebarrow](https://github.com/clydebarrow)
+- [esp32] Rebuild when idf_component.yml changes [esphome#10540](https://github.com/esphome/esphome/pull/10540) by [@swoboda1337](https://github.com/swoboda1337)
+- [i2c] Fix bug in write_register16 [esphome#10547](https://github.com/esphome/esphome/pull/10547) by [@latonita](https://github.com/latonita)
+- [esp32] Clear IDF environment variables [esphome#10527](https://github.com/esphome/esphome/pull/10527) by [@swoboda1337](https://github.com/swoboda1337)
+- [api] Fix VERY_VERBOSE logging compilation error with bool arrays [esphome#10539](https://github.com/esphome/esphome/pull/10539) by [@bdraco](https://github.com/bdraco)
 
