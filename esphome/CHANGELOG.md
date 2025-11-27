@@ -1,16 +1,13 @@
-## 2025.11.1
+## 2025.11.2
 
 [**Read release announcement**](https://esphome.io/changelog/2025.11.0)
 
-- [graph] Fix legend border [esphome#12000](https://github.com/esphome/esphome/pull/12000) by [@swoboda1337](https://github.com/swoboda1337)
-- [network] Fix IPAddress constructor causing comparison failures and garbage output [esphome#12005](https://github.com/esphome/esphome/pull/12005) by [@bdraco](https://github.com/bdraco)
-- [ltr501][ltr_als_ps] Rename enum to avoid collision with lwip defines [esphome#12017](https://github.com/esphome/esphome/pull/12017) by [@swoboda1337](https://github.com/swoboda1337)
-- [cst816][packet_transport][udp][wake_on_lan] Fix error messages [esphome#12019](https://github.com/esphome/esphome/pull/12019) by [@swoboda1337](https://github.com/swoboda1337)
-- [jsn_sr04t] Fix model AJ_SR04M [esphome#11992](https://github.com/esphome/esphome/pull/11992) by [@swoboda1337](https://github.com/swoboda1337)
-- [cst816][http_request] Fix status_set_error() dangling pointer bugs [esphome#12033](https://github.com/esphome/esphome/pull/12033) by [@bdraco](https://github.com/bdraco)
-- [esp32] Fix C2 builds [esphome#12050](https://github.com/esphome/esphome/pull/12050) by [@swoboda1337](https://github.com/swoboda1337)
-- [core] Add support for passing yaml files to clean-all [esphome#12039](https://github.com/esphome/esphome/pull/12039) by [@swoboda1337](https://github.com/swoboda1337)
-- [script][wait_until] Fix FIFO ordering and reentrancy bugs [esphome#12049](https://github.com/esphome/esphome/pull/12049) by [@bdraco](https://github.com/bdraco)
-- [esp_ldo,mipi_dsi,mipi_rgb] Fix dangling pointer bugs in mark_failed() [esphome#12077](https://github.com/esphome/esphome/pull/12077) by [@bdraco](https://github.com/bdraco)
-- [online_image] Fix some large PNGs causing watchdog timeout [esphome#12025](https://github.com/esphome/esphome/pull/12025) by [@jesserockz](https://github.com/jesserockz)
+- [nextion] Do not set alternative baud rate when not specified or `<= 0` [esphome#12097](https://github.com/esphome/esphome/pull/12097) by [@edwardtfn](https://github.com/edwardtfn)
+- [esp32] Fix platformio flash size print [esphome#12099](https://github.com/esphome/esphome/pull/12099) by [@swoboda1337](https://github.com/swoboda1337)
+- [script] Fix script.wait hanging when triggered from on_boot [esphome#12102](https://github.com/esphome/esphome/pull/12102) by [@bdraco](https://github.com/bdraco)
+- [lvgl] Allow multiple widgets per grid cell [esphome#12091](https://github.com/esphome/esphome/pull/12091) by [@clydebarrow](https://github.com/clydebarrow) (new-feature)
+- [lvgl] Fix position of errors in widget config [esphome#12111](https://github.com/esphome/esphome/pull/12111) by [@clydebarrow](https://github.com/clydebarrow)
+- [esp32] Fix hosted update when there is no wifi [esphome#12123](https://github.com/esphome/esphome/pull/12123) by [@swoboda1337](https://github.com/swoboda1337)
+- [wifi] Restore blocking setup until connected for RP2040 [esphome#12142](https://github.com/esphome/esphome/pull/12142) by [@clydebarrow](https://github.com/clydebarrow)
+- [scheduler] Fix use-after-move crash in heap operations [esphome#12124](https://github.com/esphome/esphome/pull/12124) by [@bdraco](https://github.com/bdraco)
 
