@@ -1,13 +1,16 @@
-## 2025.11.2
+## 2025.11.3
 
 [**Read release announcement**](https://esphome.io/changelog/2025.11.0)
 
-- [nextion] Do not set alternative baud rate when not specified or `<= 0` [esphome#12097](https://github.com/esphome/esphome/pull/12097) by [@edwardtfn](https://github.com/edwardtfn)
-- [esp32] Fix platformio flash size print [esphome#12099](https://github.com/esphome/esphome/pull/12099) by [@swoboda1337](https://github.com/swoboda1337)
-- [script] Fix script.wait hanging when triggered from on_boot [esphome#12102](https://github.com/esphome/esphome/pull/12102) by [@bdraco](https://github.com/bdraco)
-- [lvgl] Allow multiple widgets per grid cell [esphome#12091](https://github.com/esphome/esphome/pull/12091) by [@clydebarrow](https://github.com/clydebarrow) (new-feature)
-- [lvgl] Fix position of errors in widget config [esphome#12111](https://github.com/esphome/esphome/pull/12111) by [@clydebarrow](https://github.com/clydebarrow)
-- [esp32] Fix hosted update when there is no wifi [esphome#12123](https://github.com/esphome/esphome/pull/12123) by [@swoboda1337](https://github.com/swoboda1337)
-- [wifi] Restore blocking setup until connected for RP2040 [esphome#12142](https://github.com/esphome/esphome/pull/12142) by [@clydebarrow](https://github.com/clydebarrow)
-- [scheduler] Fix use-after-move crash in heap operations [esphome#12124](https://github.com/esphome/esphome/pull/12124) by [@bdraco](https://github.com/bdraco)
+- [build] Don't clear pio cache unless requested [esphome#11966](https://github.com/esphome/esphome/pull/11966) by [@clydebarrow](https://github.com/clydebarrow)
+- [usb_uart] Wake main loop immediately when USB data arrives [esphome#12148](https://github.com/esphome/esphome/pull/12148) by [@bdraco](https://github.com/bdraco)
+- [espnow] Initialize LwIP stack when running without WiFi component [esphome#12169](https://github.com/esphome/esphome/pull/12169) by [@bdraco](https://github.com/bdraco)
+- [helpers] Add conversion from FixedVector to std::vector [esphome#12179](https://github.com/esphome/esphome/pull/12179) by [@clydebarrow](https://github.com/clydebarrow)
+- [hlk_fm22x] Fix Action::play method signatures [esphome#12192](https://github.com/esphome/esphome/pull/12192) by [@bdraco](https://github.com/bdraco)
+- [mopeka_pro_check] Fix negative temperatures [esphome#12198](https://github.com/esphome/esphome/pull/12198) by [@swoboda1337](https://github.com/swoboda1337)
+- [ade7953] Apply voltage_gain setting to both channels [esphome#12180](https://github.com/esphome/esphome/pull/12180) by [@dlitz](https://github.com/dlitz)
+- [core] Fix clean all on windows [esphome#12217](https://github.com/esphome/esphome/pull/12217) by [@swoboda1337](https://github.com/swoboda1337)
+- [rtl87xx] Fix AsyncTCP compilation by upgrading FreeRTOS to 8.2.3 [esphome#12230](https://github.com/esphome/esphome/pull/12230) by [@swoboda1337](https://github.com/swoboda1337)
+- [analog_threshold] Fix oscillation when using invert filter [esphome#12251](https://github.com/esphome/esphome/pull/12251) by [@swoboda1337](https://github.com/swoboda1337)
+- [rtl87xx] Fix FreeRTOS version for RTL8720C boards [esphome#12261](https://github.com/esphome/esphome/pull/12261) by [@swoboda1337](https://github.com/swoboda1337)
 
