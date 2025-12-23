@@ -1,11 +1,13 @@
-## 2025.12.1
+## 2025.12.2
 
 [**Read release announcement**](https://beta.esphome.io/changelog/2025.12.0)
 
-- [cc1101] Fix default frequencies [esphome#12539](https://github.com/esphome/esphome/pull/12539) by [@anna-oake](https://github.com/anna-oake)
-- [pm1006] Fix "never" update interval detection [esphome#12529](https://github.com/esphome/esphome/pull/12529) by [@jackwilsdon](https://github.com/jackwilsdon)
-- [bme68x_bsec2_i2c] Add MULTI_CONF to fix multiple sensors [esphome#12535](https://github.com/esphome/esphome/pull/12535) by [@swoboda1337](https://github.com/swoboda1337)
-- [esp32_camera] Fix I2C driver conflict with other components [esphome#12533](https://github.com/esphome/esphome/pull/12533) by [@swoboda1337](https://github.com/swoboda1337)
-- [template.alarm_control_panel] Fix compile without binary_sensor [esphome#12548](https://github.com/esphome/esphome/pull/12548) by [@swoboda1337](https://github.com/swoboda1337)
-- [esp32_ble, esp32_ble_tracker] Fix crash, error messages when `ble.disable` called during boot [esphome#12560](https://github.com/esphome/esphome/pull/12560) by [@kbx81](https://github.com/kbx81)
+- [pca9685,sx126x,sx127x] Use frequency/float_range check [esphome#12490](https://github.com/esphome/esphome/pull/12490) by [@ximex](https://github.com/ximex)
+- [wifi] Fix for `wifi_info` when static IP is configured [esphome#12576](https://github.com/esphome/esphome/pull/12576) by [@kbx81](https://github.com/kbx81)
+- [display_menu_base] Call on_value_ after updating the select [esphome#12584](https://github.com/esphome/esphome/pull/12584) by [@ellull](https://github.com/ellull)
+- [hub75] Bump esp-hub75 version to 0.1.7 [esphome#12564](https://github.com/esphome/esphome/pull/12564) by [@stuartparmenter](https://github.com/stuartparmenter)
+- [syslog] send NIL ("-") as timestamp if time source is not valid [esphome#12588](https://github.com/esphome/esphome/pull/12588) by [@leo-b](https://github.com/leo-b)
+- [cc1101] Fix option defaults and move them to YAML [esphome#12608](https://github.com/esphome/esphome/pull/12608) by [@anna-oake](https://github.com/anna-oake)
+- [esp32_camera] Throttle frame logging to reduce overhead and improve throughput [esphome#12586](https://github.com/esphome/esphome/pull/12586) by [@bdraco](https://github.com/bdraco)
+- [cc1101] Fix packet mode RSSI/LQI [esphome#12630](https://github.com/esphome/esphome/pull/12630) by [@swoboda1337](https://github.com/swoboda1337)
 
