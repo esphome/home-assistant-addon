@@ -33,7 +33,7 @@ init: false
 startup: services
 name: ESPHome Device Builder (dev)
 panel_title: ESPHome Builder (dev)
-version: 2026.1.0-dev20251223
+version: 2026.1.0-dev20251224
 slug: esphome-dev
 description: Development version of ESPHome Device Builder
 image: ghcr.io/esphome/esphome-hassio
