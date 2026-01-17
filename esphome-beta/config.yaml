@@ -32,7 +32,7 @@ init: false
 startup: services
 name: ESPHome Device Builder (beta)
 panel_title: ESPHome Builder (beta)
-version: 2026.1.0b2
+version: 2025.12.7
 slug: esphome-beta
 description: Beta version of ESPHome Device Builder
 image: ghcr.io/esphome/esphome-hassio
