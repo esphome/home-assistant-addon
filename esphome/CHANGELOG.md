@@ -1,19 +1,14 @@
-## 2026.1.2
+## 2026.1.3
 
 [**Read release announcement**](https://esphome.io/changelog/2026.1.0)
 
-- [st7701s] Fix dump_summary deprecation warning [esphome#13462](https://github.com/esphome/esphome/pull/13462) by [@bdraco](https://github.com/bdraco)
-- [mipi_rgb] Fix dump_summary deprecation warning [esphome#13463](https://github.com/esphome/esphome/pull/13463) by [@bdraco](https://github.com/bdraco)
-- [rpi_dpi_rgb] Fix dump_summary deprecation warning [esphome#13461](https://github.com/esphome/esphome/pull/13461) by [@bdraco](https://github.com/bdraco)
-- [ir_rf_proxy] Remove unnecessary headers, add tests [esphome#13464](https://github.com/esphome/esphome/pull/13464) by [@kbx81](https://github.com/kbx81)
-- [mipi_rgb] Add software reset command to st7701s init sequence [esphome#13470](https://github.com/esphome/esphome/pull/13470) by [@clydebarrow](https://github.com/clydebarrow)
-- [slow_pwm] Fix dump_summary deprecation warning [esphome#13460](https://github.com/esphome/esphome/pull/13460) by [@bdraco](https://github.com/bdraco)
-- [sen5x] Fix store baseline functionality [esphome#13469](https://github.com/esphome/esphome/pull/13469) by [@mikelawrence](https://github.com/mikelawrence)
-- [lvgl] Fix setting empty text [esphome#13494](https://github.com/esphome/esphome/pull/13494) by [@clydebarrow](https://github.com/clydebarrow)
-- [light] Fix cwww state restore [esphome#13493](https://github.com/esphome/esphome/pull/13493) by [@kbx81](https://github.com/kbx81)
-- [rd03d] Fix speed and resolution field order [esphome#13495](https://github.com/esphome/esphome/pull/13495) by [@jasstrong](https://github.com/jasstrong)
-- [modbus_controller] Fix YAML serialization error with custom_command [esphome#13482](https://github.com/esphome/esphome/pull/13482) by [@swoboda1337](https://github.com/swoboda1337)
-- [i2c] Increase ESP-IDF I2C transaction timeout from 20ms to 100ms [esphome#13483](https://github.com/esphome/esphome/pull/13483) by [@swoboda1337](https://github.com/swoboda1337)
-- [wifi] Fix watchdog timeout on P4 WiFi scan [esphome#13520](https://github.com/esphome/esphome/pull/13520) by [@clydebarrow](https://github.com/clydebarrow)
-- [wifi] Fix scan flag race condition causing reconnect failure on ESP8266/LibreTiny [esphome#13514](https://github.com/esphome/esphome/pull/13514) by [@bdraco](https://github.com/bdraco)
+- Update webserver local assets to 20260122-204614 [esphome#13455](https://github.com/esphome/esphome/pull/13455) by [@esphomebot](https://github.com/esphomebot)
+- [mhz19] Fix Uninitialized var warning message [esphome#13526](https://github.com/esphome/esphome/pull/13526) by [@sebcaps](https://github.com/sebcaps)
+- [ota] Improve error message when device closes connection without responding [esphome#13562](https://github.com/esphome/esphome/pull/13562) by [@bdraco](https://github.com/bdraco)
+- [socket] ESP8266: call delay(0) instead of esp_delay(0, cb) for zero timeout [esphome#13530](https://github.com/esphome/esphome/pull/13530) by [@bdraco](https://github.com/bdraco)
+- [web_server] Add name_id to SSE for entity ID format migration [esphome#13535](https://github.com/esphome/esphome/pull/13535) by [@bdraco](https://github.com/bdraco)
+- Update webserver local assets to 20260127-190637 [esphome#13573](https://github.com/esphome/esphome/pull/13573) by [@esphomebot](https://github.com/esphomebot)
+- [ld2450] preserve precision of angle [esphome#13600](https://github.com/esphome/esphome/pull/13600) by [@ccutrer](https://github.com/ccutrer)
+- [wifi] Fix ESP8266 yield panic when WiFi scan fails [esphome#13603](https://github.com/esphome/esphome/pull/13603) by [@bdraco](https://github.com/bdraco)
+- [http_request] Fix empty body for chunked transfer encoding responses [esphome#13599](https://github.com/esphome/esphome/pull/13599) by [@bdraco](https://github.com/bdraco)
 
