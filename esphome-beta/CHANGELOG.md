@@ -1,13 +1,13 @@
-## 2026.1.4
+## 2026.1.5
 
 [**Read release announcement**](https://beta.esphome.io/changelog/2026.1.0)
 
-- [mipi_spi] Fix log_pin() FlashStringHelper compatibility [esphome#13624](https://github.com/esphome/esphome/pull/13624) by [@J0k3r2k1](https://github.com/J0k3r2k1)
-- [max7219] Allocate buffer in constructor [esphome#13660](https://github.com/esphome/esphome/pull/13660) by [@swoboda1337](https://github.com/swoboda1337)
-- [mqtt] resolve warnings related to use of ip.str() [esphome#13719](https://github.com/esphome/esphome/pull/13719) by [@rwrozelle](https://github.com/rwrozelle)
-- [core] Add missing uint32_t ID overloads for defer() and cancel_defer() [esphome#13720](https://github.com/esphome/esphome/pull/13720) by [@bdraco](https://github.com/bdraco)
-- [http_request] Fix requests taking full timeout when response is already complete [esphome#13649](https://github.com/esphome/esphome/pull/13649) by [@bdraco](https://github.com/bdraco)
-- [cse7766] Fix power reading stuck when load switches off [esphome#13734](https://github.com/esphome/esphome/pull/13734) by [@bdraco](https://github.com/bdraco)
-- [wifi] Fix wifi.connected condition returning false in connect state listener automations [esphome#13733](https://github.com/esphome/esphome/pull/13733) by [@bdraco](https://github.com/bdraco)
-- [ultrasonic] adjust timeouts and bring the parameter back [esphome#13738](https://github.com/esphome/esphome/pull/13738) by [@ssieb](https://github.com/ssieb)
+- [rd03d] Revert incorrect field order swap [esphome#13769](https://github.com/esphome/esphome/pull/13769) by [@jasstrong](https://github.com/jasstrong)
+- [core] Add capacity check to register_component_ [esphome#13778](https://github.com/esphome/esphome/pull/13778) by [@swoboda1337](https://github.com/swoboda1337)
+- [ota] Fix CLI upload option shown when only http_request platform configured [esphome#13784](https://github.com/esphome/esphome/pull/13784) by [@swoboda1337](https://github.com/swoboda1337)
+- [dashboard] Close WebSocket after process exit to prevent zombie connections [esphome#13834](https://github.com/esphome/esphome/pull/13834) by [@bdraco](https://github.com/bdraco)
+- [nrf52,logger] fix printk [esphome#13874](https://github.com/esphome/esphome/pull/13874) by [@tomaszduda23](https://github.com/tomaszduda23)
+- [lvgl] Fix crash with unconfigured `top_layer` [esphome#13846](https://github.com/esphome/esphome/pull/13846) by [@clydebarrow](https://github.com/clydebarrow)
+- [esp32] Set UV_CACHE_DIR inside data dir so Clean All clears it [esphome#13888](https://github.com/esphome/esphome/pull/13888) by [@swoboda1337](https://github.com/swoboda1337)
+- [aqi] Fix AQI calculation for specific pm2.5 or pm10 readings [esphome#13770](https://github.com/esphome/esphome/pull/13770) by [@xconverge](https://github.com/xconverge)
 
