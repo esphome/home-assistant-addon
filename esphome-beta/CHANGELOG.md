@@ -1,6 +1,6 @@
-## 2026.2.0b4
+## 2026.2.0b5
 
 [**Read release announcement**](https://beta.esphome.io/changelog/2026.2.0)
 
-- [openthread] Fix compiler format warning [esphome#14030](https://github.com/esphome/esphome/pull/14030) by [@schdro](https://github.com/schdro)
+- [external_components] Clean up incomplete clone on failed ref fetch [esphome#14051](https://github.com/esphome/esphome/pull/14051) by [@swoboda1337](https://github.com/swoboda1337)
 
