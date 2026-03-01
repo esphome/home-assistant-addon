@@ -35,7 +35,7 @@ Then just click UPLOAD and the sensor will magically appear in Home Assistant:
 [repository]: https://github.com/esphome/esphome
 [discord-shield]: https://img.shields.io/discord/429907082951524364.svg
 [github-stars-shield]: https://img.shields.io/github/stars/esphome/esphome.svg?style=social&label=Star&maxAge=2592000
-[dht22]: https://beta.esphome.io/components/sensor/dht.html
-[releases]: https://beta.esphome.io/changelog/index.html
+[dht22]: https://beta.esphome.io/components/sensor/dht/
+[releases]: https://beta.esphome.io/changelog/
 [logo]: https://github.com/esphome/home-assistant-addon/raw/main/esphome-beta/logo.png
 [website]: https://beta.esphome.io/
