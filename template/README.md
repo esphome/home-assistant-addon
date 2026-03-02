@@ -16,6 +16,9 @@ handled by ESPHome.
 <img title="ESPHome Device Builder screenshot" src="https://github.com/esphome/home-assistant-addon/raw/main/esphome/images/screenshot.png" width="700px"></img>
 </p>
 
+Compiling software for ESPHome devices is both a CPU and memory intensive task. We recommend that the
+device running Home Assistant have at least 4GB of RAM, otherwise compiling the firmware may fail.
+
 [View the ESPHome documentation][website]
 
 ## Example
