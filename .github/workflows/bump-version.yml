@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v6.0.2
-      - uses: actions/setup-python@v6.2.0
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: "3.11"
       - run: pip install -r script/requirements.txt
@@ -58,7 +58,7 @@ jobs:
           COMMIT=$(git rev-parse HEAD)
           echo "commit_sha=${COMMIT}" >> $GITHUB_OUTPUT
       - name: Create a Release
-        uses: actions/create-release@v1.1.4
+        uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1.1.4
         continue-on-error: true
         if: ${{ !contains(github.event.inputs.version, 'dev') }}
         env:
