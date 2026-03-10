@@ -15,6 +15,7 @@ on:
       - main
     paths:
       - .devcontainer/**
+      - script/requirements.txt
 
 jobs:
   build:
