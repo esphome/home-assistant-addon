@@ -1,4 +1,4 @@
-FROM ghcr.io/home-assistant/devcontainer:addons
+FROM ghcr.io/home-assistant/devcontainer:apps
 
 RUN \
   apt-get update \

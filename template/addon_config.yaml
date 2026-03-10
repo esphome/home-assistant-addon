@@ -1,7 +1,7 @@
 ---
 # When changing options in this file, please also run:
 #    python3 script/generate.py dev
-# to update the dev addon config (beta/stable configs will be updated on next release by release script)
+# to update the dev app config (beta/stable configs will be updated on next release by release script)
 base: &base
   url: https://esphome.io/
   arch:
@@ -16,7 +16,7 @@ base: &base
   ingress: true
   ingress_port: 0
   panel_icon: "mdi:chip"
-  # Automatically add UART devices to add-on
+  # Automatically add UART devices to App
   uart: true
   ports:
     "6052/tcp": null

@@ -7,7 +7,7 @@
 
 ## About
 
-This add-on allows you to write configurations and turn your microcontrollers
+This App allows you to write configurations and turn your microcontrollers
 into smart home devices directly through Home Assistant **with no programming experience required**.
 All you need to do is write YAML configuration files; the rest (over-the-air updates, compiling) is all
 handled by ESPHome.
@@ -35,7 +35,7 @@ Then just click UPLOAD and the sensor will magically appear in Home Assistant:
 [repository]: https://github.com/esphome/esphome
 [discord-shield]: https://img.shields.io/discord/429907082951524364.svg
 [github-stars-shield]: https://img.shields.io/github/stars/esphome/esphome.svg?style=social&label=Star&maxAge=2592000
-[dht22]: https://esphome.io/components/sensor/dht.html
-[releases]: https://esphome.io/changelog/index.html
+[dht22]: https://esphome.io/components/sensor/dht/
+[releases]: https://esphome.io/changelog/
 [logo]: https://github.com/esphome/home-assistant-addon/raw/main/esphome/logo.png
 [website]: https://esphome.io/

@@ -22,14 +22,14 @@ configuration:
       updated you can enter `dev` here.
 
       Please note that the fork or branch you are using **must** be up to
-      date with ESPHome dev or the add-on **will not start**.
+      date with ESPHome dev or the App **will not start**.
   home_assistant_dashboard_integration:
     name: Home Assistant Dashboard Integration
     description: >-
       Enables/Disables the ESPHome dashboard integrating with Home Assistant
       for automatic configuration of devices and device updates. If you use
-      multiple version of the ESPHome add-on, make sure it is enabled on a
-      single add-on only.
+      multiple version of the ESPHome App, make sure it is enabled on a
+      single App only.
   keyfile:
     name: Private key file
     description: >-
@@ -38,7 +38,7 @@ configuration:
   leave_front_door_open:
     name: Disable external authentication
     description: >-
-      Disables external authentication when having opened the add-on
+      Disables external authentication when having opened the App
       on an external port. **WARNING**: This is a security risk!
   relative_url:
     name: Relative URL

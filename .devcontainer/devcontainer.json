@@ -1,5 +1,5 @@
 {
-  "name": "ESPHome Home Assistant add-on devcontainer",
+  "name": "ESPHome Home Assistant App devcontainer",
   "image": "ghcr.io/esphome/devcontainer:addons",
   "appPort": [
     "7123:8123",
