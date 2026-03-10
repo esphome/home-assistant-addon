@@ -8,6 +8,7 @@ on:
     paths:
       - .devcontainer/**
       - script/requirements.txt
+      - .github/workflows/devcontainer-build.yaml
   schedule:
     - cron: '0 0 1 * *'
   pull_request:
@@ -16,6 +17,7 @@ on:
     paths:
       - .devcontainer/**
       - script/requirements.txt
+      - .github/workflows/devcontainer-build.yaml
 
 jobs:
   build:
