@@ -6,7 +6,7 @@ on:
   pull_request:
 jobs:
   build:
-    name: Add-on configuration
+    name: App configuration
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -28,7 +28,7 @@ jobs:
         run: pip install -r script/requirements.txt
       - name: 🛠 Generate files from template
         run: python script/generate.py ${{ matrix.channels.channel }}
-      - name: 🚀 Run Home Assistant Add-on Lint on ${{ matrix.channels.channel }}
+      - name: 🚀 Run Home Assistant App Lint on ${{ matrix.channels.channel }}
         uses: frenck/action-addon-linter@f995494fd84fae6310d23617e66d0e37de4f14eb # v2.21.0
         with:
           path: "./${{ matrix.channels.folder }}"

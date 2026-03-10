@@ -1,14 +1,14 @@
-# ESPHome DEV add on
+# ESPHome DEV App
 
-This is **development** version of the ESPHome add on.
+This is **development** version of the ESPHome App.
 
-To deploy production nodes please use mainstream release add on.
+To deploy production nodes please use mainstream release App.
 
-The add on uses a version of ESPHome built automatically every day at 02:00 UTC. and is used to test components in development. See the `esphome_fork` configuration below to properly configure the add on. Once you update the configuration make sure to rebuild the image.
+The App uses a version of ESPHome built automatically every day at 02:00 UTC. and is used to test components in development. See the `esphome_fork` configuration below to properly configure the App. Once you update the configuration make sure to rebuild the image.
 
 ## Configuration
 
-**Note**: _Remember to restart the add-on when the configuration is changed._
+**Note**: _Remember to restart the App when the configuration is changed._
 
 ### Option: `esphome_fork`
 
@@ -20,16 +20,16 @@ assumes the repository is named `esphome` still.
 If you need to test the latest commit on dev branch before the image is updated you can enter `dev` here.
 
 Please note that the fork or branch you are using **must** be up to date with ESPHome dev
-or the add-on **will not start**.
+or the App **will not start**.
 
 
-## General ESPHome add on configurations
+## General ESPHome App configurations
 
 General options also available in other versions.
 
 ### Option: `ssl`
 
-Enables or disables encrypted SSL/TLS (HTTPS) connections to the web server of this add-on.
+Enables or disables encrypted SSL/TLS (HTTPS) connections to the web server of this App.
 Set it to `true` to encrypt communications, `false` otherwise.
 Please note that if you set this to `true` you must also generate the key and certificate
 files for encryption. For example using [Let's Encrypt](https://www.home-assistant.io/addons/lets_encrypt/)
@@ -37,19 +37,19 @@ or [Self-signed certificates](https://www.home-assistant.io/docs/ecosystem/certi
 
 ### Option: `certfile`
 
-The certificate file to use for SSL. If this file doesn't exist, the add-on start will fail.
+The certificate file to use for SSL. If this file doesn't exist, the App start will fail.
 
 **Note**: The file MUST be stored in `/ssl/`, which is the default for Home Assistant
 
 ### Option: `keyfile`
 
-The private key file to use for SSL. If this file doesn't exist, the add-on start will fail.
+The private key file to use for SSL. If this file doesn't exist, the App start will fail.
 
 **Note**: The file MUST be stored in `/ssl/`, which is the default for Home Assistant
 
 ### Option: `leave_front_door_open`
 
-Adding this option to the add-on configuration allows you to disable
+Adding this option to the App configuration allows you to disable
 authentication by setting it to `true`.
 
 ### Option: `relative_url`

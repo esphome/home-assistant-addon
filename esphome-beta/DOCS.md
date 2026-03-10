@@ -1,21 +1,21 @@
-# ESPHome Add-on
+# ESPHome App
 ## Installation
 
-The installation of this add-on is pretty straightforward and not different in comparison to installing any other Home Assistant add-on.
+The installation of this App is pretty straightforward and not different in comparison to installing any other Home Assistant App.
 
-1. Search for the “ESPHome” add-on in the Supervisor add-on store.
-2. Press install to download the add-on and unpack it on your machine. This can take some time.
-3. Optional: If you're using SSL/TLS certificates and want to encrypt your communication to this add-on, please enter `true` into the `ssl` field and set the `fullchain` and `certfile` options accordingly.
-4. Start the add-on, check the logs of the add-on to see if everything went well.
+1. Search for the "ESPHome" App in the Supervisor App store.
+2. Press install to download the App and unpack it on your machine. This can take some time.
+3. Optional: If you're using SSL/TLS certificates and want to encrypt your communication to this App, please enter `true` into the `ssl` field and set the `fullchain` and `certfile` options accordingly.
+4. Start the App, check the logs of the App to see if everything went well.
 5. Click "OPEN WEB UI" to open the ESPHome dashboard. You will be asked for your Home Assistant credentials - ESPHome uses Home Assistant's authentication system to log you in.
 
 You can view the ESPHome documentation at https://esphome.io/
 
 ## Configuration
 
-**Note**: _Remember to restart the add-on when the configuration is changed._
+**Note**: _Remember to restart the App when the configuration is changed._
 
-Example add-on configuration:
+Example App configuration:
 
 ```json
 {
@@ -27,7 +27,7 @@ Example add-on configuration:
 
 ### Option: `ssl`
 
-Enables or disables encrypted SSL/TLS (HTTPS) connections to the web server of this add-on.
+Enables or disables encrypted SSL/TLS (HTTPS) connections to the web server of this App.
 Set it to `true` to encrypt communications, `false` otherwise.
 Please note that if you set this to `true` you must also generate the key and certificate
 files for encryption. For example using [Let's Encrypt](https://www.home-assistant.io/addons/lets_encrypt/)
@@ -35,19 +35,19 @@ or [Self-signed certificates](https://www.home-assistant.io/docs/ecosystem/certi
 
 ### Option: `certfile`
 
-The certificate file to use for SSL. If this file doesn't exist, the add-on start will fail.
+The certificate file to use for SSL. If this file doesn't exist, the App start will fail.
 
 **Note**: The file MUST be stored in `/ssl/`, which is the default for Home Assistant
 
 ### Option: `keyfile`
 
-The private key file to use for SSL. If this file doesn't exist, the add-on start will fail.
+The private key file to use for SSL. If this file doesn't exist, the App start will fail.
 
 **Note**: The file MUST be stored in `/ssl/`, which is the default for Home Assistant
 
 ### Option: `leave_front_door_open`
 
-Adding this option to the add-on configuration allows you to disable
+Adding this option to the App configuration allows you to disable
 authentication by setting it to `true`.
 
 ### Option: `relative_url`
