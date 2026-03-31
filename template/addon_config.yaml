@@ -52,7 +52,6 @@ esphome-dev:
   url: https://next.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
-  advanced: true
   schema:
     status_use_ping: bool?
     streamer_mode: bool?
@@ -77,7 +76,6 @@ esphome-beta:
   url: https://beta.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
-  advanced: true
   options:
     home_assistant_dashboard_integration: false
 
