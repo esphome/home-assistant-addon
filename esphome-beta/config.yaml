@@ -37,6 +37,5 @@ slug: esphome-beta
 description: Beta version of ESPHome Device Builder
 image: ghcr.io/esphome/esphome-hassio
 stage: experimental
-advanced: true
 options:
   home_assistant_dashboard_integration: false
