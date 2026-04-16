@@ -70,6 +70,7 @@ esphome-beta:
   directory: esphome-beta
   name: ESPHome Device Builder (beta)
   panel_title: ESPHome Builder (beta)
+  panel_icon: "mdi:esphome"
   version: "2026.4.0"  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome Device Builder"
@@ -84,6 +85,7 @@ esphome-stable:
   directory: esphome
   name: ESPHome Device Builder
   panel_title: ESPHome Builder
+  panel_icon: "mdi:esphome"
   version: "2026.4.0"  # STABLE
   slug: esphome
   description: "Build your own smart home devices using ESPHome, no programming experience required"
