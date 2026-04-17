@@ -8,7 +8,7 @@ auth_api: true
 host_network: true
 ingress: true
 ingress_port: 0
-panel_icon: mdi:esphome
+panel_icon: mdi:chip
 uart: true
 ports:
   6052/tcp: null
@@ -33,7 +33,7 @@ init: false
 startup: services
 name: ESPHome Device Builder (dev)
 panel_title: ESPHome Builder (dev)
-version: 2026.5.0-dev20260416
+version: 2026.5.0-dev20260417
 slug: esphome-dev
 description: Development version of ESPHome Device Builder
 image: ghcr.io/esphome/esphome-hassio
