@@ -15,7 +15,7 @@ base: &base
   # Ingress settings
   ingress: true
   ingress_port: 0
-  panel_icon: "mdi:chip"
+  panel_icon: "mdi:esphome"
   # Automatically add UART devices to App
   uart: true
   ports:
