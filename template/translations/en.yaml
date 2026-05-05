@@ -63,5 +63,12 @@ configuration:
       Enables/Disables streamer mode, which makes ESPHome hide all
       potentially private information. So for example WiFi (B)SSIDs (which could
       be used to find your location), usernames, etc.
+  use_new_device_builder:
+    name: Use new Device Builder
+    description: >-
+      Use the new ESPHome Device Builder instead of the classic ESPHome
+      dashboard. When enabled, the latest prerelease of `esphome-device-builder`
+      is installed on container start. **This is experimental and may not yet
+      have all the features of the classic dashboard.**
 network:
   6052/tcp: Web interface (to use without Home Assistant)
