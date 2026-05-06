@@ -32,6 +32,9 @@ backup_exclude:
 - '*/*/'
 init: false
 startup: services
+options:
+  home_assistant_dashboard_integration: false
+  use_new_device_builder: false
 name: ESPHome Device Builder (dev)
 panel_title: ESPHome Builder (dev)
 version: 2026.5.0-dev20260506
@@ -39,6 +42,3 @@ slug: esphome-dev
 description: Development version of ESPHome Device Builder
 image: ghcr.io/esphome/esphome-hassio
 stage: experimental
-options:
-  home_assistant_dashboard_integration: false
-  use_new_device_builder: false
