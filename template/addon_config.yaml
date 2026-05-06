@@ -34,12 +34,15 @@ base: &base
     certfile: str?
     keyfile: str?
     leave_front_door_open: bool?
+    use_new_device_builder: bool?
   backup_exclude:
     - "*/*/"
   # Disable docker init for s6
   init: false
   # Make sure dashboard is available for core
   startup: services
+  options:
+    use_new_device_builder: false
 
 esphome-dev:
   <<: *base
@@ -62,10 +65,8 @@ esphome-dev:
     certfile: str?
     keyfile: str?
     leave_front_door_open: bool?
-    use_new_device_builder: bool?
   options:
     home_assistant_dashboard_integration: false
-    use_new_device_builder: false
 
 esphome-beta:
   <<: *base

@@ -16,6 +16,16 @@ class Channel(Enum):
     dev = "dev"
 
 
+def deep_merge(base, override):
+    result = dict(override)
+    for key, base_value in base.items():
+        if key not in override:
+            result[key] = base_value
+        elif isinstance(base_value, dict) and isinstance(override[key], dict):
+            result[key] = deep_merge(base_value, override[key])
+    return result
+
+
 def main(args):
     parser = argparse.ArgumentParser(
         description="Generate ESPHome Home Assistant config.json"
@@ -30,9 +40,10 @@ def main(args):
         config = yaml.safe_load(f)
 
     copyf = config["copy_files"]
+    base = config.get("base") or {}
 
     for channel in args.channels:
-        conf = config[f"esphome-{channel.value}"]
+        conf = deep_merge(base, config[f"esphome-{channel.value}"])
         dir_ = root / conf.pop("directory")
         path = dir_ / "config.yaml"
         with open(path, "w", encoding="utf-8") as f:
