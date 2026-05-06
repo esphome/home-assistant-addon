@@ -27,6 +27,7 @@ schema:
   certfile: str?
   keyfile: str?
   leave_front_door_open: bool?
+  use_new_device_builder: bool?
 backup_exclude:
 - '*/*/'
 init: false
@@ -40,3 +41,4 @@ image: ghcr.io/esphome/esphome-hassio
 stage: experimental
 options:
   home_assistant_dashboard_integration: false
+  use_new_device_builder: false
