@@ -67,6 +67,7 @@ esphome-dev:
     leave_front_door_open: bool?
   options:
     home_assistant_dashboard_integration: false
+    use_new_device_builder: true
 
 esphome-beta:
   <<: *base
@@ -81,6 +82,7 @@ esphome-beta:
   stage: experimental
   options:
     home_assistant_dashboard_integration: false
+    use_new_device_builder: true
 
 esphome-stable:
   <<: *base
