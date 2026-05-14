@@ -37,7 +37,7 @@ options:
   use_new_device_builder: true
 name: ESPHome Device Builder (dev)
 panel_title: ESPHome Builder (dev)
-version: 2026.5.0-dev20260513
+version: 2026.6.0-dev20260514
 slug: esphome-dev
 description: Development version of ESPHome Device Builder
 image: ghcr.io/esphome/esphome-hassio
