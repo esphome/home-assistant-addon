@@ -6,66 +6,161 @@ on:
       version:
         description: The version to release
         required: true
-      content:
-        description: The content of the release-notes
-        required: true
+
+permissions:
+  contents: read  # actions/checkout only; commits + release writes use the App token
 
 jobs:
   create-release:
+    name: Create release
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+      - name: Generate a token
+        id: generate-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.ESPHOME_GITHUB_APP_CLIENT_ID }}
+          private-key: ${{ secrets.ESPHOME_GITHUB_APP_PRIVATE_KEY }}
+          # contents: write covers both GraphQL createCommitOnBranch and
+          # ``gh release create`` (which creates the release + lightweight tag).
+          permission-contents: write
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: "3.11"
-      - run: pip install -r script/requirements.txt
-      - run: script/bump-version.py ${{ github.event.inputs.version }}
+
+      - name: Install Python dependencies
+        run: pip install -r script/requirements.txt
+
+      - name: Bump version
+        run: script/bump-version.py ${{ github.event.inputs.version }}
+
       - name: Extract major version
         id: extract_version
         run: |
           # Extract major version (e.g., 2025.6.0 from 2025.6.2 or 2025.6.0b3)
           MAJOR_VERSION=$(echo "${{ github.event.inputs.version }}" | sed -E 's/^([0-9]+\.[0-9]+)\.[0-9]+.*/\1.0/')
           echo "major_version=${MAJOR_VERSION}" >> $GITHUB_OUTPUT
+
+      - name: Fetch release body
+        # Stored in $RUNNER_TEMP so ``git status --porcelain`` in the commit
+        # step doesn't pick it up. Consumed by the changelog writes and the
+        # ``Create a Release`` step.
+        if: ${{ !contains(github.event.inputs.version, 'dev') }}
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          VERSION: ${{ github.event.inputs.version }}
+        run: |
+          gh release view "$VERSION" \
+            --repo esphome/esphome \
+            --json body \
+            --jq .body \
+            > "$RUNNER_TEMP/release_body.md"
+
       - name: Write Beta changelog
         if: ${{ !contains(github.event.inputs.version, 'dev') }}
+        env:
+          VERSION: ${{ github.event.inputs.version }}
+          MAJOR: ${{ steps.extract_version.outputs.major_version }}
         run: |
-          cat > esphome-beta/CHANGELOG.md << 'EOF'
-          ## ${{ github.event.inputs.version }}
+          {
+            printf '## %s\n\n[**Read release announcement**](https://beta.esphome.io/changelog/%s)\n\n' "$VERSION" "$MAJOR"
+            cat "$RUNNER_TEMP/release_body.md"
+          } > esphome-beta/CHANGELOG.md
 
-          [**Read release announcement**](https://beta.esphome.io/changelog/${{ steps.extract_version.outputs.major_version }})
-
-          ${{ github.event.inputs.content }}
-          EOF
       - name: Write Stable changelog
         if: ${{ !contains(github.event.inputs.version, 'b') && !contains(github.event.inputs.version, 'dev')  }}
+        env:
+          VERSION: ${{ github.event.inputs.version }}
+          MAJOR: ${{ steps.extract_version.outputs.major_version }}
         run: |
-          cat > esphome/CHANGELOG.md << 'EOF'
-          ## ${{ github.event.inputs.version }}
+          {
+            printf '## %s\n\n[**Read release announcement**](https://esphome.io/changelog/%s)\n\n' "$VERSION" "$MAJOR"
+            cat "$RUNNER_TEMP/release_body.md"
+          } > esphome/CHANGELOG.md
 
-          [**Read release announcement**](https://esphome.io/changelog/${{ steps.extract_version.outputs.major_version }})
-
-          ${{ github.event.inputs.content }}
-          EOF
       - name: Commit version bump
-        id: commit_version
-        run: |
-          git config user.name esphomebot
-          git config user.email esphome@nabucasa.com
-          git add .
-          git commit -m "Bump version to ${{ github.event.inputs.version }}"
-          git push
-          COMMIT=$(git rev-parse HEAD)
-          echo "commit_sha=${COMMIT}" >> $GITHUB_OUTPUT
+        id: commit
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          VERSION: ${{ github.event.inputs.version }}
+        with:
+          github-token: ${{ steps.generate-token.outputs.token }}
+          script: |
+            const fs = require('fs');
+            const { execSync } = require('child_process');
+
+            // bump-version.py + the changelog writes only touch files with
+            // simple ASCII names, so the default porcelain format (no -z)
+            // is sufficient.
+            const lines = execSync('git status --porcelain', { encoding: 'utf8' })
+              .split('\n')
+              .filter(line => line.length > 0);
+
+            const additions = [];
+            const deletions = [];
+            for (const line of lines) {
+              const status = line.substring(0, 2);
+              const path = line.substring(3);
+              if (status.includes('D')) {
+                deletions.push({ path });
+              } else {
+                additions.push({
+                  path,
+                  contents: fs.readFileSync(path).toString('base64'),
+                });
+              }
+            }
+
+            if (additions.length === 0 && deletions.length === 0) {
+              core.setFailed('No file changes to commit');
+              return;
+            }
+
+            const headOid = execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
+            const repo = context.payload.repository;
+
+            const result = await github.graphql(
+              `mutation($input: CreateCommitOnBranchInput!) {
+                createCommitOnBranch(input: $input) {
+                  commit { oid }
+                }
+              }`,
+              {
+                input: {
+                  branch: {
+                    repositoryNameWithOwner: repo.full_name,
+                    branchName: repo.default_branch,
+                  },
+                  message: { headline: `Bump version to ${process.env.VERSION}` },
+                  fileChanges: { additions, deletions },
+                  expectedHeadOid: headOid,
+                },
+              }
+            );
+
+            core.setOutput('sha', result.createCommitOnBranch.commit.oid);
+
       - name: Create a Release
-        uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1.1.4
         continue-on-error: true
         if: ${{ !contains(github.event.inputs.version, 'dev') }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.event.inputs.version }}
-          release_name: ${{ github.event.inputs.version }}
-          body: ${{ github.event.inputs.content }}
-          prerelease: ${{ contains(github.event.inputs.version, 'b') }}
-          commitish: ${{ steps.commit_version.outputs.commit_sha }}
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          VERSION: ${{ github.event.inputs.version }}
+          TARGET_SHA: ${{ steps.commit.outputs.sha }}
+        run: |
+          flags=()
+          if [[ "$VERSION" == *b* ]]; then
+            flags+=(--prerelease)
+          fi
+
+          gh release create "$VERSION" \
+            --title "$VERSION" \
+            --notes-file "$RUNNER_TEMP/release_body.md" \
+            --target "$TARGET_SHA" \
+            "${flags[@]}"
