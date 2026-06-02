@@ -35,7 +35,7 @@ options:
   use_new_device_builder: false
 name: ESPHome Device Builder
 panel_title: ESPHome Builder
-version: 2026.5.1
+version: 2026.5.2
 slug: esphome
 description: Build your own smart home devices using ESPHome, no programming experience
   required
