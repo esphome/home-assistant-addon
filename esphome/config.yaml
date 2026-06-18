@@ -26,16 +26,13 @@ schema:
   certfile: str?
   keyfile: str?
   leave_front_door_open: bool?
-  use_new_device_builder: bool?
 backup_exclude:
 - '*/*/'
 init: false
 startup: services
-options:
-  use_new_device_builder: false
 name: ESPHome Device Builder
 panel_title: ESPHome Builder
-version: 2026.5.3
+version: 2026.6.0
 slug: esphome
 description: Build your own smart home devices using ESPHome, no programming experience
   required
