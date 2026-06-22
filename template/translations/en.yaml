@@ -1,10 +1,5 @@
 ---
 configuration:
-  certfile:
-    name: Certificate file
-    description: >-
-      The certificate file to use for SSL. Note that this file must
-      exist in the /ssl/ folder.
   default_compile_process_limit:
     name: Default compile process limit
     description: >-
@@ -30,38 +25,10 @@ configuration:
       for automatic configuration of devices and device updates. If you use
       multiple version of the ESPHome App, make sure it is enabled on a
       single App only.
-  keyfile:
-    name: Private key file
-    description: >-
-      The private key file to use for SSL. Note that this file must
-      exist in the /ssl/ folder.
   leave_front_door_open:
     name: Disable external authentication
     description: >-
       Disables external authentication when having opened the App
       on an external port. **WARNING**: This is a security risk!
-  relative_url:
-    name: Relative URL
-    description: >-
-      Host the ESPHome dashboard under a relative URL, so that it can be
-      integrated into existing web proxies like NGINX under a relative URL.
-      Defaults to `/`.
-  ssl:
-    name: SSL
-    description: >-
-      Enables/Disables SSL (HTTPS) on the web interface.
-  status_use_ping:
-    name: Use ping for status
-    description: >-
-      By default the dashboard uses mDNS to check if nodes are online. This does
-      not work across subnets unless your router supports mDNS forwarding
-      or avahi. Enabling this option will use ICMP ping to check if nodes are
-      online.
-  streamer_mode:
-    name: Streamer mode
-    description: >-
-      Enables/Disables streamer mode, which makes ESPHome hide all
-      potentially private information. So for example WiFi (B)SSIDs (which could
-      be used to find your location), usernames, etc.
 network:
   6052/tcp: Web interface (to use without Home Assistant)
