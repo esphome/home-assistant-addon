@@ -96,5 +96,6 @@ copy_files:
   - README.md
   - translations/en.yaml
   - images/dht-example.png
-  - images/screenshot.png
+  - images/screenshot-light.png
+  - images/screenshot-dark.png
   - images/temperature-humidity.png
