@@ -13,10 +13,7 @@ All you need to do is write YAML configuration files; the rest (over-the-air upd
 handled by ESPHome.
 
 <p align="center">
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/esphome/home-assistant-addon/raw/main/esphome/images/screenshot-dark.png">
 <img title="ESPHome Device Builder screenshot" src="https://github.com/esphome/home-assistant-addon/raw/main/esphome/images/screenshot-light.png" width="700px"></img>
-</picture>
 </p>
 
 [View the ESPHome documentation][website]
