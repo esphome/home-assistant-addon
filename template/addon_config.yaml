@@ -86,5 +86,4 @@ copy_files:
   - translations/en.yaml
   - images/dht-example.png
   - images/screenshot-light.png
-  - images/screenshot-dark.png
   - images/temperature-humidity.png
