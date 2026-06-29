@@ -59,7 +59,7 @@ esphome-beta:
   directory: esphome-beta
   name: ESPHome Device Builder (beta)
   panel_title: ESPHome Builder (beta)
-  version: "2026.6.2"  # BETA
+  version: "2026.6.3"  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome Device Builder"
   url: https://beta.esphome.io/
@@ -73,7 +73,7 @@ esphome-stable:
   directory: esphome
   name: ESPHome Device Builder
   panel_title: ESPHome Builder
-  version: "2026.6.2"  # STABLE
+  version: "2026.6.3"  # STABLE
   slug: esphome
   description: "Build your own smart home devices using ESPHome, no programming experience required"
   image: ghcr.io/esphome/esphome-hassio
