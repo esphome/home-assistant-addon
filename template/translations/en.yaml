@@ -32,3 +32,4 @@ configuration:
       on an external port. **WARNING**: This is a security risk!
 network:
   6052/tcp: Web interface (to use without Home Assistant)
+  6055/tcp: Peer link (for remote build server pairing)
