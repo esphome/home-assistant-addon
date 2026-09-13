@@ -1,7 +1,4 @@
 # ESPHome Device Builder
-
-[![ESPHome logo][logo]][website]
-
 [![GitHub stars][github-stars-shield]][repository]
 [![Discord][discord-shield]][discord]
 
