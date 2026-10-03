@@ -24,6 +24,7 @@ base: &base
     - config:rw
   discovery:
     - esphome
+    - mcp
   schema:
     home_assistant_dashboard_integration: bool?
     default_compile_process_limit: int(1,)?
