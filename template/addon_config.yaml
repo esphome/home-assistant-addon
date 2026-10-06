@@ -68,6 +68,9 @@ esphome-beta:
   url: https://beta.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
+  discovery:
+    - esphome
+    - mcp
   options:
     home_assistant_dashboard_integration: false
 
