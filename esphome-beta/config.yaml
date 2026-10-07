@@ -16,6 +16,7 @@ map:
 - config:rw
 discovery:
 - esphome
+- mcp
 schema:
   home_assistant_dashboard_integration: bool?
   default_compile_process_limit: int(1,)?
@@ -26,7 +27,7 @@ init: false
 startup: services
 name: ESPHome Device Builder (beta)
 panel_title: ESPHome Builder (beta)
-version: 2026.9.1
+version: 2026.10.0b1
 slug: esphome-beta
 description: Beta version of ESPHome Device Builder
 image: ghcr.io/esphome/esphome-hassio
