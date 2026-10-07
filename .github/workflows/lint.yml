@@ -5,6 +5,21 @@ on:
       - main
   pull_request:
 jobs:
+  pytest:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: 🛠 Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.11'
+      - name: 🛠 Install dependencies
+        run: pip install -r script/requirements_test.txt
+      - name: 🧪 Run tests
+        run: pytest tests
+
   build:
     name: App configuration
     runs-on: ubuntu-latest
