@@ -51,6 +51,9 @@ esphome-dev:
     default_compile_process_limit: int(1,)?
     esphome_fork: str?
     leave_front_door_open: bool?
+  discovery:
+    - esphome
+    - mcp
   options:
     home_assistant_dashboard_integration: false
 
@@ -65,6 +68,9 @@ esphome-beta:
   url: https://beta.esphome.io/
   image: ghcr.io/esphome/esphome-hassio
   stage: experimental
+  discovery:
+    - esphome
+    - mcp
   options:
     home_assistant_dashboard_integration: false
 
