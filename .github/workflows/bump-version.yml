@@ -38,6 +38,7 @@ jobs:
         run: pip install -r script/requirements.txt
 
       - name: Bump version
+        id: bump
         run: script/bump-version.py ${{ github.event.inputs.version }}
 
       - name: Extract major version
@@ -63,7 +64,9 @@ jobs:
             > "$RUNNER_TEMP/release_body.md"
 
       - name: Write Beta changelog
-        if: ${{ !contains(github.event.inputs.version, 'dev') }}
+        # bump-version.py skips the beta channel when a stable patch release
+        # is older than the current beta (e.g. 2026.9.2 vs 2026.10.0b1).
+        if: ${{ steps.bump.outputs.beta_updated == 'true' }}
         env:
           VERSION: ${{ github.event.inputs.version }}
           MAJOR: ${{ steps.extract_version.outputs.major_version }}

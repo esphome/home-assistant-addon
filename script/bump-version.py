@@ -41,6 +41,11 @@ class Version:
         dev = str(match[5][4:]) if match[5] else ""
         return Version(major=major, minor=minor, patch=patch, beta=beta, dev=dev)
 
+    @property
+    def release_key(self) -> tuple[int, int, int, bool, int]:
+        # A full release sorts after any beta of the same patch version.
+        return (self.major, self.minor, self.patch, self.beta == 0, self.beta)
+
 
 def _sub(path, pattern, repl, expected_count=1):
     with open(path, encoding="utf-8") as fh:
@@ -63,6 +68,22 @@ def _write_version(target: str, version: Version):
     )
 
 
+def _read_version(target: str) -> Version:
+    with open("template/addon_config.yaml", encoding="utf-8") as fh:
+        content = fh.read()
+    match = re.search(f'  version: "([^"]+)"  # {target.upper()}', content)
+    assert match is not None, f"Could not find {target} version!"
+    return Version.parse(match[1])
+
+
+def _set_output(name: str, value: str) -> None:
+    output = os.environ.get("GITHUB_OUTPUT")
+    if not output:
+        return
+    with open(output, "a", encoding="utf-8") as fh:
+        fh.write(f"{name}={value}\n")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("new_version", type=str)
@@ -71,16 +92,25 @@ def main():
     version = Version.parse(args.new_version)
 
     print(f"Bumping to {version}")
+    beta_updated = False
     if version.dev:
         _write_version("dev", version)
         generate.main(["dev"])
     elif version.beta:
         _write_version("beta", version)
         generate.main(["beta"])
+        beta_updated = True
     else:
         _write_version("stable", version)
-        _write_version("beta", version)
-        generate.main(["stable", "beta"])
+        current_beta = _read_version("beta")
+        if current_beta.release_key > version.release_key:
+            print(f"Not bumping beta, current beta {current_beta} is newer")
+            generate.main(["stable"])
+        else:
+            _write_version("beta", version)
+            generate.main(["stable", "beta"])
+            beta_updated = True
+    _set_output("beta_updated", str(beta_updated).lower())
     return 0
 
 
