@@ -19,6 +19,12 @@ def _load() -> ModuleType:
 
 bump_version = _load()
 
+SEED_VERSIONS = {
+    "stable": "2026.9.1",
+    "beta": "2026.9.1",
+    "dev": "2026.10.0-dev20261007",
+}
+
 
 @pytest.fixture
 def repo(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> list[list[str]]:
@@ -26,6 +32,10 @@ def repo(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> list[list[str]]:
     shutil.copy(ROOT / "template" / "addon_config.yaml", tmp_path / "template")
     monkeypatch.chdir(tmp_path)
     monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
+    # Pin the versions so the tests do not depend on whatever the live
+    # template was last released as.
+    for target, version in SEED_VERSIONS.items():
+        bump_version._write_version(target, bump_version.Version.parse(version))
     calls: list[list[str]] = []
     monkeypatch.setattr(bump_version.generate, "main", calls.append)
     return calls
