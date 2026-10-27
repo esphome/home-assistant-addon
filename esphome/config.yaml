@@ -16,6 +16,7 @@ map:
 - config:rw
 discovery:
 - esphome
+- mcp
 schema:
   home_assistant_dashboard_integration: bool?
   default_compile_process_limit: int(1,)?
@@ -26,7 +27,7 @@ init: false
 startup: services
 name: ESPHome Device Builder
 panel_title: ESPHome Builder
-version: 2026.10.0
+version: 2026.10.1
 slug: esphome
 description: Build your own smart home devices using ESPHome, no programming experience
   required
