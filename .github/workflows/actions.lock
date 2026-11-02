@@ -7,7 +7,7 @@ workflows:
         - 'actions/checkout@v7.0.0'
         - 'actions/create-github-app-token@v3.2.0'
         - 'actions/github-script@v9.0.0'
-        - 'actions/setup-python@v6.2.0'
+        - 'actions/setup-python@v7.1.0'
     '.github/workflows/devcontainer-build.yaml':
         - 'actions/checkout@v7.0.0'
         - 'docker/build-push-action@v7.2.0'
@@ -16,7 +16,7 @@ workflows:
         - 'docker/setup-qemu-action@v4.1.0'
     '.github/workflows/lint.yml':
         - 'actions/checkout@v7.0.0'
-        - 'actions/setup-python@v6.2.0'
+        - 'actions/setup-python@v7.1.0'
         - 'frenck/action-app-linter@v2.21.0'
     '.github/workflows/verify-lockfile.yml':
         - 'actions/checkout@v7.0.1'
@@ -41,9 +41,9 @@ dependencies:
         commit: 'sha1-3a2844b7e9c422d3c10d287c895573f7108da1b3'
         owner_id: 44036562
         repo_id: 205262760
-    'actions/setup-python@v6.2.0':
-        ref: 'v6.2.0'
-        commit: 'sha1-a309ff8b426b58ec0e2a45f0f869d46889d02405'
+    'actions/setup-python@v7.1.0':
+        ref: 'v7.1.0'
+        commit: 'sha1-6d4fd22b20465ccc0f7354476588e8df7c9ca0e0'
         owner_id: 44036562
         repo_id: 192625525
     'docker/build-push-action@v7.2.0':
