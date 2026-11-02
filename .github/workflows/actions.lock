@@ -4,28 +4,23 @@
 version: 'v0.0.3'
 workflows:
     '.github/workflows/bump-version.yml':
-        - 'actions/checkout@v7.0.0'
+        - 'actions/checkout@v7.0.1'
         - 'actions/create-github-app-token@v3.2.0'
         - 'actions/github-script@v9.0.0'
         - 'actions/setup-python@v6.2.0'
     '.github/workflows/devcontainer-build.yaml':
-        - 'actions/checkout@v7.0.0'
+        - 'actions/checkout@v7.0.1'
         - 'docker/build-push-action@v7.2.0'
         - 'docker/login-action@v4.2.0'
         - 'docker/setup-buildx-action@v4.1.0'
         - 'docker/setup-qemu-action@v4.1.0'
     '.github/workflows/lint.yml':
-        - 'actions/checkout@v7.0.0'
+        - 'actions/checkout@v7.0.1'
         - 'actions/setup-python@v6.2.0'
         - 'frenck/action-app-linter@v2.21.0'
     '.github/workflows/verify-lockfile.yml':
         - 'actions/checkout@v7.0.1'
 dependencies:
-    'actions/checkout@v7.0.0':
-        ref: 'v7.0.0'
-        commit: 'sha1-9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0'
-        owner_id: 44036562
-        repo_id: 197814629
     'actions/checkout@v7.0.1':
         ref: 'v7.0.1'
         commit: 'sha1-3d3c42e5aac5ba805825da76410c181273ba90b1'
