@@ -12,7 +12,7 @@ workflows:
         - 'actions/checkout@v7.0.1'
         - 'docker/build-push-action@v7.4.0'
         - 'docker/login-action@v4.7.0'
-        - 'docker/setup-buildx-action@v4.1.0'
+        - 'docker/setup-buildx-action@v4.4.1'
         - 'docker/setup-qemu-action@v4.1.0'
     '.github/workflows/lint.yml':
         - 'actions/checkout@v7.0.1'
@@ -51,9 +51,9 @@ dependencies:
         commit: 'sha1-81c6f93d4bc991e510b342a00b419b3bb4efc5c6'
         owner_id: 5429470
         repo_id: 287743349
-    'docker/setup-buildx-action@v4.1.0':
-        ref: 'v4.1.0'
-        commit: 'sha1-d7f5e7f509e45cec5c76c4d5afdd7de93d0b3df5'
+    'docker/setup-buildx-action@v4.4.1':
+        ref: 'v4.4.1'
+        commit: 'sha1-f87e5991a6d7451dcb8d9637bfbc97413f497069'
         owner_id: 5429470
         repo_id: 288485773
     'docker/setup-qemu-action@v4.1.0':
