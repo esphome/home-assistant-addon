@@ -4,28 +4,23 @@
 version: 'v0.0.3'
 workflows:
     '.github/workflows/bump-version.yml':
-        - 'actions/checkout@v7.0.0'
+        - 'actions/checkout@v7.0.1'
         - 'actions/create-github-app-token@v3.2.0'
         - 'actions/github-script@v9.0.0'
-        - 'actions/setup-python@v6.2.0'
+        - 'actions/setup-python@v7.1.0'
     '.github/workflows/devcontainer-build.yaml':
-        - 'actions/checkout@v7.0.0'
-        - 'docker/build-push-action@v7.2.0'
-        - 'docker/login-action@v4.2.0'
+        - 'actions/checkout@v7.0.1'
+        - 'docker/build-push-action@v7.4.0'
+        - 'docker/login-action@v4.7.0'
         - 'docker/setup-buildx-action@v4.4.1'
         - 'docker/setup-qemu-action@v4.1.0'
     '.github/workflows/lint.yml':
-        - 'actions/checkout@v7.0.0'
-        - 'actions/setup-python@v6.2.0'
+        - 'actions/checkout@v7.0.1'
+        - 'actions/setup-python@v7.1.0'
         - 'frenck/action-app-linter@v2.21.0'
     '.github/workflows/verify-lockfile.yml':
         - 'actions/checkout@v7.0.1'
 dependencies:
-    'actions/checkout@v7.0.0':
-        ref: 'v7.0.0'
-        commit: 'sha1-9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0'
-        owner_id: 44036562
-        repo_id: 197814629
     'actions/checkout@v7.0.1':
         ref: 'v7.0.1'
         commit: 'sha1-3d3c42e5aac5ba805825da76410c181273ba90b1'
@@ -41,19 +36,19 @@ dependencies:
         commit: 'sha1-3a2844b7e9c422d3c10d287c895573f7108da1b3'
         owner_id: 44036562
         repo_id: 205262760
-    'actions/setup-python@v6.2.0':
-        ref: 'v6.2.0'
-        commit: 'sha1-a309ff8b426b58ec0e2a45f0f869d46889d02405'
+    'actions/setup-python@v7.1.0':
+        ref: 'v7.1.0'
+        commit: 'sha1-6d4fd22b20465ccc0f7354476588e8df7c9ca0e0'
         owner_id: 44036562
         repo_id: 192625525
-    'docker/build-push-action@v7.2.0':
-        ref: 'v7.2.0'
-        commit: 'sha1-f9f3042f7e2789586610d6e8b85c8f03e5195baf'
+    'docker/build-push-action@v7.4.0':
+        ref: 'v7.4.0'
+        commit: 'sha1-c3c9e263c25d99ce0380d002d59b67737d91b0dc'
         owner_id: 5429470
         repo_id: 241092383
-    'docker/login-action@v4.2.0':
-        ref: 'v4.2.0'
-        commit: 'sha1-650006c6eb7dba73a995cc03b0b2d7f5ca915bee'
+    'docker/login-action@v4.7.0':
+        ref: 'v4.7.0'
+        commit: 'sha1-81c6f93d4bc991e510b342a00b419b3bb4efc5c6'
         owner_id: 5429470
         repo_id: 287743349
     'docker/setup-buildx-action@v4.4.1':

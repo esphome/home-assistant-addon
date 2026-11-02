@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@v7.0.1
       - name: 🛠 Setup Python
-        uses: actions/setup-python@v6.2.0
+        uses: actions/setup-python@v7.1.0
         with:
           python-version: '3.11'
       - name: 🛠 Install dependencies
@@ -34,9 +34,9 @@ jobs:
             channel: dev
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@v7.0.1
       - name: 🛠 Setup Python
-        uses: actions/setup-python@v6.2.0
+        uses: actions/setup-python@v7.1.0
         with:
           python-version: '3.11'
       - name: 🛠 Install dependencies
