@@ -17,7 +17,7 @@ workflows:
     '.github/workflows/lint.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-python@v7.1.0'
-        - 'frenck/action-app-linter@v2.21.0'
+        - 'frenck/action-app-linter@v2.21.1'
     '.github/workflows/verify-lockfile.yml':
         - 'actions/checkout@v7.0.1'
 dependencies:
@@ -61,8 +61,8 @@ dependencies:
         commit: 'sha1-99012661954931238ded8c8b007157a8430204e1'
         owner_id: 5429470
         repo_id: 288487894
-    'frenck/action-app-linter@v2.21.0':
-        ref: 'v2.21.0'
-        commit: 'sha1-f995494fd84fae6310d23617e66d0e37de4f14eb'
+    'frenck/action-app-linter@v2.21.1':
+        ref: 'v2.21.1'
+        commit: 'sha1-b9cfd1bc62ba60d2c4fc96317b5f7ada5923f4a7'
         owner_id: 195327
         repo_id: 329084004
