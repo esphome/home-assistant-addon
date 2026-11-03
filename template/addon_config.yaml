@@ -21,7 +21,9 @@ base: &base
   ports:
     "6052/tcp": null
   map:
-    - config:rw
+    - type: homeassistant_config
+      read_only: false
+      path: /config
   discovery:
     - esphome
     - mcp
